@@ -1,0 +1,78 @@
+---
+title: ""
+author: ""
+ 
+
+header-includes:
+    \usepackage[italian]{babel}
+
+
+output:
+  pdf_document:
+    toc: true
+    number_sections: true
+ 
+---
+\listoffigures
+\listoftables
+# ELENCO DEI COLLABORATORI {-}
+* **Dr. Tranquillo Vito** U.O. 1-Responsabile scientifico del progetto.Coordinamento delle U.O., Analisi statistica dei dati fenotipici. 
+* **Dr. Fiocchi Alfredo** U.O. 1-Analisi microbiologiche e antibiogrammi.
+* **Dr. Pongolini Stefano** U.O. 2-Coordinamento U.O. e attività di analisi metagenomiche
+* **Dr. Bolzoni Luca** U.O. 2-Attività analisi metagenomiche e analisi dati
+* **Dr. Erika       ** U.O. 2-Attività analisi metagenomiche e analisi dati
+* **Dr. Bertoletti Irene** U.O. 3-Analisi Microbiologiche e antibiogrammi
+* **Dr. Alessandro Bianchi** U.O. 3-Analisi Microbiologiche e antibiogrammi
+* **Dr. Loris Alborali** U.O. 4-Analsi genomiche ceppi Ceftiofur resistenti
+* **Dr. Prati Paola** U.O. 5- Attività di raccolta e invio campioni a U.O.1 per successive analisi
+* **Dr. Gianni Sala** U.O. 6- Attività di raccolta e invio campioni a U.O.1 per successive analisi
+
+# RELAZIONE FINALE VERSIONE INTEGRALE {-}
+
+# INTRODUZIONE (max 5 pagine)
+
+
+
+
+# MATERIALE E METODI (max 10 pagine)
+
+## Campionamento
+
+## Esami microbiologici
+
+## Antibiogrammi
+
+## Analisi metagenomiche
+
+## Analisi dei dati
+
+# RISULTATI
+
+## QUADRO GENERALE
+
+### Territorio
+
+### Fauna selvatica
+
+### Esami microbiologici
+
+### Antibiogrammi
+
+## PREVALENZA DI CEPPI ANTIBIOTICO-RESISTENTI E MULTI-RESISTENTI NELLA FAUNA SELVATICA
+
+## CARATTERIZZAZIONE FENOTIPICA DELL'ANTIBIOTICO-RESISTENZA DEGLI ISOLATI BATTERICI
+
+## POOL METAGENOMICI
+
+# DISCUSSIONE E CONCLUSIONI (max 10 pagine)
+
+# BIBLIOGRAFIA
+
+# Raccomandazioni (max 2 pagine)
+### elementi gestionali e/o diagnostici
+### indicazioni per la ricerca
+### sugg per eventuali provvedimenti normativi
+
+# MODALITÀ DI DIVULGAZIONE DEI RISULTATI (1 pagina)
+
+

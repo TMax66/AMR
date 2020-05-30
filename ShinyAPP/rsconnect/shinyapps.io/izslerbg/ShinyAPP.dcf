@@ -1,0 +1,13 @@
+name: ShinyAPP
+title: ShinyAPP
+username:
+account: izslerbg
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 962963
+bundleId: 2127397
+url: https://izslerbg.shinyapps.io/ShinyAPP/
+when: 1559578392.33324
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .gitattributes|manifest.json|xx.html|xx.Rhtml

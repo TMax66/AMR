@@ -1,0 +1,13 @@
+name: PRC2106020
+title: PRC2106020
+username:
+account: myappshiny
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 386133
+bundleId: 1947307
+url: https://myappshiny.shinyapps.io/PRC2106020/
+when: 1552907429.18232
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .gitattributes|codici.R|manifest.json

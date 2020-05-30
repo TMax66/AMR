@@ -1,0 +1,13 @@
+name: PRC2016020
+title: PRC2016020
+username:
+account: myappshiny
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 386125
+bundleId: 1494787
+url: https://myappshiny.shinyapps.io/PRC2016020/
+when: 1532337066.10778
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: codici.R|d1.html|d2.html|d3.html|d4.html|d5.html|generale.html|intro.html|intro.Rhtml|tab.html|xx.html|xx.Rhtml
