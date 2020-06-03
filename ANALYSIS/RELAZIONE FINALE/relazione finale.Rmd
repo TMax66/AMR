@@ -4,15 +4,19 @@ author: ""
 header-includes:
     \usepackage[italian]{babel}
     \usepackage{setspace}\doublespacing
+     
 output:
   pdf_document:
     toc: true
     number_sections: true
     fig_caption: true
+
 ---
+
 \listoffigures
 \listoftables
-# ELENCO DEI COLLABORATORI {-}
+
+### ELENCO DEI COLLABORATORI {-}
 * **Dr. Tranquillo Vito** U.O. 1-Responsabile scientifico del progetto.Coordinamento delle U.O., Analisi statistica dei dati fenotipici. 
 * **Dr. Fiocchi Alfredo** U.O. 1-Analisi microbiologiche e antibiogrammi.
 * **Dr. Pongolini Stefano** U.O. 2-Coordinamento U.O. e attività di analisi metagenomiche
@@ -34,7 +38,7 @@ di resistenza naturale e quella presente nelle deiezioni di animali e uomini, a 
 
 La presenza nella fauna selvatica, normalmente non sottoposta a trattamenti antibiotici, di ceppi batterici resistenti e in generale di geni di resistenza, è opinione comune sia da attribuire a fenomeni di contaminazione ambientale , oltre a noti fenomeni di resistenza naturale di ceppi batterici come strumento di difesa nei confronti di antibatterici prodotti da diversi generi di microrganismi come funghi, lieviti, ecc. Per definire il ruolo della fauna selvatica nel complesso meccanismo di diffusione e mantenimento dell'antibiotico resistenza è necessario acquisire informazioni relativamente alla prevalenza di animali selvatici portatori di ceppi batterici resistenti nelle differenti specie e come questa varia in base all'etologia ed ecologia delle specie ospite. La caratterizzazione fenotipica e genotipica dei batteri isolati da specie selvatica e la prevalenza di ceppi resistenti e multiresistenti. La necessità di colmare le evidenze scientifiche di questo tipo ha portato ad un incremento di studi sull'argomento, comportando nell'arco di una decina d'anni l'accumulo di evidenze che aiutano a definire meglio il ruolo della fauna selvatica nella diffusione e nel mantenimento dell'antibiotico-resistenza.
 
-Una “scoping review”(cit[xxxx]) pubblicata nel 2015, ha evidenziato la presenza di 866 articoli di ricerca primaria; Oltre il 90% erano studi osservazionali; la maggioranza riportano i dati di prevalenza per AR nella fauna selvatica (551/866, 63.6%). Ci sono stati 176 di 866 (20,3%) studi  di genotipizzazione.   AR è stata più frequentemente studiata in E. coli 150 di 866 (17,3%), Salmonella 83 di 866 (9,6%) e Enterococcus 48 di 866 (5,5%). I gruppi della fauna selvatica più frequentemente studiati erano uccelli 410 su 866 (47,3%), cervidi, 133 di 866 (15,4%) e roditori 91 di 866 (10,5%). Solo 11 articoli hanno studiato la contaminazione dei prodotti, e ci sono stati 26 casi di vettori intermedi, come le mosche o insetti. La contaminazione ambientale è stata più frequentemente riportati per l'acqua 130 di 866 (15%). Le modalità di trasmissione dell’AR è stata riportata in 110 articoli (12,7%). Tra le caratteristiche ambientali che sono state segnalate come fattori di rischio per il trasferimento di batteri patogeni e /o AR vi sono: condivisione di ambienti  161 di 866 (18,6%), infestazione o mancanza di controllo degli uccelli selvatici 124 di 866 (14,3%) e delle fonti idriche condivise 98 di 866 (11,3%). Le pratiche di mitigazione, strategie o programmi per ridurre la trasmissione di batteri e / o AR sono stati discussi o studiati in 124 su 866 (14,3%) articoli. Sono state fornite informazioni circa i tassi di contatto tra fauna selvatica e animali domestici in 29 articoli (3,3%). È interessante notare che numerosi articoli di ricerca primaria (122/866, 14.1%) hanno riportato associazioni per i fattori di rischio di trasmissione di AR o batteri patogeni dalla fauna selvatica agli animali cibo, fonti ambientali o umani. 
+Una “scoping review” @Vittoq  pubblicata nel 2015, ha evidenziato la presenza di 866 articoli di ricerca primaria; Oltre il 90% erano studi osservazionali; la maggioranza riportano i dati di prevalenza per AR nella fauna selvatica (551/866, 63.6%). Ci sono stati 176 di 866 (20,3%) studi  di genotipizzazione.   AR è stata più frequentemente studiata in E. coli 150 di 866 (17,3%), Salmonella 83 di 866 (9,6%) e Enterococcus 48 di 866 (5,5%). I gruppi della fauna selvatica più frequentemente studiati erano uccelli 410 su 866 (47,3%), cervidi, 133 di 866 (15,4%) e roditori 91 di 866 (10,5%). Solo 11 articoli hanno studiato la contaminazione dei prodotti, e ci sono stati 26 casi di vettori intermedi, come le mosche o insetti. La contaminazione ambientale è stata più frequentemente riportati per l'acqua 130 di 866 (15%). Le modalità di trasmissione dell’AR è stata riportata in 110 articoli (12,7%). Tra le caratteristiche ambientali che sono state segnalate come fattori di rischio per il trasferimento di batteri patogeni e /o AR vi sono: condivisione di ambienti  161 di 866 (18,6%), infestazione o mancanza di controllo degli uccelli selvatici 124 di 866 (14,3%) e delle fonti idriche condivise 98 di 866 (11,3%). Le pratiche di mitigazione, strategie o programmi per ridurre la trasmissione di batteri e / o AR sono stati discussi o studiati in 124 su 866 (14,3%) articoli. Sono state fornite informazioni circa i tassi di contatto tra fauna selvatica e animali domestici in 29 articoli (3,3%). È interessante notare che numerosi articoli di ricerca primaria (122/866, 14.1%) hanno riportato associazioni per i fattori di rischio di trasmissione di AR o batteri patogeni dalla fauna selvatica agli animali cibo, fonti ambientali o umani. 
 
 Nonostante il crescente interesse e la produzione di un notevole accumulo di evidenze circa la presenza di ceppi antibiotico-resistenti nella fauna selvatica in tutto il mondo e in un'ampia varietà di specie animali non è ancora ben chiaro il ruolo epidemiologico del camparto selvatico nel mantenimento e diffusione dell'antibiotico resistenza.
 A questo proposito PincoPallino (citare)  sottolinea quali sono i gap che la ricerca deve ancora colmare. In particolare.....
@@ -106,7 +110,7 @@ AMR-911: che contiene tutti i ceppi di Enterobacteriacee identificati per genere
 
 ### Territorio
 L'attività di campionamento si è svolta tra Settembre 2017 e Dicembre 2019  in sette province della Lombardia : Bergamo, Pavia, Varese,Como, Lecco e Brescia da un totale di 224 comuni (Fig\ref{fig:fig1}). 
-Sulla base dei  criteri di classificazione dei comuni adottati dall'ISTAT, in merito a grado di urbanizzazione, e montanità risulta che : 415 campioni (57%) provengono da comuni a bassa urbanizzazione (aree rurali scarsamente popolate), 222 campioni (30%) da comuni a densità intermedia di popolazione e 11 campioni (1.15%) da comuni ad alta densità di popolazione; 472 campioni (65%) provengono da comuni totalmente montani, 162 (22%) da comuni in pianura e 14 campioni (2%), da aree parzialmente montane (collinari). In  tabella 1 sono riportate le statistiche descrittive della caratterizzazione geografica e di popolazione dei comuni da cui provengono i campioni. 
+Sulla base dei  criteri di classificazione dei comuni adottati dall'ISTAT, in merito a grado di urbanizzazione, e montanità risulta che : 415 campioni (57%) provengono da comuni a bassa urbanizzazione (aree rurali scarsamente popolate), 222 campioni (30%) da comuni a densità intermedia di popolazione e 11 campioni (1.15%) da comuni ad alta densità di popolazione; 472 campioni (65%) provengono da comuni totalmente montani, 162 (22%) da comuni in pianura e 14 campioni (2%), da aree parzialmente montane (collinari). In  tabella \ref{tab:tab1} sono riportate le statistiche descrittive della caratterizzazione geografica e di popolazione dei comuni da cui provengono i campioni. 
 
 ### Fauna selvatica
 Sono stati raccolti complessivamente 729 campioni di feci da 33 differenti specie di fauna selvatica.  Le specie più frequentemente campionate sono il Capriolo (Capreolus capreolus) con 201 campioni ( 27.6%),  la Cornacchia grigia (Corvus cornix) con 133 (18.2%), il Cervo (Cervus elaphus) ,  con 83 campioni (11.4%), il Cinghiale (Sus scrofa) con 78 campioni (10.7%), il Camoscio (Rupicapra rupicapra) 49 campioni (6.7%) e il Muflone (Ovis aries musimon) 44 campioni (6.0%) che rappresentano complessivamente l'80% dei campioni esaminati. Il restante 20% è distribuito su un totale di 27 specie differenti (tabella 2). 
@@ -196,26 +200,20 @@ La resistenza dei ceppi isolati al Ceftiofur è risultata poco frequente (prev..
 knitr::include_graphics("figure/fig1.png")
 ```
 
-
-
 ```{r echo=FALSE, fig2, fig.align = "center",out.width = '80%', fig.cap="distribuzione numero di resistenze al panel di antibiotici"}
 
 knitr::include_graphics("figure/fig2.png")
 ```
 
+\pagebreak
 
+**ELENCO TABELLE** 
 
-
-
-
-\newpage
-
-### **ELENCO TABELLE** {-}
-
+ 
 \begin{table}[h]
-\label{t1}
 \centering
 \caption{Caratterizzazione dei comuni di provenienza dei campioni}
+\label{tab:tab1}
 \begin{tabular}{l|r|r|r|r|r|r|r}
 \hline
 Parametri & min & q25 & median & q75 & max & mean & sd\\
@@ -236,12 +234,12 @@ Capi al pascolo & 2.00 & 52.0 & 133.0 & 293.0 & 8429 & 307.1 & 602.7\\
 \end{table}
  
 
-\begin{table}[h]
+\begin{table} 
 \centering
-\caption{Distribuzione del numero e percentuale \% del differenti specie di fauna selvatica di origine dei campioni di feci}
+\caption{Distribuzione del numero e in \% delle differenti specie di fauna selvatica di origine dei campioni di feci}
 \begin{tabular}{l|l|r|r}
 \hline
-Gruppo & SPECIE & n & prop\\
+Gruppo & SPECIE & n & \%\\
 \hline
 CERVIDI & CAPRIOLO & 201 & 70.53\\
 \hline
