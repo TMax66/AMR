@@ -33,9 +33,23 @@ L'Antibiotico-Resistenza (AR) è una grave minaccia per la salute umana, in quan
 di resistenza naturale e quella presente nelle deiezioni di animali e uomini, a cui si possono aggiungere gli effetti selettivi di inquinanti, che possono co-selezionare elementi genetici mobili che trasportano più geni di resistenza.L'interesse per il ruolo della fauna selvatica nella diffusione e nel mantenimento dell'antibiotico-resistenza è aumentato nel corso degli ultimi 10 anni, con un costante aumento della produzione scientifica. La principale preoccupazione nasce dal timore che l'eventuale dimostrazione di un ruolo della fauna selvatica come "serbatoio" e "mantenimento" di batteri portatori di geni di resistenza, contribuendo alla contaminazione ambientale di batteri resistenti o materiale genetico di resistenza (resistoma), possa compromettere gli sforzi messi in atto, soprattutto in questi ultimi anni, in campo medico e veterinario per ridurre la diffusione del fenomeno della resistenza agli antibiotici. 
 
 La presenza nella fauna selvatica, normalmente non sottoposta a trattamenti antibiotici, di ceppi batterici resistenti e in generale di geni di resistenza, è opinione comune sia da attribuire a fenomeni di contaminazione ambientale , oltre a noti fenomeni di resistenza naturale di ceppi batterici come strumento di difesa nei confronti di antibatterici prodotti da diversi generi di microrganismi come funghi, lieviti, ecc. Per definire il ruolo della fauna selvatica nel complesso meccanismo di diffusione e mantenimento dell'antibiotico resistenza è necessario acquisire informazioni relativamente alla prevalenza di animali selvatici portatori di ceppi batterici resistenti nelle differenti specie e come questa varia in base all'etologia ed ecologia delle specie ospite. La caratterizzazione fenotipica e genotipica dei batteri isolati da specie selvatica e la prevalenza di ceppi resistenti e multiresistenti. La necessità di colmare le evidenze scientifiche di questo tipo ha portato ad un incremento di studi sull'argomento, comportando nell'arco di una decina d'anni l'accumulo di evidenze che aiutano a definire meglio il ruolo della fauna selvatica nella diffusione e nel mantenimento dell'antibiotico-resistenza.
-Una “scoping review”(cit[xxxx]) pubblicata nel 2015, ha evidenziato la presenza di 866 articoli di ricerca primaria; Oltre il 90% erano studi osservazionali; la maggioranza riportano i dati di prevalenza per AR nella fauna selvatica (551/866, 63.6%). Ci sono stati 176 di 866 (20,3%) studi  di genotipizzazione.   AR è stata più frequentemente studiata in E. coli 150 di 866 (17,3%), Salmonella 83 di 866 (9,6%) e Enterococcus 48 di 866 (5,5%). I gruppi della fauna selvatica più frequentemente studiati erano uccelli 410 su 866 (47,3%), cervidi, 133 di 866 (15,4%) e roditori 91 di 866 (10,5%). Solo 11 articoli hanno studiato la contaminazione dei prodotti, e ci sono stati 26 casi di vettori intermedi, come le mosche o insetti. La contaminazione ambientale è stata più frequentemente riportati per l'acqua 130 di 866 (15%). Le modalità di trasmissione dell’AR è stata riportata in 110 articoli (12,7%). Tra le caratteristiche ambientali che sono state segnalate come fattori di rischio per il trasferimento di batteri patogeni e /o AR vi sono: condivisione di ambienti  161 di 866 (18,6%), infestazione o mancanza di controllo degli uccelli selvatici 124 di 866 (14,3%) e delle fonti idriche condivise 98 di 866 (11,3%). Le pratiche di mitigazione, strategie o programmi per ridurre la trasmissione di batteri e / o AR sono stati discussi o studiati in 124 su 866 (14,3%) articoli. Sono state fornite informazioni circa i tassi di contatto tra fauna selvatica e animali domestici in 29 articoli (3,3%). È interessante notare che numerosi articoli di ricerca primaria (122/866, 14.1%) hanno riportato associazioni statisticamente significative per i fattori di rischio di trasmissione di AR o batteri patogeni dalla fauna selvatica agli animali cibo, fonti ambientali o umani. 
 
-Uno dei primi lavori in Italia sull’AR nella  fauna selvatica è stato condotto da Caprioli et al:(cit) sono stati  raccolti 81 campioni di feci da mammiferi selvatici (ruminanti, Marmotta) che vivono in Parco Nazionale dello Stelvio. Lo studio è stato focalizzato solo su Escherichia coli come microrganismo target. Sono stati osservati ceppi AR di E.coli in 17 dei 121 ceppi  presi in esame. ARB isolati hanno mostrato un profilo di multiresistenza. Gli autori hanno concluso che i ceppi di E. coli in animali selvatici possono essere resistenti a diversi agenti antimicrobici e portatori di  plasmidi R, anche se il microbioma intestinale degli animali selvatici non è direttamente esposta agli antibiotici. Così una possibile fonte di AR in E.coli potrebbe essere quegli esseri umani e animali domestici che portano AMRB e condividono gli stessi habitat (turisti, animali domestici pascolo) di animali della fauna selvatica. In IZSLER l’attività di routine nel periodo tra il 2002 e il 2016 mostra che sono stati eseguiti 404 antibiogrammi di ceppi di batteri isolati da animali selvatici. Tutti questi ceppi mostrano resistenza ad almeno un antibiotico. Nel 96% si è osservata multi-resistenza; 77% erano ceppi di Salmonella spp isolati da oltre 300 cinghiali. E. coli è stato il secondo ceppo più analizzato (51). Tra le altre specie di fauna selvatica indagati sono: 27 ruminanti, 22 uccelli, 42 lepri, 2 volpi e un riccio. Questi dati sono indicativi della presenza e della circolazione di ARB e ARG nella fauna selvatica delle Alpi.
+Una “scoping review”(cit[xxxx]) pubblicata nel 2015, ha evidenziato la presenza di 866 articoli di ricerca primaria; Oltre il 90% erano studi osservazionali; la maggioranza riportano i dati di prevalenza per AR nella fauna selvatica (551/866, 63.6%). Ci sono stati 176 di 866 (20,3%) studi  di genotipizzazione.   AR è stata più frequentemente studiata in E. coli 150 di 866 (17,3%), Salmonella 83 di 866 (9,6%) e Enterococcus 48 di 866 (5,5%). I gruppi della fauna selvatica più frequentemente studiati erano uccelli 410 su 866 (47,3%), cervidi, 133 di 866 (15,4%) e roditori 91 di 866 (10,5%). Solo 11 articoli hanno studiato la contaminazione dei prodotti, e ci sono stati 26 casi di vettori intermedi, come le mosche o insetti. La contaminazione ambientale è stata più frequentemente riportati per l'acqua 130 di 866 (15%). Le modalità di trasmissione dell’AR è stata riportata in 110 articoli (12,7%). Tra le caratteristiche ambientali che sono state segnalate come fattori di rischio per il trasferimento di batteri patogeni e /o AR vi sono: condivisione di ambienti  161 di 866 (18,6%), infestazione o mancanza di controllo degli uccelli selvatici 124 di 866 (14,3%) e delle fonti idriche condivise 98 di 866 (11,3%). Le pratiche di mitigazione, strategie o programmi per ridurre la trasmissione di batteri e / o AR sono stati discussi o studiati in 124 su 866 (14,3%) articoli. Sono state fornite informazioni circa i tassi di contatto tra fauna selvatica e animali domestici in 29 articoli (3,3%). È interessante notare che numerosi articoli di ricerca primaria (122/866, 14.1%) hanno riportato associazioni per i fattori di rischio di trasmissione di AR o batteri patogeni dalla fauna selvatica agli animali cibo, fonti ambientali o umani. 
+
+Nonostante il crescente interesse e la produzione di un notevole accumulo di evidenze circa la presenza di ceppi antibiotico-resistenti nella fauna selvatica in tutto il mondo e in un'ampia varietà di specie animali non è ancora ben chiaro il ruolo epidemiologico del camparto selvatico nel mantenimento e diffusione dell'antibiotico resistenza.
+A questo proposito PincoPallino (citare)  sottolinea quali sono i gap che la ricerca deve ancora colmare. In particolare.....
+
+
+Uno dei primi lavori in Italia sull’AR nella  fauna selvatica è stato condotto da Caprioli et al:(cit) su 81 campioni di feci da mammiferi selvatici (ruminanti, Marmotta) del Parco Nazionale dello Stelvio. Lo studio è stato focalizzato solo su Escherichia coli come microrganismo target. Sono stati osservati ceppi AR di E.coli in 17 dei 121 ceppi  presi in esame. I ceppi isolati hanno mostrato un profilo di multiresistenza. Gli Autori hanno concluso che i ceppi di E. coli in animali selvatici possono essere resistenti a diversi agenti antimicrobici e portatori di  plasmidi R, anche se il microbioma intestinale degli animali selvatici non è direttamente esposta agli antibiotici. Così una possibile fonte di AR in E.coli potrebbe essere quegli esseri umani e animali domestici che portano AMRB e condividono gli stessi habitat (turisti, animali domestici pascolo) di animali della fauna selvatica. 
+
+Più recentemente sono stati pubblicati nuovi lavori che riguardano la presenza di antibiotico-resistenza in feci di animali selvatici in varie regioni d'Italia con particolare riferimento alle Enterobatteriacee e in particolare E.coli come microrganismo target. (citare gli articoli)
+
+
+
+
+<!-- L’attività routinaria nel periodo tra il 2002 e il 2016  presso l'IZSLER mostra che sono stati eseguiti 404 antibiogrammi di ceppi di batteri isolati da animali selvatici. Tutti questi ceppi mostrano resistenza ad almeno un antibiotico. Nel 96% si è osservata multi-resistenza; 77% erano ceppi di Salmonella spp isolati da oltre 300 cinghiali. E. coli è stato il secondo ceppo più analizzato (51). Tra le altre specie di fauna selvatica indagati sono: 27 ruminanti, 22 uccelli, 42 lepri, 2 volpi e un riccio. Questi dati sono indicativi della presenza e della circolazione di ARB e ARG nella fauna selvatica delle Alpi.  -->
+
+L'obiettivo di questo progetto di ricerca è stato quello di raccogliere informazioni sulla presenza e diffusione dell'antibiotico-resistenza in ceppi batterici della famiglia delle Enterobacteriacee isolati da feci di un ampio spettro di specie di fauna selvatica, presente in varie province della Lombardia con differenti gradi di urbanizzazione e la caratterizzazione fenotipica del profilo di resistenza dei ceppi isolati e quella genotipica utilizzando metodiche di analisi metagenomica di pool di ceppi batterici. 
 
 \newpage
 # MATERIALE E METODI (max 10 pagine)
@@ -47,12 +61,12 @@ ruminanti selvatici, lagomorfi, volatili) , sia i campioni provenienti da attivi
 
 ## Esami microbiologici
 L’esame batteriologico è stato eseguito seguendo le indicazioni riportate nel metodo di prova interno    IZSLER che descrive la tecnica microbiologica per la categorizzazione di isolati batterici
-aerobi/anaerobi facoltativi. I campioni di feci confezionati in sacchetti o barattoli o prelevati direttamente in sede necroscopica dall'intestino, sono stati disciolti in brodo di pre-arricchimento APT (acqua peptonata) e, dopo l’allestimento di tamponi, sono stati seminati su MC-Conkey Agar (terreno selettivo per enterobatteriacee) e incubati per 24-48 ore a 37°C in aerobiosi al fine di ottenere colonie isolate. Da una colonia isolata sono state realizzate colture su terreno solido Klieger Iron Agar (KIA) da utilizzare nelle successive prove di caratterizzazione (morfologica, colturale, biochimica).KIA costituisce un terreno differenziale impiegato principalmente come ausilio nell’identificazione di alcuni membri della famiglia delle Enterobacteriaceae. La differenziazione degli enterobatteri avviene in base alla loro capacità di fermentare il destrosio ed il lattosio e di produrre idrogeno solforato.  Tutti i campioni sono stati successivamente sottoposti alla prova della citocromo ossidasi. Quelli risultanti ossidativi e fermentativi alla coltura su terreno Klieger sono stati testati per confermare fossero E.Coli (ossidasi negativo). I campioni risultati ossidasi positivi sono stati invece identificati con analisi biochimica mediante gallerie utilizzando il kit Microgen TM GnA + B-ID System.
+aerobi/anaerobi facoltativi. I campioni di feci confezionati in sacchetti o barattoli o prelevati direttamente in sede necroscopica dall'intestino, sono stati disciolti in brodo di pre-arricchimento APT (acqua peptonata) e, dopo l’allestimento di tamponi, sono stati seminati su MC-Conkey Agar (terreno selettivo per enterobatteriacee) e incubati per 24-48 ore a 37°C in aerobiosi al fine di ottenere colonie isolate. Da una colonia isolata sono state realizzate colture su terreno solido Klieger Iron Agar (KIA) da utilizzare nelle successive prove di caratterizzazione (morfologica, colturale, biochimica). Il KIA costituisce un terreno differenziale impiegato principalmente come ausilio nell’identificazione di alcuni membri della famiglia delle Enterobacteriaceae. La differenziazione degli enterobatteri avviene in base alla loro capacità di fermentare il destrosio ed il lattosio e di produrre idrogeno solforato.  Tutti i campioni sono stati successivamente sottoposti alla prova della citocromo ossidasi. Quelli risultanti ossidativi e fermentativi alla coltura su terreno Klieger sono stati testati per confermare fossero E.Coli (ossidasi negativo). I campioni risultati ossidasi positivi sono stati invece identificati con analisi biochimica mediante gallerie utilizzando il kit Microgen TM GnA + B-ID System.
 
 ## Antibiogrammi
 Gli antibiogrammi sono stati eseguiti mediante la  “tecnica di diffusione in agar” descritta nel metodo di prova interno per l’esecuzione dell’antibiogramma dell’Istituto Zooprofilattico della Lombardia e dell’Emilia Romagna, redatto in conformità con le linee guida nazionali del Centro di Referenza per l’Antibiotico Resistenza (CRAB) e le linee guida internazionali del Clinical and Laboratory
 Standards Institute (CLSI). 
-E' stato utilizzato un panel di 7 antibiotici sulla base  delle Linee Guida per l'interpretazione delle prove di sensibilità ai chemioantibiotici del Centro di Referenza Nazionale per l'Antibiotico-resistenza. Le molecole selezionate sono indicate come molecole prototipo rappresentative delle diverse classi farmacologiche:
+E' stato utilizzato un panel di 7 antibiotici scelti sulla base  delle Linee Guida per l'interpretazione delle prove di sensibilità ai chemioantibiotici del Centro di Referenza Nazionale per l'Antibiotico-resistenza. Le molecole selezionate sono indicate come molecole prototipo rappresentative delle diverse classi farmacologiche:
 
 Ampicillina (AMP). Molecola prototipo di  Beta-lattamici tipo Amoxicillina, Etacillina. Antibiotico classificato come Critical I..... dal....
     
@@ -73,14 +87,16 @@ Gentamicina (GEN). Molecola prototipo di streptomicine quali Tobramicina, Apamic
 ## Analisi metagenomiche
 Le analisi metagenomiche sono state eseguite sui seguenti pools di ceppi di Escherichia coli costituiti secondo criteri di confrontabilità e rappresentatività di, area di campionamento, specie di provenienza,  e in base alla  disponibilità numerica; un ulteriore pool è costituito da ceppi di Klebsiella penumoniae di particolare interesse come patogeno nosocomiale:
 
+
+
 ## Analisi dei dati
 I dati raccolti sono stati inseriti in foglio di lavoro denominato AMR in formato googlesheet e quindi importato in ambiente R (R-CRAN)  per le successive analisi.
-AMR risulta costituito da 978 righe e 23 colonne. Si è proceduto ad eliminare 54 righe relative a  campioni per i quali non è stato possibile isolare alcun ceppo, 
-Il dataset finale  contiene quindi le informazioni relative a 924 ceppi batterici isolati da campioni di feci di diverse specie di fauna selvatica. Complessivamente non è stato possibile l'identificazione di genere per 14 ceppi di Enterobacteriacee. 
-AMR contiene i seguenti 
+AMR risulta costituito da 978 righe e 23 colonne. Si è proceduto ad eliminare 54 righe relative a  campioni per i quali non è stato possibile isolare alcun ceppo. 
+Il dataset finale  contiene quindi le informazioni relative a 924 ceppi batterici isolati da campioni di feci di diverse specie di fauna selvatica. Complessivamente non è stato possibile l'identificazione di genere per 14 ceppi di Enterobacteriacee.  AMR contiene i seguenti 
 Per le analisi sulle caratteristiche territoriali delle aree campionate è stato utili
 MR-924: che contiene tutti i ceppi isolati su terreno McConkey è come tali appartenti alla famiglia delle Enterobacteriacee indipendentemente da
 AMR-911: che contiene tutti i ceppi di Enterobacteriacee identificati per genere
+
 
 
 \newpage
@@ -90,10 +106,10 @@ AMR-911: che contiene tutti i ceppi di Enterobacteriacee identificati per genere
 
 ### Territorio
 L'attività di campionamento si è svolta tra Settembre 2017 e Dicembre 2019  in sette province della Lombardia : Bergamo, Pavia, Varese,Como, Lecco e Brescia da un totale di 224 comuni (Fig\ref{fig:fig1}). 
-Utilizzando i dati ISTAT dei censimenti,  il territorio da cui provengono i campioni risulta essere cosi caratterizzato: ---tabella 1)------ In particolare considerando i criteri di classificazione dei comuni adottati dall'ISTAT, in merito a grado di urbanizzazione, e Montanità: 415 campioni (57%) provengono da comuni a bassa urbanizzazione (aree rurali scarsamente popolate), 222 campioni (30%) da comuni a densità intermedia di popolazione e 11 campioni (1.15%) da comuni ad alta densità di popolazione; 472 campioni (65%) provengono da comuni totalmente montani, 162 (22%) da comuni in pianura e 14 campioni (2%), da aree parzialmente montane (collinari). 
+Sulla base dei  criteri di classificazione dei comuni adottati dall'ISTAT, in merito a grado di urbanizzazione, e montanità risulta che : 415 campioni (57%) provengono da comuni a bassa urbanizzazione (aree rurali scarsamente popolate), 222 campioni (30%) da comuni a densità intermedia di popolazione e 11 campioni (1.15%) da comuni ad alta densità di popolazione; 472 campioni (65%) provengono da comuni totalmente montani, 162 (22%) da comuni in pianura e 14 campioni (2%), da aree parzialmente montane (collinari). In  tabella 1 sono riportate le statistiche descrittive della caratterizzazione geografica e di popolazione dei comuni da cui provengono i campioni. 
 
 ### Fauna selvatica
-Sono stati raccolti complessivamente 729 campioni di feci da 33 differenti specie di fauna selvatica. La distribuzione del numero di campioni per gruppo  Le specie più frequentemente campionate sono il Capriolo (Capreolus capreolus) con 201 campioni ( 27.6%),  la Cornacchia grigia (Corvus cornix) con 133 (18.2%), il Cervo (Cervus elaphus) ,  con 83 campioni (11.4%), il Cinghiale (Sus scrofa) con 78 campioni (10.7%), il Camoscio (Rupicapra rupicapra) 49 campioni (6.7%) e il Muflone (Ovis aries musimon) 44 campioni (6.0%) che rappresentano complessivamente l'80% dei campioni esaminati. Il restante 20% è distribuito su un totale di 27 specie differenti (tabella 2). 
+Sono stati raccolti complessivamente 729 campioni di feci da 33 differenti specie di fauna selvatica.  Le specie più frequentemente campionate sono il Capriolo (Capreolus capreolus) con 201 campioni ( 27.6%),  la Cornacchia grigia (Corvus cornix) con 133 (18.2%), il Cervo (Cervus elaphus) ,  con 83 campioni (11.4%), il Cinghiale (Sus scrofa) con 78 campioni (10.7%), il Camoscio (Rupicapra rupicapra) 49 campioni (6.7%) e il Muflone (Ovis aries musimon) 44 campioni (6.0%) che rappresentano complessivamente l'80% dei campioni esaminati. Il restante 20% è distribuito su un totale di 27 specie differenti (tabella 2). 
 -distribuzione territoriale dei gruppi gruppi specie (usare ARM-istat IDcamp filtrati....)
 Oltre il 90% di campioni dei gruppi-specie CERVIDI, BOVIDI e SUIDI   proviene da territori classificati da ISTAT come Totalmente Montani (TM); il 75% dei campioni del gruppo CARNIVORI proviene da territori TM; l'86% dei campioni del gruppo CORVIDI proviene da territori Non Montani (NM)e il 50% dei campioni del gruppo RAPACI proviene da territori TM e il 50% da territori NM. Per tutti i gruppi specie risulta poco rappresentata la categoria territoriale Parzialmente Montano (tabella 2b)
 ISTAT sulla base della densità di popolazione per Kmq classifica i comuni in 3 classi di urbanizzazione: 1=densamente popolato, 2=mediamente popolato, 3=scarsamente popolato (rurale). La distribuzione dei campioni dei diversi gruppi specie rispetto alle caratteristiche di urbanizzazione dei comuni di provenienza riflette quanto già visto per la montanità dei territori campionati, con una più alta frequenza di campioni provenienti da territori rurali e a densità media che da comuni ad elevata densità di popolazione. In particolare dai territori a bassa urbanizzazione (rurali) proviene il 72% dei campioni del gruppo CERVIDI,  il 75% dei campioni del gruppo BOVIDI, il 67% dei campioni del gruppo SUIDI, il 70% dei campioni del gruppo CARNIVORI, il 57% dei campioni  dal gruppo CORVIDI e il 30% dal gruppo RAPACI (tabella 2c)
@@ -191,3 +207,107 @@ knitr::include_graphics("figure/fig2.png")
 
 
 
+
+\newpage
+
+### **ELENCO TABELLE** {-}
+
+\begin{table}[h]
+\label{t1}
+\centering
+\caption{Caratterizzazione dei comuni di provenienza dei campioni}
+\begin{tabular}{l|r|r|r|r|r|r|r}
+\hline
+Parametri & min & q25 & median & q75 & max & mean & sd\\
+\hline
+Superficie (Kmq) & 1.97 & 10.6 & 17.1 & 29.2 & 227 & 29.8 & 43.9\\
+\hline
+Densità di popolazione (Ab/Kmq) & 4.02 & 45.1 & 128.1 & 257.1 & 2210 & 250.7 & 357.3\\
+\hline
+Altitudine mediana & 48.00 & 185.0 & 600.0 & 1120.0 & 2650 & 773.3 & 684.6\\
+\hline
+Superficie al pascolo (ettari) & 0.09 & 11.0 & 60.0 & 170.9 & 2630 & 178.8 & 338.8\\
+\hline
+Aziende con pascolo & 1.00 & 3.0 & 8.0 & 16.0 & 425 & 12.6 & 20.3\\
+\hline
+Capi al pascolo & 2.00 & 52.0 & 133.0 & 293.0 & 8429 & 307.1 & 602.7\\
+\hline
+\end{tabular}
+\end{table}
+ 
+
+\begin{table}[h]
+\centering
+\caption{Distribuzione del numero e percentuale \% del differenti specie di fauna selvatica di origine dei campioni di feci}
+\begin{tabular}{l|l|r|r}
+\hline
+Gruppo & SPECIE & n & prop\\
+\hline
+CERVIDI & CAPRIOLO & 201 & 70.53\\
+\hline
+CERVIDI & CERVO & 83 & 29.12\\
+\hline
+CERVIDI & DAINO & 1 & 0.35\\
+\hline
+BOVIDI & CAMOSCIO & 49 & 49.49\\
+\hline
+BOVIDI & MUFLONE & 44 & 44.44\\
+\hline
+BOVIDI & STAMBECCO & 6 & 6.06\\
+\hline
+CARNIVORI & TASSO & 5 & 20.83\\
+\hline
+CARNIVORI & VOLPE & 19 & 79.17\\
+\hline
+SUIDI & CINGHIALE & 78 & 100.00\\
+\hline
+LEPRE & LEPRE & 4 & 100.00\\
+\hline
+CORVIDI & CORNACCHIA & 133 & 88.67\\
+\hline
+CORVIDI & GAZZA & 13 & 8.67\\
+\hline
+CORVIDI & GHIANDAIA & 4 & 2.67\\
+\hline
+RAPACI & ALLOCCO & 3 & 4.41\\
+\hline
+RAPACI & ASSIOLO & 2 & 2.94\\
+\hline
+RAPACI & CIVETTA & 15 & 22.06\\
+\hline
+RAPACI & CIVETTA NANA & 1 & 1.47\\
+\hline
+RAPACI & FALCO PECCHIAIOLO & 7 & 10.29\\
+\hline
+RAPACI & GHEPPIO & 13 & 19.12\\
+\hline
+RAPACI & GUFO REALE & 4 & 5.88\\
+\hline
+RAPACI & NIBBIO BRUNO & 1 & 1.47\\
+\hline
+RAPACI & POIANA & 8 & 11.76\\
+\hline
+RAPACI & SPARVIERO & 14 & 20.59\\
+\hline
+UCCELLI ACQUATICI & CIGNO REALE & 3 & 20.00\\
+\hline
+UCCELLI ACQUATICI & CORMORANO & 1 & 6.67\\
+\hline
+UCCELLI ACQUATICI & FENICOTTERO & 1 & 6.67\\
+\hline
+UCCELLI ACQUATICI & FOLAGA & 1 & 6.67\\
+\hline
+UCCELLI ACQUATICI & GABBIANO & 1 & 6.67\\
+\hline
+UCCELLI ACQUATICI & GABBIANO REALE & 1 & 6.67\\
+\hline
+UCCELLI ACQUATICI & GERMANO REALE & 7 & 46.67\\
+\hline
+ALTRI VOLATILI & FAGIANO & 3 & 50.00\\
+\hline
+ALTRI VOLATILI & PICCIONE & 2 & 33.33\\
+\hline
+ALTRI VOLATILI & STARNA & 1 & 16.67\\
+\hline
+\end{tabular}
+\end{table}
