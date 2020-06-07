@@ -11,7 +11,8 @@ output:
     number_sections: true
     fig_caption: true
 bibliography: "amrRef.bib"
-link_citations: true
+link-citations: yes
+linkcolor: blue
 ---
 
 \listoffigures
@@ -45,7 +46,7 @@ Nonostante il crescente interesse e la produzione di un notevole accumulo di evi
 A questo proposito PincoPallino (citare)  sottolinea quali sono i gap che la ricerca deve ancora colmare. In particolare.....
 
 
-Uno dei primi lavori in Italia sull’AR nella  fauna selvatica è stato condotto da Caprioli et al:(cit) su 81 campioni di feci da mammiferi selvatici (ruminanti, Marmotta) del Parco Nazionale dello Stelvio. Lo studio è stato focalizzato solo su Escherichia coli come microrganismo target. Sono stati osservati ceppi AR di E.coli in 17 dei 121 ceppi  presi in esame. I ceppi isolati hanno mostrato un profilo di multiresistenza. Gli Autori hanno concluso che i ceppi di E. coli in animali selvatici possono essere resistenti a diversi agenti antimicrobici e portatori di  plasmidi R, anche se il microbioma intestinale degli animali selvatici non è direttamente esposta agli antibiotici. Così una possibile fonte di AR in E.coli potrebbe essere quegli esseri umani e animali domestici che portano AMRB e condividono gli stessi habitat (turisti, animali domestici pascolo) di animali della fauna selvatica. 
+Uno dei primi lavori in Italia sull’AR nella  fauna selvatica è stato condotto da [@pagano1985faecal] in ruminanti selvatici e marmotte del parco Nazionale dello Stelvio, in cui su 121 campioni di feci esaminati furno individuati 17 ceppi di E.coli antibiotico-resistenti. Nel 1991   [@caprioli1991antimicrobial] su 81 campioni di feci da mammiferi selvatici (ruminanti, Marmotta) del Parco Nazionale dello Stelvio. Lo studio è stato focalizzato solo su Escherichia coli come microrganismo target. Sono stati osservati ceppi AR di E.coli in 17 dei 121 ceppi  presi in esame. I ceppi isolati hanno mostrato un profilo di multiresistenza. Gli Autori hanno concluso che i ceppi di E. coli in animali selvatici possono essere resistenti a diversi agenti antimicrobici e portatori di  plasmidi R, anche se il microbioma intestinale degli animali selvatici non è direttamente esposta agli antibiotici. Così una possibile fonte di AR in E.coli potrebbe essere quegli esseri umani e animali domestici che portano AMRB e condividono gli stessi habitat (turisti, animali domestici pascolo) di animali della fauna selvatica. 
 
 Più recentemente sono stati pubblicati nuovi lavori che riguardano la presenza di antibiotico-resistenza in feci di animali selvatici in varie regioni d'Italia con particolare riferimento alle Enterobatteriacee e in particolare E.coli come microrganismo target. (citare gli articoli)
 
