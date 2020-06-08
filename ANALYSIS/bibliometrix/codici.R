@@ -24,10 +24,10 @@ amr<-metaTagExtraction(amr, Field = "CR_AU", sep = ";", aff.disamb = TRUE)
 s<-as.data.frame(S[["AnnualProduction"]])
 names(s)<-c("Anno", "Articoli")
 
-
+library(hrbrthemes)
 s %>% 
   filter(Anno!="2020") %>% 
-ggplot( aes(x=Anno, y=Articoli,group=1))+geom_point()+geom_line()+
+ggplot( aes(x=as.numeric(as.character(Anno)), y=Articoli,group=1))+geom_point()+geom_line()+
   geom_smooth()+labs(y="N.articoli", x="Anno di pubblicazione")+
   geom_label(
     label="Tasso di crescita annuo % = 6.27", 
@@ -37,9 +37,9 @@ ggplot( aes(x=Anno, y=Articoli,group=1))+geom_point()+geom_line()+
     # label.size = 0.35,
     # color = "black",
     # fill="white"
-  )
+  )+theme_ipsum_rc()
 
-###Country del primo Autore####
+  ###Country del primo Autore####
 CO<-as.data.frame(table(results[["CO"]]))
 
 CO<-as.data.frame(table(results[[""]]))
