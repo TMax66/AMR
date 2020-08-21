@@ -4,7 +4,7 @@
 # AMR_istat origina da AMR_com dopo join con i dati dei censimenti istat (878 records)
 
 ###Dataset AMR/AMR_com/AMR_istat####
-AMR<- read_excel("~/gitProgetti/AMR-PRC2016020/ANALYSIS/AMR2x.xlsx", 
+AMR<- read_excel("AMR2x.xlsx", 
                   sheet = "AMR")
 AMR<-AMR %>%
   mutate(Specieagg=factor(Specieagg,
@@ -17,7 +17,7 @@ AMR<-AMR %>%
 names(AMR)[c(13:22)]<-c("COL", "CFT", "til","KAN",
                         "ENR", "ox", "er", "GEN", "TET", "AMP")
 AMR$x<-!duplicated(AMR$IDcamp)
-AMR_com <- read_excel("dati/AMR_dati completi dei comuni.xlsx")#carica il dataset finale
+AMR_com <- read_excel("AMR_dati completi dei comuni.xlsx")#carica il dataset finale
 AMR_com<-AMR_com %>% 
   mutate(Specieagg=factor(Specieagg,
                         levels=c("CERVIDI","sCAPRINAE","CARNIVORI","CINGHIALE",

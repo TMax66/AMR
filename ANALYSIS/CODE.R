@@ -1,5 +1,6 @@
 ####DATI E PACCHETTI####
-setwd("~/gitProgetti/AMR-PRC2016020/ANALYSIS")
+
+setwd("~/Library/Mobile Documents/com~apple~CloudDocs/gitProject/AMR/ANALYSIS")
 source('pacchetti.r')#<-carica le librerie
 source('funzioni.r')#<-carica funzioni in-built
 source('dataset.r')#<-carica lo script di preparazione dei dataset da usare per le analisi

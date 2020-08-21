@@ -1,16 +1,18 @@
 ---
-title: ""
-author: ""
-header-includes:
-    \usepackage[italian]{babel}
-    \usepackage{setspace}\doublespacing
-     
+title: ''
+author: ''
+header-includes: \usepackage[italian]{babel} \usepackage{setspace}\doublespacing
 output:
   pdf_document:
-    toc: true
-    number_sections: true
-    fig_caption: true
-bibliography: "amrRef.bib"
+    toc: yes
+    number_sections: yes
+    fig_caption: yes
+  html_document:
+    toc: yes
+    df_print: paged
+  word_document:
+    toc: yes
+bibliography: amrRef.bib
 link-citations: yes
 linkcolor: blue
 ---
@@ -19,6 +21,7 @@ linkcolor: blue
 \listoftables
 
 ### ELENCO DEI COLLABORATORI {-}
+
 * **Dr. Tranquillo Vito** U.O. 1-Responsabile scientifico del progetto.Coordinamento delle U.O., Analisi statistica dei dati fenotipici. 
 * **Dr. Fiocchi Alfredo** U.O. 1-Analisi microbiologiche e antibiogrammi.
 * **Dr. Pongolini Stefano** U.O. 2-Coordinamento U.O. e attività di analisi metagenomiche
@@ -99,15 +102,18 @@ Batteriostatico, penetra nella cellula complessata a Mg 2+ . Lega la sub-unità
 30S impedendo l’accesso degli aminoacil-tRNA al sito recettoriale A del ribosoma;I batteri di solito acquisiscono resistenza alla tetraciclina dal trasferimento orizzontale di un gene che codifica per una pompa di efflusso o una proteina di protezione ribosomiale. Le pompe Efflux espellono attivamente la tetraciclina dalla cellula, impedendo l'accumulo di una concentrazione inibente della tetraciclina nel citoplasma [@chopra2001tetracycline].  Le proteine di protezione ribosomiale interagiscono con il ribosoma e rimuovono la tetraciclina dal ribosoma, consentendo di continuare la traduzione [@connell2003ribosomal]. 
 
     
-Ceftiofur (CFT). Molecola prototipo di Cefalosporine a spettro esteso come Cefoperazone, Cefpodoxime e Cefquinome, classificate come CIA e HPCI......
+**Ceftiofur (CFT)**. Molecola prototipo di Cefalosporine a spettro esteso di 3^, 4^ e 5^ generazione come Cefoperazone, Cefpodoxime e Cefquinome, classificate dal WHO come  **Critically Important Antimicrobial**, perchè incontrano i creteri C1, C2 e C3 e **Highest Priority** perchè soddisfano i criteri di priorità P1, P2 e P3. In particolare Le cefalosporine di 3^ e più alte generazioni sono conosciute come in grado di selezionare ceppi resistenti di Salmonella spp e di Escherichia coli negli animali, e allo stesso tempo sono uno dei pochi strumenti terapeutici a disposizione per forme gravi di Salmonellosi  e infezioni da E.coli nell'uomo e in particolare nei bambini. 
+
     
-Colistina (COL). Molecole non appartenente al panel consigliato dalla linee guida in quanto particolarmente critico per l'utilizzo in umana... e' stato inserito nel panel per verificare la presenza di resistenza a questo importante antibiotico in ceppi provenienti dalla fauna selvatica come misura del grado di contaminazione degli ambienti selvatici da parte di ceppi portatori di resistenza ......
+**Colistina (COL)**. Molecole non appartenente al panel consigliato dalla linee guida in quanto particolarmente critico per l'utilizzo in umana. E' classificata dal WHO come **Critically Important Antimicrobial** e **Highest Priority**. Le polymixine, gruppo farmacologico a cui appartiene la colistina,  sono conosciute per selezionare E.coli polymixin-resistenti mediate da plasmidi. La somministrazione intravenosa di polymixina è uno dei pochi strumenti terapeutici efficaci per gravi forme di infezioni nosocomiali  da E.coli e Pseudomonas aeruginosa multi-resistenti in molti paesi, soprattutto nei pazienti in condizioni critiche.   E' stato inserito nel panel per verificare la presenza di resistenza a questo importante antibiotico in ceppi provenienti dalla fauna selvatica come misura del grado di contaminazione degli ambienti selvatici da parte di ceppi portatori di resistenza alle polymixine.
  
-Kanamicina (KAN). Molecola prototipo delle streptomicine quali Neomicina, Framicetina, classificata come CIA.....
+**Kanamicina (KAN)**. Molecola prototipo degli Aminoglicosidi tra cui le streptomicine (isolate da attinomiceti del genere Streptomyces) quali Neomicina e Framicetina.  Classificate dal WHO  **Critically Important Antimicrobial** in quanto soddisfa i criteri C1 e C2 e **Highly important** in quanto soddisfa solo P2 e P3 tra i fattori di prioritizzazione. 
+
+**Gentamicina (GEN)**. Molecola prototipo di Aminoglicosidi isolati da attinomiceti del genere Micromonospora quali Tobramicina, Apamicina, calssificata come **Critically Important Antimicrobial** in quanto soddisfa i criteri C1 e C2 e **Highly important** in quanto soddisfa solo P2 e P3 tra i fattori di prioritizzazione. 
+
     
-Enrofloxacin (ENR). Molecola prototipo dei fluorochinolonici, tra cui Danofloxacin, Ciprofloxacin, Marbofloxacin, Orbifloxacin, Pradofloxacin. Antibiotici classificati come CIA e HPCI
+**Enrofloxacin (ENR)**. Molecola prototipo dei fluorochinolonici, tra cui Danofloxacin, Ciprofloxacin, Marbofloxacin, Orbifloxacin, Pradofloxacin. Antibiotici classificati da WHO come **Critically Important Antimicrobial** e **Highest Priority** in quanto soddisfano sia i criteri d'importanza C1, C2 e C3 sia i fattori di prioritizzazione P1, P2 e P3). Sono antibiotici conosciuti per selezionare negli animali ceppi di E.coli e Salmonella spp resistenti ai chinoloni che sono tra i pochi strumenti terapeutici nel caso di gravi forme di infezioni da Salmonella e E.coli. 
     
-Gentamicina (GEN). Molecola prototipo di streptomicine quali Tobramicina, Apamicina, calssificata come CIA.......
  
 
 
@@ -117,12 +123,33 @@ Le analisi metagenomiche sono state eseguite sui seguenti pools di ceppi di Esch
 
 
 ## Analisi dei dati
-I dati raccolti sono stati inseriti in foglio di lavoro denominato AMR in formato googlesheet e quindi importato in ambiente R (R-CRAN)  per le successive analisi.
-AMR risulta costituito da 978 righe e 23 colonne. Si è proceduto ad eliminare 54 righe relative a  campioni per i quali non è stato possibile isolare alcun ceppo. 
-Il dataset finale  contiene quindi le informazioni relative a 924 ceppi batterici isolati da campioni di feci di diverse specie di fauna selvatica. Complessivamente non è stato possibile l'identificazione di genere per 14 ceppi di Enterobacteriacee.  AMR contiene i seguenti 
-Per le analisi sulle caratteristiche territoriali delle aree campionate è stato utili
-MR-924: che contiene tutti i ceppi isolati su terreno McConkey è come tali appartenti alla famiglia delle Enterobacteriacee indipendentemente da
-AMR-911: che contiene tutti i ceppi di Enterobacteriacee identificati per genere
+I dati raccolti sono stati inseriti in foglio elettronico denominato **AMR** in formato googlesheet e quindi importato in ambiente R (R-CRAN)  per le successive analisi. **AMR** risulta all'origine costituito da 978 righe e 23 colonne. Ogni riga corrisponde ad un isolato batterico sottoposto al test di sensibilità al panel di antibiotici identificati da una variabile univoca denominata **IDceppo**. La variabile **IDcamp** identifica in modo non univoco il campione di feci sottoposto ad analisi micorbiologica per l'isolamento e identificazione dei cepppi di *Enterobacteriacee*.  Si è proceduto ad eliminare 54 righe relative a  campioni per i quali non è stato possibile isolare alcun ceppo. 
+Il dataset finale  contiene quindi le informazioni relative a 924 ceppi batterici isolati da campioni di feci di diverse specie di fauna selvatica. Complessivamente non è stato possibile l'identificazione di genere per 14 ceppi di Enterobacteriacee.  Questi ceppi sono però stati considerati nell'analisi dei dati, relativamente ai profili fenotipici di rersistenza, in quanto appartenenti comunque alla famiglia delle *Enterobacteriacee*. I ceppi sono quindi caratterizzati dalle seguenti variabili utilizzate nelle successive analisi dei dati:
+
+* **SPECIE** variabile categorica che riporta la specie di provenienza dei campioni di feci. Questa variabile contiene 33 livelli differenti che comporta una eccessiva parcellizzazione dei dati con presenza di poche unità per alcune specie. Si è quindi proceduto ad aggregare le specie sulla base di considerazioni tassonomiche e ecologiche in  nove gruppi specie identificati dalla variabile **Specieaggreg**
+* **COMUNE** variabile categorica che riporta i comuni di provenienza dei campioni di feci.
+Questa variabile nel dataset orginale ha 115 valori mancanti, si è proceduto quindi a imputare i dati mancanti recuperandoli dai documenti di accompagnamento dei campioni. 
+* **Identificazione** variabile categorica che riporta il genere di appartenza dei ceppi isolati
+*  **AMP** (Ampicillina), **COL** (Colistina), **CFT** (Ceftiofur), **KAN** (Kanamicina), **ENR** (Enrofloxacin), **GEN** (Gentamicina), **TET** (Tetraciclina) : variabili dicotomiche che identificano la Sensibilità o Resistenza ai differenti antibiotici del panel. 
+
+Altre variabili presenti nel dataset ma non utilizzate per l'analisi dei dati sono: FASCETTA (identificativo,quando presente, dell'animale da cui proviene il campione di feci), DATA_PRELIEVO, DATA_SEMINA, STATO_CAMPIONE ( se fresco o congelato), til ( tilmicosina), ox (oxacillina), er (eritromicina): questi tre antibiotici sono stati tutti utilizzati durante il test di sensibilità agli antibiotici, ma come da indicazione del centro di referenza per l'antibiotico-resistenza le **Enterobatteriacee** mostrano resistenza naturale, quindi i rispettivi risultati non sono stati utilizzati per le successive analisi dei dati.
+
+Il dataset AMR ha una struttura gerarchica costituita da tre livelli: Comune, IDCamp, e IDceppo. I comuni contribuiscono con uno o più campioni di feci provenienti da diverse specie animali; da un singolo campione di feci identificato dal IDcamp, possono essere isolati da uno a più ceppi batterici appartenente alla famiglia delle enterobatteriacee identificati dal IDceppo. 
+
+Le caratteristiche dei differenti comuni di provenienza dei campioni sono state ottenute da differenti database dell'ISTAT consultabili al sito (https://www.istat.it/it/) e quindi collegate al dataset AMR_com mediante il campo COMUNE, ottenendo quindi il dataset AMR_istat, utilizzato per analizzare l'associazione tre caratteristiche ambientali-sociali dei differenti comuni e la prevalenza di animali portatori di enterobattericee resistenti ad almeno un antibiotico del panel indagato.
+Le caratteristiche dei comuni utilizzate sono: **denpop(abkmq)** (densità di popolazione espressa in abitanti per Kmq), 
+**sup(kmq)** (superficie del comune in kmq), **urb** ( grado di urbanizzazione: variabile categorica con tre livelli )
+
+
+[25] "zalt"            "altcentro(m)"    "litoraneo"       "montano"         "sup"             "urb"            
+[31] "aziende"         "capi"            "hapasc"          "sup(kmq)"        "altmin"          "altmax"         
+[37] "range"           "media"           "mediana"         "std"             "denpop(abkmq)"  
+> 
+
+
+
+
+
 
 
 
