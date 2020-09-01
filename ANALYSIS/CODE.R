@@ -168,7 +168,7 @@ ab %>%
   
 
 
-    #PREVALENZA DI WILD ANIMALS PORTATORI DI R E MR - ALL DATA 670 campioni..####
+#PREVALENZA DI WILD ANIMALS PORTATORI DI R E MR - ALL DATA 670 campioni..####
 ##....
 #dati aggregati per campione per calcolare la prevalenza di animali che hanno
 #almeno un ceppo resistente ad almeno un antibiotico

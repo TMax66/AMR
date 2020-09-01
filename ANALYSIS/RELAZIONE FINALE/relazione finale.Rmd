@@ -144,9 +144,11 @@ Le caratteristiche dei comuni utilizzate sono: **denpop(abkmq)** (densità di po
 ### Metodi statistici
 **Prevalenza animali portatori di ceppi resistenti**  Sulla base dei profili di resistenza dei singoli ceppi si è provveduto a classificare i ceppi in Suscettibili (ceppi sensibili a tutti gli antibiotici del panel) e Resistenti (ceppi sensibili ad almeno un  antibiotico del panel) e quindi a identificare i campioni di provenenienza dei ceppi classificando come campione di feci "Resistente" feci  portatori di almeno un ceppo resistente ad almeno un antibiotico del panel indagato. La prevalenza complessiva e specifica per specie dei campioni Resistenti  è stata stimata mediante il seguente modello:
 
-$$R_i \sim \text Binomial(1,p)$$
+$$R_i \sim \text Bernoulli(P)$$
 $$\text logit(p) = \alpha + \beta*Specie $$ $$\alpha \sim Normal (0, 1)$$ $$\beta \sim Normal (0,1)$$ 
-utilizzando la funzione stan_glm() del pacchetto rstanarm, da cui sono state estratte gli effetti marginali ottenendo le distribuzioni a posteriore del logit della prevalenza trasformato in probabilità mediante la funzione: 
+da cui deriva che $R_i$, cioè la resistenza ad almeno un antibiotico in almeno un ceppo isolato da un campione di feci si distribuisce secondo una distribuzione Bernoulli con probabilità P. P è modellato via trasformazione logistica da un modello lineare con parametri $\alpha$ e $\beta$. Dove $\alpha$ rappresenta l'intercetta e $\beta$ l'effetto della specie. Per questi due parametri si assume una distribuzione a priori debolmente informativa, scelta per ottimizzare il campionamento delle distribuzioni a posteriori ottenuta mediante l'algoritmo Hamiltonian Monte Carlo (HMC) utilizzando la funzione stan_glm() del pacchetto rstanarm, da cui sono state estratti gli effetti marginali ottenendo le distribuzioni a posteriore del logit della prevalenza trasformato in probabilità mediante la funzione inversa:
+$$ P_i = \frac{\exp(\alpha + \beta *x_i)}{1+\exp(\alpha + \beta *x_i)} $$ La prevalenza complessiva di campioni portatori di ceppi resistenti ad almeno un antibiotico è stata stimata utilizzando una versione del modello precendente con solo l'intercetta ( modello nullo). 
+
 
 
 * **Prevalenza di ceppi resistenti**.   Sulla base dei profili di resistenza dei singoli ceppi si è prvveduto a classificare i ceppi in * Suscettibili  (ceppi sensibili a tutti gli antibiotici del panel)
