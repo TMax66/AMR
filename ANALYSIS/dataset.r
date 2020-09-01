@@ -7,17 +7,26 @@
 AMR<- read_excel("AMR2x.xlsx", 
                   sheet = "AMR")
 AMR<-AMR %>%
-  mutate(Specieagg=factor(Specieagg,
+
+mutate(Specieagg=factor(Specieagg,
                           levels=c("CERVIDI","sCAPRINAE","CARNIVORI","CINGHIALE",
                                    "LEPRE","CORVIDI" ,"RAPACI","UCCELLI ACQUATICI",
                                    "ALTRI VOLATILI"))) %>% 
-  mutate(Specieagg=recode(Specieagg,"sCAPRINAE"="BOVIDI", "CINGHIALE"="SUIDI"))
+mutate(Specieagg=recode(Specieagg,"sCAPRINAE"="BOVIDI", "CINGHIALE"="SUIDI"))
 
 
 names(AMR)[c(13:22)]<-c("COL", "CFT", "til","KAN",
-                        "ENR", "ox", "er", "GEN", "TET", "AMP")
+                     "ENR", "ox", "er", "GEN", "TET", "AMP")
+
 AMR$x<-!duplicated(AMR$IDcamp)
-AMR_com <- read_excel("AMR_dati completi dei comuni.xlsx")#carica il dataset finale
+AMR$na <- ifelse(is.na(AMR$identificazione ),  "cancellare",
+                 ifelse(AMR$identificazione== "Non identificabile", "cancellare", "tenere"))
+
+
+
+
+AMR_com <- read_excel("~/Library/Mobile Documents/com~apple~CloudDocs/gitProject/AMR/ANALYSIS/dati/AMR_dati completi dei comuni.xlsx")#carica il dataset finale
+
 AMR_com<-AMR_com %>% 
   mutate(Specieagg=factor(Specieagg,
                         levels=c("CERVIDI","sCAPRINAE","CARNIVORI","CINGHIALE",

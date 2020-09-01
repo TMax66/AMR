@@ -88,7 +88,7 @@ AMR_istat %>%
 ###Fauna Selvatica#####
 
 #numero campioni di feci
-AMR %>% 
+AMR_com %>% 
   filter(x=="TRUE") %>%
   group_by(IDcamp) %>% 
   tally() %>% summarise(n=sum(n))
@@ -97,13 +97,18 @@ AMR %>%
 length(unique(as.character(AMR$SPECIE)))##c'è un NA da togliere....
 
 #tabella 2
-AMR%>% 
+AMR_com%>% 
   filter(x=="TRUE") %>% 
-group_by("Gruppo"=Specieagg, SPECIE) %>% 
-  tally() %>% 
-  mutate(prop=round(100*prop.table(n), 2)) %>% 
+  group_by("Gruppo"=Specieagg, SPECIE) %>% 
+  summarise(n=n()) %>% 
+  mutate(prop=round(100*(n/671),  2)) %>% 
+  adorn_totals(where = "row") %>% 
   kable("latex") %>% 
   kable_styling()
+  
+  
+  
+  
 #tabella 2b<-campioni by montanità
 AMR_istat %>% 
   mutate(urb=ifelse(urb==1, "densPop alta",
