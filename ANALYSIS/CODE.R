@@ -287,22 +287,22 @@ MRhpd<- cbind("Specieagg"=mr[, 1], MRhpd[,6:8]) %>%
 
 #bayesian density
 #grafico bayesian density (figura 3)
-mprev <-mPrev %>% 
-  mutate(prev=ifelse(MRSelv=="Sr", 0, 1)) 
-
-modp<-stan_glm(prev~ Specieagg, data=mprev,family=binomial(link="logit"))
-
-t<-emmeans(modp, ~Specieagg)
-p<-gather_emmeans_draws(t)
-
-p %>% 
-  mutate("prev"=logit2prob(.value))%>% 
-  ggplot(aes(x = prev, y=Specieagg,fill = Specieagg)) +
-  geom_density_ridges(panel_scaling=TRUE)+
-  theme_ridges()+
-  scale_fill_brewer(palette = 7) +
-  theme_ridges() + theme(legend.position = "NULL")+labs(x="Prevalenza MR Intervalli di Credibilità Bayesiani 95%",y="")
-                     
+# mprev <-mPrev %>% 
+#   mutate(prev=ifelse(MRSelv=="Sr", 0, 1)) 
+# 
+# modp<-stan_glm(prev~ Specieagg, data=mprev,family=binomial(link="logit"))
+# 
+# t<-emmeans(modp, ~Specieagg)
+# p<-gather_emmeans_draws(t)
+# 
+# p %>% 
+#   mutate("prev"=logit2prob(.value))%>% 
+#   ggplot(aes(x = prev, y=Specieagg,fill = Specieagg)) +
+#   geom_density_ridges(panel_scaling=TRUE)+
+#   theme_ridges()+
+#   scale_fill_brewer(palette = 7) +
+#   theme_ridges() + theme(legend.position = "NULL")+labs(x="Prevalenza MR Intervalli di Credibilità Bayesiani 95%",y="")
+#                      
 #PREVALENZA R E MR IN WILDLIFE BY TERRITORIO E SPECIE####
 #USO DATASET ComAMRsel 640 RIGHE
   #-prevalenza  R by URB                                                    

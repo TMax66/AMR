@@ -1,7 +1,7 @@
 ---
 title: ''
 author: ''
-header-includes: \usepackage[italian]{babel} \usepackage{setspace}\doublespacing
+header-includes: \usepackage[italian]{babel} \usepackage{setspace}\doublespacing 
 output:
   pdf_document:
     toc: yes
@@ -25,8 +25,8 @@ linkcolor: blue
 * **Dr. Tranquillo Vito** U.O. 1-Responsabile scientifico del progetto.Coordinamento delle U.O., Analisi statistica dei dati fenotipici. 
 * **Dr. Fiocchi Alfredo** U.O. 1-Analisi microbiologiche e antibiogrammi.
 * **Dr. Pongolini Stefano** U.O. 2-Coordinamento U.O. e attività di analisi metagenomiche
-* **Dr. Bolzoni Luca** U.O. 2-Attività analisi metagenomiche e analisi dati
-* **Dr. Erika Scaltriti** U.O. 2-Attività analisi metagenomiche e analisi dati
+* **Dr. Bolzoni Luca** U.O. 2-Attività analisi metagenomiche 
+* **Dr. Erika Scaltriti** U.O. 2-Attività analisi metagenomiche 
 * **Dr. Bertoletti Irene** U.O. 3-Analisi Microbiologiche e antibiogrammi
 * **Dr. Alessandro Bianchi** U.O. 3-Analisi Microbiologiche e antibiogrammi
 * **Dr. Loris Alborali** U.O. 4-Analsi genomiche ceppi Ceftiofur resistenti
@@ -145,19 +145,30 @@ Le caratteristiche dei comuni utilizzate sono: **denpop(abkmq)** (densità di po
 **Prevalenza animali portatori di ceppi resistenti**  Sulla base dei profili di resistenza dei singoli ceppi si è provveduto a classificare i ceppi in Suscettibili (ceppi sensibili a tutti gli antibiotici del panel) e Resistenti (ceppi sensibili ad almeno un  antibiotico del panel) e quindi a identificare i campioni di provenenienza dei ceppi classificando come campione di feci "Resistente" feci  portatori di almeno un ceppo resistente ad almeno un antibiotico del panel indagato. La prevalenza complessiva e specifica per specie dei campioni Resistenti  è stata stimata mediante il seguente modello:
 
 $$R_i \sim \text Bernoulli(P)$$
-$$\text logit(p) = \alpha + \beta*Specie $$ $$\alpha \sim Normal (0, 1)$$ $$\beta \sim Normal (0,1)$$ 
-da cui deriva che $R_i$, cioè la resistenza ad almeno un antibiotico in almeno un ceppo isolato da un campione di feci si distribuisce secondo una distribuzione Bernoulli con probabilità P. P è modellato via trasformazione logistica da un modello lineare con parametri $\alpha$ e $\beta$. Dove $\alpha$ rappresenta l'intercetta e $\beta$ l'effetto della specie. Per questi due parametri si assume una distribuzione a priori debolmente informativa, scelta per ottimizzare il campionamento delle distribuzioni a posteriori ottenuta mediante l'algoritmo Hamiltonian Monte Carlo (HMC) utilizzando la funzione stan_glm() del pacchetto rstanarm, da cui sono state estratti gli effetti marginali ottenendo le distribuzioni a posteriore del logit della prevalenza trasformato in probabilità mediante la funzione inversa:
-$$ P_i = \frac{\exp(\alpha + \beta *x_i)}{1+\exp(\alpha + \beta *x_i)} $$ La prevalenza complessiva di campioni portatori di ceppi resistenti ad almeno un antibiotico è stata stimata utilizzando una versione del modello precendente con solo l'intercetta ( modello nullo). 
+$$\text logit(p) = \alpha + \beta*Specie $$ $$\alpha \sim Normal (0, 2.5)$$ $$\beta \sim Normal (0,2.5)$$ 
+da cui deriva che $R_i$, cioè la resistenza ad almeno un antibiotico in almeno un ceppo isolato da un campione di feci si distribuisce secondo una distribuzione Bernoulli con probabilità P. P è modellato via trasformazione logistica da un modello lineare con parametri $\alpha$ e $\beta$. Dove $\alpha$ rappresenta l'intercetta e $\beta$ l'effetto della specie. Per questi due parametri si assume una distribuzione a priori debolmente informativa, scelta per ottimizzare il campionamento delle distribuzioni a posteriori ottenuta mediante l'algoritmo Hamiltonian Monte Carlo (HMC), utilizzando quattro catene random com 2000 iterazioni di cui 1000 di warnup. Per il campionamento è stato utilizzando la funzione stan_glm() del pacchetto rstanarm, da cui sono state estratti gli effetti marginali ottenendo le distribuzioni a posteriore del logit della prevalenza trasformato in probabilità mediante la funzione inversa:
+$$ P_i = \frac{\exp(\alpha + \beta *x_i)}{1+\exp(\alpha + \beta *x_i)} $$ La prevalenza complessiva di campioni portatori di ceppi resistenti ad almeno un antibiotico è stata stimata utilizzando una versione del modello precendente con solo l'intercetta ( modello nullo). Le stime della prevelenza sono quindi espresse come mediana delle distribuzione a posteriori di P e i rispettivi intervalli di credibilità calcolati al 95% utilizzando i percentili 2.5 e 97.5 delle distribuzioni a posteriori di P, e rappresentati graficamente mediante density-ridges plot. 
 
+**Variabilità della Prevalenza di animali portatori di ceppi resitenti e caratteristiche ambientali**
+Esistono evidenze in letteratura che la presenza (prevalenza/occorrenza ) di animali selvatici portatori di ceppi AR  è da attribuire alla contaminazione ambientale e/o all'interazione tra specie doemstiche e selvatiche.  Per 648 campioni è risultato disponibile il dato geografico e la caratterizzazione territoriale ISTAT. Su questi campioni è stato  quindi possibile  valutare la relazione tra prevalenza di capi selvatici portatori di ceppi R  (e di ceppi MR) e i caratteri territoriali di provenienza dei campioni. Per questo tipo di valutazione sono stati esclusi i dati riferiti ai gruppi-specie meno numerosi: LEPRE, UCCELLI ACQUATICI e ALTRI VOLATILI. Dopo esclusione di questi gruppi specie, il dataset comprende informazioni su 603 campioni. I dati Istat disponibili, utilizzati, per esplorare l'associazione tra prevalenza di capi portatori di AR e indicatori di "contaminazione" derivati dai singoli comuni sono: densità di popolazione ( da cui deriva la classificazione del grado di urbanizzazione dell'ISTAT), superficie kmq del comune, altitudine , superfice a pascolo, numero di capi domestici al pascolo , n.aziende al pascolo.
+Per questo studio è stato adattato un modello bayesiano multilevel specificato a priori mediante un Direct Acyclic Graph (DAG)  che ha permesso di chiarire la dipendenza delle variabili e scegliere quelle da inserire nel modello (Fig\ref{fig:figB}). Formalmente il modello è il seguente:
 
+$$R_i \sim Bernoulli(P)$$
+$$\text logit(p) = \alpha_{\text{Comune}} + \beta*X $$ $$\alpha_{\text{Comune}} \sim Normal (\alpha, \sigma)$$  $$ \alpha \sim Normal(0, 1) $$ $$\sigma \sim \text{HalfCauchy(0,1)} $$    $$\beta \sim Normal (0, 1)$$
+Dove X rappresenta la matrice dei predittori e $\alpha_{\text{Comune}}$ definisce la variabile con intercetta variabile.  Tutte le variabili quantitative predittorie (Urbanizzazione e Pascolo) sono state standardizzate in accordo a quanto suggerisce Gelman, sia per una maggior interpretabilità dei coefficienti sia per una migliore performance del motore HCMCM che per una miglior utilizzo delle prior del modello. Si è proceduto ad adattare diversi modelli utilizzando i diversi predittori esplorando termini d'interazione ragionevoli dal punto di vista epidemiologico. Il confronto tra i i diversi modelli mediante le metriche dei criteri d'informazione LOO ( Leave-One-Out Cross Validation) ha permesso di selezionare il modello con maggior potere informativo. Le stime dei parametri del modello sono state ottenute mediante campionamento con l'algoritmo Hamiltonian Monte Carlo utilizzando quattro catene, con 4000 iterazioni di cui 2000 di warmup ( escluse dopo il campionamento). Per questo modello è stato utilizzato il pacchetto brms come interfaccia del linguaggio STAN in ambiente R. 
 
-* **Prevalenza di ceppi resistenti**.   Sulla base dei profili di resistenza dei singoli ceppi si è prvveduto a classificare i ceppi in * Suscettibili  (ceppi sensibili a tutti gli antibiotici del panel)
+**Prevalenza di ceppi resistenti e profili fenotipici di resistenza ai differenti antibiotici**.   Sulla base dei profili di resistenza dei singoli ceppi si è provveduto a classificare i ceppi in * Suscettibili  (ceppi sensibili a tutti gli antibiotici del panel)
 * Resistenti (ceppi sensibili fino a 2 antibiotici del panel)
-* Multiresistenti (ceppi sensibili a 3 o più antibiotici del panel)
+* Multiresistenti (ceppi sensibili a 3 o più antibiotici del panel). 
 
-* **Biodiversità dei profili fenotipici di resistenza**
+La stima della distribuzione a posteriori della prevalenza di ceppi delle diverse classi è stata ottenuta mediante adattamento di un modello bayesiano analogo a quello utilizzato per la stima della prevalenza di animali portatori di ceppi resistenti a cui si rimanda per i dettagli. 
 
+Per ogni singolo antibiotico è stata stimata la distribuzione a posteriori della prevalenza di ceppi resistenti complessivamente  e nelle differenti specie di provenienza dei campioni, adattando modelli bayesiani analogo al precedente a cui si rimanda. 
 
+Le distribuzioni a posteriori delle prevalenze sono state quindi riassunte mediante il calcolo della mediana e dei percentili 2.5  e 97.5, definendo quindi un intervallo di credibilità bayesiano del 95%.
+
+**Biodiversità dei profili fenotipici di resistenza**
+Sulla base delle resistenze ai differenti antibiotici del panel i ceppi sono stati caratterizzati per il loro profilo di resistenza indicato da una stringa costituita dall'abbreviazione di tre lettere degli antibiotici resistenti. Ad esempio la stringa AMP-TET-COL indica un ceppo batterico con fenotipo di resistenza a Ampicillina, Tetraciclina, e Colistina. I differenti ceppi sono stati quindi aggregati per fenotipo e per gruppo-specie di provenienza dei ceppi e analizzati mediante metodi di analisi della biodiversità calcolando quattro misure di diversità legate alle misure di entropia generalizzata di Rényi. Questo approccio è  descritto da Mathe et al (rif) dove l'esponenziale dell'entropia di Rényi ($\text{D}\alpha$) stima il numero effettivo di specie (in questo caso di fenotipi di resistenza) e $\alpha$ rappresenta un parametro di scala, lungo il quale la richezza del profilo e l'abbondanza relativa dei profili sono pesate in modo differente. I quattro indici di diversità che sono stati confrontati tra i comparti rappresentati dai gruppi-specie si trovano a diversi livelli di $\alpha$: a D0, profile richness (PR), rappresenta una semplice conta dei differenti profili di resistenza che ignora la relativa abbondanza e quindi considera profili rari e comuni allo stesso modo; a log(D1), Shannon entropy (SEn) rappresenta la probabilità che due ceppi estratti a caso hanno lo stesso profilo di resistenza; a 1/D2 Simposon diversity(SD) è l'abbondanza relativa di ogni profilo e a 1/D$\infty$ Berger-Parker diversity(BP) che rappresenta la proporzione dei profili più comuni nel campione.
 
 
 \newpage
@@ -185,8 +196,8 @@ Complessivamente sono stati isolati 978 ceppi batterici, di cui 911 identificati
 Sono stati eseguiti 910 antibiogrammi. Complessivamente 392 ceppi (43%) sono risultati Suscettibili (S) al panel di antibiotici testati ; 423 (46%) i ceppi Resistenti (R)  fino ad un massimo di 2 antibiotici e infine 95 (10%) ceppi sono risultati Multiresistenti (MR), con resistenza a 3 o più antibiotici. La distribuzione del numero di resistenze al panel di antibiotici per isolato (Antibiogram length) mostra una decisa distribuzione asimmetrica (fig.2-hist). 
 
 
-## PREVALENZA DI CEPPI ANTIBIOTICO-RESISTENTI E MULTI-RESISTENTI NELLA FAUNA SELVATICA
-Complessivamente su 671 campioni di feci di fauna selvatica da cui è stato  isolato almeno un ceppo di Enterobacteriacee e su cui è stato eseguito l'antibiogramma, 421 hanno almeno un ceppo resistente ad uno o più  antibiotici del panel indagato, pari ad una Prevalenza complessiva (Overall Prevalence) del 63% (ICBayesiano: 59-66%). Nei CORVIDI si osserva la prevalenza più elevata (80%), mentre nei  BOVIDI la più bassa (37%). A causa della bassa numerosità campionaria si osservano stime con incertezza molto ampia nei gruppi : LEPRE, ALTRI VOLATILI, UCCELLI ACQUATICI, CARNIVORI e RAPACI. (fig.3)
+## PREVALENZA DI CEPPI ANTIBIOTICO-RESISTENTI (E MULTI-RESISTENTI....verificare) NELLA FAUNA SELVATICA
+Complessivamente su 670 campioni di feci di fauna selvatica da cui è stato  isolato almeno un ceppo di Enterobacteriacee e su cui è stato eseguito l'antibiogramma, 421 hanno almeno un ceppo resistente ad uno o più  antibiotici del panel indagato, pari ad una Prevalenza complessiva (Overall Prevalence) del 63% (ICBayesiano: 59-66%). Nei CORVIDI si osserva la prevalenza più elevata (80%), mentre nei  BOVIDI la più bassa (37%). A causa della bassa numerosità campionaria si osservano stime con incertezza molto ampia nei gruppi : LEPRE, ALTRI VOLATILI, UCCELLI ACQUATICI, CARNIVORI e RAPACI. (fig.3)
 
 Su 670 campioni di feci, 92 presentano almeno un ceppo MULTI-RESISTENTE (numero di resistenze >= a 3), pari ad una prevalenza del 14% (95%BCI:11%-16%). La prevalenza di animali selvatici portatori di ceppi multiresistenti varia da un minimo del 4% nel gruppo UCCELLI ACQUATICI ad un massimo del 37% nella LEPRE. La bassa numerosità dei campioni di alcuni gruppi specie rende le stime molto incerte(fig.4) 
 
@@ -225,7 +236,7 @@ AL contrario i gruppi specie BOVIDI, SUIDI, CARNIVORI, LEPRE, UCCELLI ACQUATICI 
 Le popolazione di CORVIDI e RAPACI mostrano un sovrapponibile profilo di diversità intermedio rispetto a quello di dominanza dei CERVIDI e di evenness degli altri gruppi-specie. 
 
 
-#interazione selvatici-domestici? dati di sondrio confronto (da fare)
+
 
     
 Caratterizzazione genomica dei ceppi ceftiofur-resistenti
@@ -257,6 +268,10 @@ La resistenza dei ceppi isolati al Ceftiofur è risultata poco frequente (prev..
 knitr::include_graphics("figure/pubblicazioni.png")
 ```
 
+```{r echo=FALSE, figB, fig.align = "center",out.width = '70%', fig.cap="DAG-Direct Acyclic Graph: secondo il modello qui specificato, la probabilità di Resistenza è dipendente dalla Specie di provenienza dei campioni, dalla superificie del comune dedicata al Pascolo e dal grado di Urbanizzazione. Sia la Specie che frequenta un determinato comune  che il Pascolo sono dipendeni dal grado di Urbanizzazione. Specie e Pascolo sono indipendenti condizionalmente al grado di Urbanizzazione."}
+
+knitr::include_graphics("figure/dag.png")
+```
 
 
 ```{r echo=FALSE, fig1, fig.align = "center",out.width = '80%', fig.cap="Comuni di provenienza dei campioni"}
@@ -298,7 +313,7 @@ Capi al pascolo & 2.00 & 52.0 & 133.0 & 293.0 & 8429 & 307.1 & 602.7\\
 \end{table}
  
 
-\begin{table}[!h] 
+\begin{table}[!ht] 
 \centering
 \caption{Distribuzione del numero di campioni di feci in base alle differenti specie di fauna selvatica di origine, raggruppati per il gruppo-specie di appartenenza}
 \label{tab:tab2}

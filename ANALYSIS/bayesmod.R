@@ -26,25 +26,47 @@ ggcorr(ComAMRsel[, c(5,9,10,11,12,13,14,15,16,17,18,19,21)], geom = "text")
       drop_na(densPop)  
      
   
-      library(dagitty)
+library(dagitty)
     
-    WildRes<-dagitty( "dag{    
+WildRes<-dagitty( "dag{    
                      
-             
-             Urbanizzazione->WR
+             Specie->R
+             Pascolo->R
+             Urbanizzazione->R
              Urbanizzazione->Specie
              Urbanizzazione->Pascolo
-             Specie->WR
-             Pascolo->WR
+             
                      }")
     
     
     plot(graphLayout(WildRes))
     
-    impliedConditionalIndependencies(WildRes)    
+   impliedConditionalIndependencies(WildRes)    
     
     
-    
+#############BAYES MULTILEVEL MODEL WITH BRMS#######
+library(brms)
+myprior <-  c(set_prior("normal(0, 0.5)", class = "Intercept"),
+              set_prior("cauchy(0, 1)", class = "sd"))
+
+mod <- brm(R ~ 1 + (1|comune) + Specieagg + pascolo + densPop + Specieagg*pascolo,
+           data = x, family = bernoulli, chains = 4, iter = 4000, warmup = 1000, cores = 4)
+   
+mod2 <- brm(R ~ 1 + (1|comune) + Specieagg + pascolo + densPop,
+              data = x, family = bernoulli, chains = 4, iter = 4000, warmup = 1000, cores = 4)
+
+mod3 <- brm(R ~ 1 + (1|comune) + Specieagg + pascolo + Specieagg*pascolo, 
+            data = x, family = bernoulli, chains = 4, iter = 4000, warmup = 1000, cores = 4)
+
+      
+library(see)
+library(bayestestR)
+
+plot(p_direction(mod))
+
+   
+   
+#######BAYES MODEL WITH RETHINKING PACKG#############   
     lista_dati<-list(
       WildlifeR=x$R,
       Pascolo=x$pascolo,
@@ -127,6 +149,7 @@ ggcorr(ComAMRsel[, c(5,9,10,11,12,13,14,15,16,17,18,19,21)], geom = "text")
           bp~dlnorm(0, 0.1),
           bPSp~dlnorm(0,0.1),
           ##parte del multilevel model 
+          
           a[comune]~dnorm(0,0.5),##adaptive prior
           sigma_g~dexp(7)#hyoerprior
         ),data=lista_datiML , chains = 5, iter=10000,  cores=4, 
@@ -196,3 +219,4 @@ Prediction %>%
 Prediction %>% 
   ggplot(aes(x=pascolo, y=R))+
   geom_point(aes(y=Prevalence))+facet_grid(~Specieagg)
+#####################################################################

@@ -8,3 +8,4 @@ logit2prob <- function(logit){
   prob <- odds / (1 + odds)
   return(prob)
 }
+
