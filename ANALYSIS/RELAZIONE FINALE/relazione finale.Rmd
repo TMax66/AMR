@@ -1,7 +1,7 @@
 ---
 title: ''
 author: ''
-header-includes: \usepackage[italian]{babel} \usepackage{setspace}\doublespacing 
+header-includes: \usepackage[italian]{babel} \usepackage{setspace}\doublespacing \usepackage{float}
 output:
   pdf_document:
     toc: yes
@@ -181,26 +181,24 @@ $\alpha$ rappresenta un parametro di scala, lungo il quale la richezza del profi
 
 ### Territorio
 L'attività di campionamento si è svolta tra Settembre 2017 e Dicembre 2019  in sette province della Lombardia : Bergamo, Pavia, Varese,Como, Lecco e Brescia da un totale di 224 comuni (Fig\ref{fig:fig1}). 
-Sulla base dei  criteri di classificazione dei comuni adottati dall'ISTAT, in merito a grado di urbanizzazione, e montanità risulta che : 415 campioni (57%) provengono da comuni a bassa urbanizzazione (aree rurali scarsamente popolate), 222 campioni (30%) da comuni a densità intermedia di popolazione e 11 campioni (1.15%) da comuni ad alta densità di popolazione; 472 campioni (65%) provengono da comuni totalmente montani, 162 (22%) da comuni in pianura e 14 campioni (2%), da aree parzialmente montane (collinari). In  tabella \ref{tab:tab1} sono riportate le statistiche descrittive della caratterizzazione geografica e di popolazione dei comuni da cui provengono i campioni. 
+Sulla base dei  criteri di classificazione dei comuni adottati dall'ISTAT, in merito a grado di urbanizzazione, e montanità risulta che : 415 campioni (57%) provengono da comuni a bassa urbanizzazione (aree rurali scarsamente popolate), 222 campioni (30%) da comuni a densità intermedia di popolazione e 11 campioni (1.15%) da comuni ad alta densità di popolazione; 472 campioni (65%) provengono da comuni totalmente montani, 162 (22%) da comuni in pianura e 14 campioni (2%), da aree parzialmente montane (collinari). Questi risultati sono riferiti ad un totale di 648 campioni provenienti da comuni per i quali era disponibile il dato ISTAT. In  tabella \ref{tab:tab1} sono riportate le statistiche descrittive della caratterizzazione geografica e di popolazione dei comuni da cui provengono i campioni. 
 
 ### Fauna selvatica
-Sono stati raccolti complessivamente 671 campioni di feci da 33 differenti specie di fauna selvatica.  Le specie più frequentemente campionate sono il Capriolo (Capreolus capreolus) con 201 campioni ( 27.6%),  la Cornacchia grigia (Corvus cornix) con 133 (18.2%), il Cervo (Cervus elaphus) ,  con 83 campioni (11.4%), il Cinghiale (Sus scrofa) con 78 campioni (10.7%), il Camoscio (Rupicapra rupicapra) 49 campioni (6.7%) e il Muflone (Ovis aries musimon) 44 campioni (6.0%) che rappresentano complessivamente l'80% dei campioni esaminati. Il restante 20% è distribuito su un totale di 27 specie differenti (tab \ref{tab:tab2})
+Sono stati raccolti complessivamente 671 campioni di feci da 33 differenti specie di fauna selvatica.  Le specie più frequentemente campionate sono il Capriolo (Capreolus capreolus) con 191 campioni ( 28.5%),  la Cornacchia grigia (Corvus cornix) con 122 (18.2%), il Cervo (Cervus elaphus) ,  con 80 campioni (11.9%), il Cinghiale (Sus scrofa) con 76 campioni (11.3%), il Camoscio (Rupicapra rupicapra) 46 campioni (6.9%) e il Muflone (Ovis aries musimon) 43 campioni (6.4%) che rappresentano complessivamente più dell'80% dei campioni esaminati. Il restante 20% è distribuito su un totale di 27 specie differenti descritte in tabella \ref{tab:tab2}.
 
--distribuzione territoriale dei gruppi specie (usare ARM-istat IDcamp filtrati....)
-Oltre il 90% di campioni dei gruppi-specie CERVIDI, BOVIDI e SUIDI   proviene da territori classificati da ISTAT come Totalmente Montani (TM); il 75% dei campioni del gruppo CARNIVORI proviene da territori TM; l'86% dei campioni del gruppo CORVIDI proviene da territori Non Montani (NM)e il 50% dei campioni del gruppo RAPACI proviene da territori TM e il 50% da territori NM. Per tutti i gruppi specie risulta poco rappresentata la categoria territoriale Parzialmente Montano (tabella 2b)
-ISTAT sulla base della densità di popolazione per Kmq classifica i comuni in 3 classi di urbanizzazione: 1=densamente popolato, 2=mediamente popolato, 3=scarsamente popolato (rurale). La distribuzione dei campioni dei diversi gruppi specie rispetto alle caratteristiche di urbanizzazione dei comuni di provenienza riflette quanto già visto per la montanità dei territori campionati, con una più alta frequenza di campioni provenienti da territori rurali e a densità media che da comuni ad elevata densità di popolazione. In particolare dai territori a bassa urbanizzazione (rurali) proviene il 72% dei campioni del gruppo CERVIDI,  il 75% dei campioni del gruppo BOVIDI, il 67% dei campioni del gruppo SUIDI, il 70% dei campioni del gruppo CARNIVORI, il 57% dei campioni  dal gruppo CORVIDI e il 30% dal gruppo RAPACI (tabella 2c)
+Oltre il 90% di campioni dei gruppi-specie CERVIDI, BOVIDI e SUIDI   proviene da territori classificati da ISTAT come Totalmente Montani; il 75% dei campioni del gruppo CARNIVORI proviene da territori Totalmente Montani; l'86% dei campioni del gruppo CORVIDI proviene da territori Non Montani e il 50% dei campioni del gruppo RAPACI proviene da territori Totalemnte Montani e il 50% da territori Non Montani. Per tutti i gruppi specie risulta poco rappresentata la categoria territoriale Parzialmente Montano (P) (tabella \ref{tab:tab2b}). ISTAT sulla base della densità di popolazione per Kmq classifica i comuni in 3 classi di urbanizzazione: 1=densamente popolato, 2=mediamente popolato, 3=scarsamente popolato (rurale). La distribuzione dei campioni dei diversi gruppi specie rispetto alle caratteristiche di urbanizzazione dei comuni di provenienza riflette quanto già visto per la montanità dei territori campionati, con una più alta frequenza di campioni provenienti da territori rurali e a densità media che da comuni ad elevata densità di popolazione. In particolare dai territori a bassa urbanizzazione (rurali) proviene il 72% dei campioni del gruppo CERVIDI,  il 75% dei campioni del gruppo BOVIDI, il 67% dei campioni del gruppo SUIDI, il 70% dei campioni del gruppo CARNIVORI, il 57% dei campioni  dal gruppo CORVIDI e il 30% dal gruppo RAPACI (tabella \ref{tab:tab2c})
 
 
 ### Esami microbiologici
-Complessivamente sono stati isolati 978 ceppi batterici, di cui 911 identificati come appartenenti alla famiglia delle Enterobacteriacee. Escherichia coli (E.coli) rappresenta il 67.6% dei ceppi isolati, il restante 32% dei ceppi è ditruibuito su un totale di 14 generi differenti ( tabella 3). Per 67 ceppi non si è giunti all'identificazione basata sulle prove biochimiche di genere. Per questi ceppi non si è proceduto ad ulteriore approfondimenti diagnostici ma sono stati comunque archiviati in glicerolo e congelatore.
+Dai 671 campioni di feci analizzati sono stati isolati  911 ceppi batterici identificati come appartenenti alla famiglia delle Enterobacteriacee. Escherichia coli (E.coli) rappresenta il 67.6% dei ceppi isolati, il restante 32% dei ceppi è distruibuito su un totale di 14 generi differenti ( tabella \ref{tab:micro}). Per 67 ceppi non si è giunti all'identificazione basata sulle prove biochimiche di genere. Per questi ceppi non si è proceduto ad ulteriore approfondimenti diagnostici ma sono stati comunque archiviati in brodo con glicerolo e quindi congelatati.
 
 
 ### Antibiogrammi
-Sono stati eseguiti 910 antibiogrammi. Complessivamente 392 ceppi (43%) sono risultati Suscettibili (S) al panel di antibiotici testati ; 423 (46%) i ceppi Resistenti (R)  fino ad un massimo di 2 antibiotici e infine 95 (10%) ceppi sono risultati Multiresistenti (MR), con resistenza a 3 o più antibiotici. La distribuzione del numero di resistenze al panel di antibiotici per isolato (Antibiogram length) mostra una decisa distribuzione asimmetrica (fig.2-hist). 
+Sono stati eseguiti 911 antibiogrammi. Complessivamente 392 ceppi (43%) sono risultati Suscettibili (S) al panel di antibiotici testati ; 423 (46%) i ceppi Resistenti (R)  fino ad un massimo di 2 antibiotici e infine 95 (10%) ceppi sono risultati Multiresistenti (MR), con resistenza a 3 o più antibiotici. La distribuzione del numero di resistenze al panel di antibiotici per isolato (Antibiogram length) è sintetizzata in figura \ref{fig:fig2}
 
 
 ## PREVALENZA DI CEPPI ANTIBIOTICO-RESISTENTI (E MULTI-RESISTENTI....verificare) NELLA FAUNA SELVATICA
-Complessivamente su 670 campioni di feci di fauna selvatica da cui è stato  isolato almeno un ceppo di Enterobacteriacee e su cui è stato eseguito l'antibiogramma, 421 hanno almeno un ceppo resistente ad uno o più  antibiotici del panel indagato, pari ad una Prevalenza complessiva (Overall Prevalence) del 63% (ICBayesiano: 59-66%). Nei CORVIDI si osserva la prevalenza più elevata (80%), mentre nei  BOVIDI la più bassa (37%). A causa della bassa numerosità campionaria si osservano stime con incertezza molto ampia nei gruppi : LEPRE, ALTRI VOLATILI, UCCELLI ACQUATICI, CARNIVORI e RAPACI. (fig.3)
+Complessivamente su 671 campioni di feci di fauna selvatica da cui è stato  isolato almeno un ceppo di _Enterobacteriacee_ e su cui è stato eseguito l'antibiogramma, 421 hanno almeno un ceppo resistente ad uno o più  antibiotici del panel indagato, pari ad una Prevalenza complessiva (Overall Prevalence) del 63% (95% IC: 59-66%). Nei CORVIDI si osserva la prevalenza più elevata (80%), mentre nei  BOVIDI la più bassa (37%). A causa della bassa numerosità campionaria si osservano stime con incertezza molto ampia nei gruppi : LEPRE, ALTRI VOLATILI, UCCELLI ACQUATICI, CARNIVORI e RAPACI. (fig.3)
 
 Su 670 campioni di feci, 92 presentano almeno un ceppo MULTI-RESISTENTE (numero di resistenze >= a 3), pari ad una prevalenza del 14% (95%BCI:11%-16%). La prevalenza di animali selvatici portatori di ceppi multiresistenti varia da un minimo del 4% nel gruppo UCCELLI ACQUATICI ad un massimo del 37% nella LEPRE. La bassa numerosità dei campioni di alcuni gruppi specie rende le stime molto incerte(fig.4) 
 
@@ -287,12 +285,12 @@ knitr::include_graphics("figure/fig1.png")
 knitr::include_graphics("figure/fig2.png")
 ```
 
-\pagebreak
+\newpage
 
 **ELENCO TABELLE** 
 
  
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \caption{Caratterizzazione dei comuni di provenienza dei campioni}
 \label{tab:tab1}
@@ -316,7 +314,7 @@ Capi al pascolo & 2.00 & 52.0 & 133.0 & 293.0 & 8429 & 307.1 & 602.7\\
 \end{table}
  
 
-\begin{table}[!ht] 
+\begin{table}[H] 
 \centering
 \caption{Distribuzione del numero di campioni di feci in base alle differenti specie di fauna selvatica di origine, raggruppati per il gruppo-specie di appartenenza}
 \label{tab:tab2}
@@ -389,6 +387,108 @@ ALTRI VOLATILI & PICCIONE & 1 & 0.15\\
 ALTRI VOLATILI & STARNA & 1 & 0.15\\
 \hline
 Total & - & 671 & 100.04\\
+\hline
+\end{tabular}
+\end{table}
+
+\newpage
+
+\begin{table}[H]
+\centering
+\caption{Distribuzione del numero di campioni di feci in base alle caratteristiche territoriali di provenienza per i differenti gruppo-specie di appartenenza (NM= Non Montani, P= Parzialmente Montani, T= Totalmente Montani)}
+\label{tab:tab2b}
+\begin{tabular}{l|r|r|r|r}
+Specieagg & NM & P & T & Total\\
+\hline
+CERVIDI & 3 & 5 & 248 & 256\\
+\hline
+BOVIDI & 0 & 4 & 88 & 92\\
+\hline
+CARNIVORI & 5 & 0 & 15 & 20\\
+\hline
+SUIDI & 3 & 1 & 68 & 72\\
+\hline
+LEPRE & 1 & 0 & 2 & 3\\
+\hline
+CORVIDI & 118 & 1 & 19 & 138\\
+\hline
+RAPACI & 25 & 0 & 25 & 50\\
+\hline
+UCCELLI ACQUATICI & 3 & 3 & 6 & 12\\
+\hline
+ALTRI VOLATILI & 4 & 0 & 1 & 5\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Distribuzione del numero di campioni di feci in base al grado di urbanizzazione  dei comuni di provenienza per i differenti gruppo-specie di appartenenza (UA= Urbanizzazione ALta, UM= Urbanizzazione Media, UB= Urbanizzazione Bassa)}
+\label{tab:tab2c}
+\begin{tabular}{l|r|r|r}
+\hline
+Gruppo Specie & UA & UM & UB\\
+\hline
+CERVIDI & 1 & 70 & 185\\
+\hline
+BOVIDI & 4 & 19 & 69\\
+\hline
+CARNIVORI & 0 & 6 & 14\\
+\hline
+SUIDI & 0 & 24 & 48\\
+\hline
+LEPRE & 0 & 1 & 2\\
+\hline
+CORVIDI & 1 & 58 & 79\\
+\hline
+RAPACI & 1 & 34 & 15\\
+\hline
+UCCELLI ACQUATICI & 3 & 6 & 3\\
+\hline
+ALTRI VOLATILI & 1 & 4 & 0\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Distribuzione del numero e proprorzione di ceppi della famiglia Enterobacteriacee suddivise per genere, isolati dai 671 campioni di feci analizzati)}
+\label{tab:micro}
+\begin{tabular}{l|r|r}
+\hline
+identificazione & n & prop(\%)\\
+\hline
+E.coli & 616 & 67.62\\
+\hline
+Klebsiella & 61 & 6.70\\
+\hline
+Enterobacter & 56 & 6.15\\
+\hline
+Serratia & 40 & 4.39\\
+\hline
+Pantoea & 39 & 4.28\\
+\hline
+Hafnia & 36 & 3.95\\
+\hline
+Proteus & 14 & 1.54\\
+\hline
+Acinetobacter & 13 & 1.43\\
+\hline
+Citrobacter & 12 & 1.32\\
+\hline
+Yersinia & 7 & 0.77\\
+\hline
+Cronobacter & 6 & 0.66\\
+\hline
+Salmonella & 5 & 0.55\\
+\hline
+Providencia & 4 & 0.44\\
+\hline
+Pseudomonas & 1 & 0.11\\
+\hline
+Shigella & 1 & 0.11\\
+\hline
+Totale & 911 & 100.00\\
 \hline
 \end{tabular}
 \end{table}

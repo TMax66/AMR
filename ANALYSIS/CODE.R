@@ -109,7 +109,7 @@ AMR_com%>%
   
   
   
-#tabella 2b<-campioni by montanità
+#tabella 2b<-campioni by montanità####
 AMR_istat %>% 
   mutate(urb=ifelse(urb==1, "densPop alta",
                     ifelse(urb==2,"densPop media", "densPop scarsa" ))) %>% 
@@ -129,6 +129,7 @@ AMR_istat %>%
   summarise(N=n()) %>% 
   pivot_wider(names_from = urb, values_from = N, values_fill = list(N=0)) %>% 
   janitor::adorn_totals(where = "col")  %>% 
+  select("Gruppo Specie"=Specieagg, "UA"= "densPop alta", "UM" = "densPop media", "UB" = "densPop scarsa") %>% 
   kable("latex") %>% 
   kable_styling()
 
@@ -142,7 +143,7 @@ AMR %>%
   group_by(identificazione) %>% 
   filter(identificazione!="Non identificabile") %>% 
   tally() %>% arrange(desc(n)) %>% 
-  mutate(prop=round(100*prop.table(n),2)) %>% 
+  mutate("prop(%)"=round(100*prop.table(n),2)) %>% 
   adorn_totals(where = c("row")) %>% 
   kable("latex" ) %>% 
   kable_styling()
@@ -168,7 +169,7 @@ ab %>%
   
 
 
-#PREVALENZA DI WILD ANIMALS PORTATORI DI R E MR - ALL DATA 670 campioni..####
+#PREVALENZA DI WILD ANIMALS PORTATORI DI R E MR - ALL DATA 671 campioni..####
 ##....
 #dati aggregati per campione per calcolare la prevalenza di animali che hanno
 #almeno un ceppo resistente ad almeno un antibiotico
@@ -224,7 +225,8 @@ Rhpd<- cbind("Specieagg"=mr[, 1], Rhpd[,6:8]) %>%
 #grafico bayesian density (figura 3)
 prev <-Prev %>% 
   mutate(prev=ifelse(RSelv=="S", 0, 1)) 
-  
+
+modn <- stan_glm(prev~ 1, data=prev,family=binomial(link="logit"))
 modp<-stan_glm(prev~ Specieagg, data=prev,family=binomial(link="logit"))
 
 t<-emmeans(modp, ~Specieagg)
