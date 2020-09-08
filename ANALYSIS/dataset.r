@@ -6,6 +6,7 @@
 ###Dataset AMR/AMR_com/AMR_istat####
 AMR<- read_excel("AMR2x.xlsx", 
                   sheet = "AMR")
+AMR <- AMR %>% filter(IDcamp!= "596")
 AMR<-AMR %>%
 
 mutate(Specieagg=factor(Specieagg,
@@ -26,6 +27,10 @@ AMR$na <- ifelse(is.na(AMR$identificazione ),  "cancellare",
 
 
 AMR_com <- read_excel("~/Library/Mobile Documents/com~apple~CloudDocs/gitProject/AMR/ANALYSIS/dati/AMR_dati completi dei comuni.xlsx")#carica il dataset finale
+
+AMR_com <- AMR_com %>% filter(IDcamp!= "596")
+
+
 
 AMR_com<-AMR_com %>% 
   mutate(Specieagg=factor(Specieagg,

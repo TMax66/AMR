@@ -80,7 +80,8 @@ AMR_istat %>%
 AMR_istat %>% 
   filter(x=="TRUE") %>% 
   group_by(montano) %>% 
-  summarise(n())
+  summarise(n()) %>% 
+  adorn_totals()
 
 
 
@@ -101,7 +102,7 @@ AMR_com%>%
   filter(x=="TRUE") %>% 
   group_by("Gruppo"=Specieagg, SPECIE) %>% 
   summarise(n=n()) %>% 
-  mutate(prop=round(100*(n/671),  2)) %>% 
+  mutate(prop=round(100*(n/670),  2)) %>% 
   adorn_totals(where = "row") %>% 
   kable("latex") %>% 
   kable_styling()
@@ -186,6 +187,7 @@ ab %>%
 
 #step1
 Psel<-AMR %>% 
+  # filter(x=="TRUE") %>%
   filter(identificazione!="Non identificabile") %>% 
   dplyr::select(-15,-18,-19)
 Psel[,13:19]<-apply(Psel[,13:19], 2 , funz)
@@ -212,34 +214,73 @@ options(digits=2)
 mr<-Prev%>%
   select(Specieagg, RSelv)%>%
   group_by(Specieagg, RSelv) %>%
-  drop_na(RSelv) %>%
+  #drop_na(RSelv) %>%
   tally() %>%
   pivot_wider(names_from = RSelv, values_from = n, values_fill = list(n = 0)) %>% 
   data.frame() %>% 
-  mutate(N=rowSums(.[2:3],na.rm = TRUE)) 
+  mutate(N=rowSums(.[2:3],na.rm = TRUE)) %>% 
+  adorn_totals()
+  
+
+
 options(digits=2)
 Rhpd <- binom.bayes(
   x = mr$R, n = mr$N, type = "highest", conf.level = 0.95, tol = 1e-9)
-Rhpd<- cbind("Specieagg"=mr[, 1], Rhpd[,6:8]) %>% 
-  arrange(desc(mean))
+# Rhpd<- cbind("Specieagg"=mr[, 1], Rhpd[,6:8]) %>% 
+#   arrange(desc(mean))
+
+Rhpd<- cbind("Specieagg"=mr[, 1], Rhpd) 
+
+R <- Rhpd %>% 
+  arrange(desc(mean)) %>% 
+  mutate(Specieagg = unique(factor(Specieagg)))
+
+R %>% 
+  select(-method, "R"=x, "N"=n, "Prevalenza"=mean, "inf-HPD"=lower, "sup-HPD"=upper, -shape1, -shape2, -sig) %>% 
+  kable("latex") %>% 
+  kable_styling()
+  
+
+z <- binom.bayes.densityplot(R)
+z+facet_wrap(~Specieagg)+xlab("Prevalenza")
+
 #grafico bayesian density (figura 3)
-prev <-Prev %>% 
-  mutate(prev=ifelse(RSelv=="S", 0, 1)) 
+# prev <-Prev %>% 
+#   mutate(prev=ifelse(RSelv=="S", 0, 1)) 
+# 
+# modn <- stan_glm(prev~ 1, data=prev,family=binomial(link="logit"))
+# modp<-stan_glm(prev~ Specieagg, data=prev,family=binomial(link="logit"))
+# 
+# t<-emmeans(modp, ~Specieagg)
+# 
+# t %>% as.data.frame() %>% 
+#   mutate(emmean=invlogit(emmean),
+#              lower.HPD = invlogit(lower.HPD),
+#              upper.HPD = invlogit(upper.HPD)) %>% 
+#   select("Gruppo-Specie" = Specieagg, "Prevalenza"=emmean, "HPD-inf"= lower.HPD, "HPD-sup"= upper.HPD ) %>% 
+#   arrange(desc(Prevalenza)) %>% 
+#   kable("latex" ) %>% 
+#   kable_styling()
 
-modn <- stan_glm(prev~ 1, data=prev,family=binomial(link="logit"))
-modp<-stan_glm(prev~ Specieagg, data=prev,family=binomial(link="logit"))
 
-t<-emmeans(modp, ~Specieagg)
-p<-gather_emmeans_draws(t)
 
-p %>% 
-mutate("prev"=logit2prob(.value))%>% 
-  ggplot(aes(x = prev, y=Specieagg,fill = Specieagg)) +
-  geom_density_ridges(panel_scaling=TRUE)+
-  theme_ridges()+
-  scale_fill_brewer(palette = 7) +
-  theme_ridges() + theme(legend.position = "NULL")+labs(x="Prevalenza Intervalli di Credibilità Bayesiani 95%",
-                                                        y="")
+# mod<-glm(prev~ Specieagg, data=prev,family=binomial(link="logit"))
+
+
+# p<-gather_emmeans_draws(t)
+
+# p %>% 
+# mutate("prev"=invlogit(.value))%>% 
+#   group_by(Specieagg) %>% 
+#   summarise(m=mean(prev),
+#             sd=sd(prev))
+#   ggplot(aes(x = prev, y=Specieagg,fill = Specieagg)) +
+#   geom_density_ridges(panel_scaling=FALSE)+
+#   theme_ridges()+
+#   scale_fill_brewer(palette = 7) +
+#   theme_ridges() + theme(legend.position = "NULL")+labs(x="Prevalenza",
+#                                                         y="")
+
 #prevalenza multi-resistenza###################
 
 mPsel<-AMR %>% 
@@ -266,7 +307,7 @@ pAMR<-AMR %>%
 #step6
 mPrev<-pAMR %>% 
   left_join(mPsel) %>% 
-  mutate(MRSelv=ifelse(Res==0,"Sr","MR"))
+  mutate(MRSelv=ifelse(MRes==0,"Sr","MR"))
 
 binom.bayes(
   x = 92, n = 670)
@@ -283,10 +324,20 @@ Mr<-mPrev%>%
 options(digits=2)
 MRhpd <- binom.bayes(
   x = Mr$MR, n = Mr$N, type = "highest", conf.level = 0.95, tol = 1e-9)
-MRhpd<- cbind("Specieagg"=mr[, 1], MRhpd[,6:8]) %>% 
-  arrange(desc(mean))
+MRhpd<- cbind("Specieagg"=mr[, 1], MRhpd)
+
+MR <- MRhpd %>% 
+  arrange(desc(mean)) %>% 
+  mutate(Specieagg = unique(factor(Specieagg)))
+
+MR %>% 
+  select(-method, "MR"=x, "N"=n, "Prevalenza"=mean, "inf-HPD"=lower, "sup-HPD"=upper, -shape1, -shape2, -sig) %>% 
+  kable("latex") %>% 
+  kable_styling()
 
 
+z <- binom.bayes.densityplot(MR)
+z+facet_wrap(~Specieagg)+xlab("Prevalenza")
 #bayesian density
 #grafico bayesian density (figura 3)
 # mprev <-mPrev %>% 
@@ -1344,3 +1395,5 @@ plot(density(d2$ARi))
 # 
 # library(GGally)
 # ggpairs(d2[,13:30])
+
+
