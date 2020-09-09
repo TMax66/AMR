@@ -162,9 +162,19 @@ La stessa procedura è stata utilizzata per stimare la prevalenza di campioni di
 Esistono evidenze in letteratura che la presenza (prevalenza/occorrenza ) di animali selvatici portatori di ceppi AR  è da attribuire alla contaminazione ambientale e/o all'interazione tra specie doemstiche e selvatiche.  Per 648 campioni è risultato disponibile il dato geografico e la caratterizzazione territoriale ISTAT. Su questi campioni è stato  quindi possibile  valutare la relazione tra prevalenza di capi selvatici portatori di ceppi R  (e di ceppi MR) e i caratteri territoriali di provenienza dei campioni. Per questo tipo di valutazione sono stati esclusi i dati riferiti ai gruppi-specie meno numerosi: LEPRE, UCCELLI ACQUATICI e ALTRI VOLATILI. Dopo esclusione di questi gruppi specie, il dataset comprende informazioni su 603 campioni. I dati Istat disponibili, utilizzati, per esplorare l'associazione tra prevalenza di capi portatori di AR e indicatori di "contaminazione" derivati dai singoli comuni sono: densità di popolazione ( da cui deriva la classificazione del grado di urbanizzazione dell'ISTAT), superficie kmq del comune, altitudine , superfice a pascolo, numero di capi domestici al pascolo , n.aziende al pascolo.
 Per questo studio è stato adattato un modello bayesiano multilevel specificato a priori mediante un Direct Acyclic Graph (DAG)  che ha permesso di chiarire la dipendenza delle variabili e scegliere quelle da inserire nel modello (Fig\ref{fig:figB}). Formalmente il modello è il seguente:
 
-$$R_i \sim Bernoulli(P)$$
+$$R_i \sim Bernoulli(p)$$
 $$\text logit(p) = \alpha_{\text{Comune}} + \beta*X $$ $$\alpha_{\text{Comune}} \sim Normal (\alpha, \sigma)$$  $$ \alpha \sim Normal(0, 1) $$ $$\sigma \sim \text{HalfCauchy(0,1)} $$    $$\beta \sim Normal (0, 1)$$
-Dove X rappresenta la matrice dei predittori e $\alpha_{\text{Comune}}$ definisce la variabile con intercetta variabile.  Tutte le variabili quantitative predittorie (Urbanizzazione e Pascolo) sono state standardizzate in accordo a quanto suggerisce Gelman, sia per una maggior interpretabilità dei coefficienti sia per una migliore performance del motore HCMCM che per una miglior utilizzo delle prior del modello. Si è proceduto ad adattare diversi modelli utilizzando i diversi predittori esplorando termini d'interazione ragionevoli dal punto di vista epidemiologico. Il confronto tra i i diversi modelli mediante le metriche dei criteri d'informazione LOO ( Leave-One-Out Cross Validation) ha permesso di selezionare il modello con maggior potere informativo. Le stime dei parametri del modello sono state ottenute mediante campionamento con l'algoritmo Hamiltonian Monte Carlo utilizzando quattro catene, con 4000 iterazioni di cui 2000 di warmup ( escluse dopo il campionamento). Per questo modello è stato utilizzato il pacchetto brms [@brms] come interfaccia del linguaggio STAN [@gelman2015stan] implementato in R nel pacchetto rstan [@rstan]
+Dove X rappresenta la matrice dei predittori e $\alpha_{\text{Comune}}$ definisce la variabile con intercetta variabile.  Tutte le variabili quantitative predittorie (Urbanizzazione e Pascolo) sono state standardizzate in accordo a quanto suggerisce  [@gelman2020regression], sia per una maggior interpretabilità dei coefficienti sia per una migliore performance del motore HCMCM che per una miglior utilizzo delle prior del modello. Le stime dei parametri del modello sono state ottenute mediante campionamento con l'algoritmo Hamiltonian Monte Carlo utilizzando quattro catene, con 4000 iterazioni di cui 1000 di warmup ( escluse dopo il campionamento). Per questo modello è stato utilizzato il pacchetto brms [@brms] come interfaccia del linguaggio STAN [@gelman2015stan] implementato in R nel pacchetto rstan [@rstan]. Si è proceduto ad adattare  i seguenti modelli utilizzando i diversi predittori esplorando termini d'interazione ragionevoli dal punto di vista epidemiologico:
+
+* modello 1 : $logit(p) =  \alpha_{\text{Comune}} + \beta_{\text{Specie}} + \beta_{\text{Pascolo}} + \beta_{\text{Urbanizzazione}}$
+
+* modello 2 : $logit(p) =  \alpha_{\text{Comune}} + \beta_{\text{Specie}} + \beta_{\text{Pascolo}} + \beta_{\text{Urbanizzazione}} + \beta_{\text{Specie*Pascolo}}$
+
+* modello 3 : $logit(p) =  \alpha_{\text{Comune}} + \beta_{\text{Specie}} + \beta_{\text{Pascolo}} + \beta_{\text{Urbanizzazione}} + \beta_{\text{Specie*Pascolo}} + \beta_{\text{Specie*Urbanizzazione}}$
+ 
+Il confronto tra i diversi modelli è stato effettuato mediante l'utilizzo delle tecniche di cross-validazione K-fold cross-validation con K= 10  subset di dati[@gelman2020regression].  
+
+
 
 **Prevalenza di ceppi resistenti e profili fenotipici di resistenza ai differenti antibiotici**.   Sulla base dei profili di resistenza dei singoli ceppi si è provveduto a classificare i ceppi in 
 
@@ -198,10 +208,6 @@ Sono stati raccolti complessivamente 670 campioni di feci da 33 differenti speci
 Oltre il 90% di campioni dei gruppi-specie CERVIDI, BOVIDI e SUIDI   proviene da territori classificati da ISTAT come Totalmente Montani; il 75% dei campioni del gruppo CARNIVORI proviene da territori Totalmente Montani; l'86% dei campioni del gruppo CORVIDI proviene da territori Non Montani e il 50% dei campioni del gruppo RAPACI proviene da territori Totalemnte Montani e il 50% da territori Non Montani. Per tutti i gruppi specie risulta poco rappresentata la categoria territoriale Parzialmente Montano (P) (tabella \ref{tab:tab2b}). ISTAT sulla base della densità di popolazione per Kmq classifica i comuni in 3 classi di urbanizzazione: 1=densamente popolato, 2=mediamente popolato, 3=scarsamente popolato (rurale). La distribuzione dei campioni dei diversi gruppi specie rispetto alle caratteristiche di urbanizzazione dei comuni di provenienza riflette quanto già visto per la montanità dei territori campionati, con una più alta frequenza di campioni provenienti da territori rurali e a densità media che da comuni ad elevata densità di popolazione. In particolare dai territori a bassa urbanizzazione (rurali) proviene il 72% dei campioni del gruppo CERVIDI,  il 75% dei campioni del gruppo BOVIDI, il 67% dei campioni del gruppo SUIDI, il 70% dei campioni del gruppo CARNIVORI, il 57% dei campioni  dal gruppo CORVIDI e il 30% dal gruppo RAPACI (tabella \ref{tab:tab2c})
 
 
-
-
-
-
 ### Esami microbiologici
 Dai 671 campioni di feci analizzati sono stati isolati  911 ceppi batterici identificati come appartenenti alla famiglia delle Enterobacteriacee. Escherichia coli (E.coli) rappresenta il 67.6% dei ceppi isolati, il restante 32% dei ceppi è distruibuito su un totale di 14 generi differenti ( tabella \ref{tab:micro}). Per 67 ceppi non si è giunti all'identificazione basata sulle prove biochimiche di genere. Per questi ceppi non si è proceduto ad ulteriore approfondimenti diagnostici ma sono stati comunque archiviati in brodo con glicerolo e quindi congelatati.
 
@@ -218,20 +224,20 @@ La variabilità tra i gruppi specie è particolarmente ampia: nei CORVIDI si oss
 
 Su 670 campioni di feci, 92 presentano almeno un ceppo MULTI-RESISTENTE (numero di resistenze >= a 3), pari ad una prevalenza del 14% (95% HPD:11%-16%). La variabilità tra gruppi specie risulta molto ampia: la prevalenza di animali selvatici portatori di ceppi multiresistenti varia da un minimo del 4% nel gruppo UCCELLI ACQUATICI ad un massimo dell'88% nella LEPRE. La bassa numerosità dei campioni di alcuni gruppi specie rende le stime molto incerte. In figura \ref{fig:fprev2}  è riportata per ogni gruppo specie la distribuzione a posteriori della prevalenza di animali carrier di ceppi multi-resistenti e in tabella (\ref{tab:prevalenze2}) le stime puntuali e i valori dell'intervallo di massima densità delle stime (95% High Probability Density HPD ).
 
+### Associazione tra la prevalenza di animali carrier e caratteristiche ambientali
 
-Per 648 campioni è risultato disponibile il dato geografico e la caratterizzazione #territoriale ISTAT. Su questi campioni è stato possibile quindi valutare la relazione #tra prevalenza di capi selvatici portatori di ceppi R  e di ceppi MR e i caratteri #territoriali di provenienza dei campioni. Per questo tipo di valutazione sono stati #esclusi i dati riferiti ai gruppi specie meno numerosi: LEPRE, UCCELLI ACQUATICI , #ALTRI VOLATILI. Dopo esclusione di questi gruppi specie, il dataset comprendeva informazioni su 628 campioni. Si è proceduto quindi ad eliminare i record con valori Missing sulle seguenti variabili: R (resistenza Si NO), densità di popolazione,e altidudine, ottenendo un dataset di 603 campioni su cui si è proceduto ad effettuare l'analisi dei dati.
+Il confronto tra modelli ha permesso di selezionare il modello 2 con le migliori performance in termini di predittività rispetto agli altri due modelli come indicato dai risultati della K-fold cross-validation riportati in tabella \ref{tab:kfold}. 
+Secondo il modello, la probabilità di un animale di essere un carrier di ceppi di _Enterobacteriacee_ antibiotico resistenti aumenta all'aumentare della superficie dedicata al pascolo dei comuni in misura differente a seconda del gruppo-specie di appartenenza (interazione tra specie e pascolo) e in misura ridotta anche dall'aumentare della densità di popolazione per kmq come misura del grado di urbanizzazione dei comuni.
 
-I dati Istat disponibili per esplorare l'associazione tra prevalenza di capi portatori di AR e indicatori di "contaminazione" derivati dai singoli comuni sono: densità di popolazione ( da cui deriva la classificazione del grado di urbanizzazione dell'ISTAT), superficiemkq del comune, altitudine ( correlato alla densità di popolazione e alla classificazione di Montanità dell'ISTAR), superfice a pascolo, numero di capi domestici al pascolo (correlato alla superficie a pascolo), n.aziende al pascolo. 
 
-Esistono evidenze in letteratura che la presenza (prevalenza/occorrenza ) di animali selvatici portatori di ceppi AR o MAR è da attribuire alla contaminazione ambientale e/o all'interazione tra specie doemstiche e selvatiche. Viene quindi ipotizzata una relazione inversa tra indicatori indiretti di contaminazione ambientale (urbanizzazione, densità di popolazione)e d'interazione tra specie (esempio aree dedicate al pascolo, n. capi al pascolo....ecc... alpeggio...)
 
-Tutte le variabili quantitative predittorie sono state standardizzate in accordo a quanto suggerisce Gelman, sia per una maggior interpretabilità dei coefficienti sia per una migliore perfromance del motore HCMCM che per una miglior utilizzo delle prior del modello....
 
-La specificazione del modello si è basata su una valutuazione DAG, che ha permesso di chiarire la dipendenza delle variabili e sceigliere quelle da inserire nel modello.
+Il modello adattato indica  che la probabilità che un animale sia portatore di almeno un ceppo di Enterobacteriacie resistente ad almeno un antibiotico del 
+panel indagato aumenta all'aumentare della dimensione dell'area adibita a pascolo condizionalmente al gruppo specie di appartenenza (interazione tra i predittori gruppo-specie e pascolo) e all'aumentare del grado di urbanizzazione (misurato in densità di popolazione per kmq) dei comuni aumenta la probabilità di animali carrier di ceppi resistenti. In tabella x sono riportate le stime a posteriori dei coefficienti di regressione e i rispettivi intervalli di credibilità. 
 
-Mediante il calcolo di WAIC e PSIS ( criteri d'informazione) è' stato selezionato un modello multilevel con la variabile "comune"" con random effect (cluster di osservazioni) come predittori: Specie, Specie*Pascolo, Pascolo, Urbanizzazione. Le viariabili quantitative sono state preventivamente standardizzate.
 
-Dal modello risulta che la probabilità che  un animale della fauna selvatica sia portatore di almeno un ceppo di Enterobacteriacie resistente ad almeno un ab del panel indagato aumenta all'aumentare della dimensione dell'area adibita a pascolo condizionalmente al gruppo specie di appartenenza, e tende ad aumentare all'aumentare della densità di popolazione per Kmq con indicatore di urbanizzazione del territorio. In tabella x sono riportate le stime a posteriori dei coefficienti di regressione e i rispettivi intervalli di credibilità. 
+
+
 
 ## CARATTERIZZAZIONE FENOTIPICA DELL'ANTIBIOTICO-RESISTENZA DEGLI ISOLATI BATTERICI
 La maggior parte dei ceppi (oltre l'80%) ha mostrato resistenza nei confronti di AMP (392 ceppi 42.47%) e TET (342 ceppi 37.05%) in cui si osserva una ampia variabilità nei differenti gruppi di Specie (Fig\ref{fig:fig2}).
@@ -587,7 +593,22 @@ UCCELLI ACQUATICI & 0 & 12 & 0.04 & 0.00 & 0.15\\
 \end{tabular}
 \end{table}
 
-
+\begin{table}[H]
+\centering
+\caption{Confronto tra modelli mediante K-fold cross-validation}
+\label{tab:kfold}
+\begin{tabular}{l|r|r|r|r|r|r}
+\hline
+  & elpd\_diff & se\_diff & elpd\_kfold & se\_elpd\_kfold & p\_kfold & se\_p\_kfold\\
+\hline
+mod2 & 0.0 & 0.0 & -346 & 13 & NA & NA\\
+\hline
+mod1 & -3.1 & 4.9 & -350 & 12 & NA & NA\\
+\hline
+mod3 & -14.8 & 4.3 & -361 & 14 & NA & NA\\
+\hline
+\end{tabular}
+\end{table}
 
 
 \newpage

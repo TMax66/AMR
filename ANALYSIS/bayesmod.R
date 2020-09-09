@@ -4,7 +4,7 @@ ggcorr(ComAMRsel[, c(5,9,10,11,12,13,14,15,16,17,18,19,21)], geom = "text")
 
 #standardizzo i predittori...trasformo in integer le variabili categoriche
 
-    x<-ComAMRsel %>% 
+x<-ComAMRsel %>% 
       filter(!Specieagg %in% c("LEPRE", "UCCELLI ACQUATICI","ALTRI VOLATILI")) %>%
       droplevels() %>% 
       rename(densPop=`denpop(abkmq)`) %>% 
@@ -49,22 +49,29 @@ library(brms)
 myprior <-  c(set_prior("normal(0, 0.5)", class = "Intercept"),
               set_prior("cauchy(0, 1)", class = "sd"))
 
-mod <- brm(R ~ 1 + (1|comune) + Specieagg + pascolo + densPop + Specieagg*pascolo,
-           data = x, family = bernoulli, chains = 4, iter = 4000, warmup = 1000, cores = 4)
-   
-mod2 <- brm(R ~ 1 + (1|comune) + Specieagg + pascolo + densPop,
-              data = x, family = bernoulli, chains = 4, iter = 4000, warmup = 1000, cores = 4)
 
-mod3 <- brm(R ~ 1 + (1|comune) + Specieagg + pascolo + Specieagg*pascolo, 
+mod1 <- brm(R ~ 1 + (1|comune) + Specieagg + pascolo + densPop,
             data = x, family = bernoulli, chains = 4, iter = 4000, warmup = 1000, cores = 4)
 
-      
+mod2 <- brm(R ~ 1 + (1|comune) + Specieagg + pascolo + densPop + Specieagg*pascolo,
+            data = x, family = bernoulli, chains = 4, iter = 4000, warmup = 1000, cores = 4)
+
+mod3 <- brm(R ~ 1 + (1|comune) +  Specieagg + pascolo + densPop + Specieagg*pascolo + Specieagg*densPop, 
+            data = x, family = bernoulli, chains = 4, iter = 4000, warmup = 1000, cores = 4)
+
+loo(mod1, mod2, mod3)
+
+kfm <- kfold(mod1, K=10)
+kfm2 <- kfold(mod2,K=10)
+kfm3 <- kfold(mod3, K=10)
+
+     
 library(see)
 library(bayestestR)
 
 plot(p_direction(mod))
 
-   
+library()
    
 #######BAYES MODEL WITH RETHINKING PACKG#############   
     lista_dati<-list(
