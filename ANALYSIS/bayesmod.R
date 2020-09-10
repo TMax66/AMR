@@ -65,7 +65,12 @@ kfm <- kfold(mod1, K=10)
 kfm2 <- kfold(mod2,K=10)
 kfm3 <- kfold(mod3, K=10)
 
-     
+options(digits = 2)
+kf <- loo_compare(kfm, kfm2, kfm3)
+
+kable(kf, "latex") 
+  
+
 library(see)
 library(bayestestR)
 
