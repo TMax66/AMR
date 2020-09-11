@@ -69,7 +69,27 @@ options(digits = 2)
 kf <- loo_compare(kfm, kfm2, kfm3)
 
 kable(kf, "latex") 
-  
+
+####visualizzazione mod2####
+library(bayesplot)
+library(hrbrthemes)
+
+mcmc_areas(
+  mod2,
+  regex_pars = "b_",
+  prob = 0.95, # 80% intervals
+  prob_outer = 1, # 99%
+  point_est = "median",
+  area_method = "equal height"
+) +
+  geom_vline(xintercept = 0, color = "red", alpha = 0.6, lwd = .8, linetype = "dashed") 
+
+
+
+conditions <- make_conditions(mod2, "Specieagg")
+p <- conditional_effects(mod2, "pascolo:Specieagg")
+
+plot(p)[[1]]+facet_wrap("effect2__")
 
 library(see)
 library(bayestestR)
@@ -216,8 +236,8 @@ library()
     
      fitted<-link(MLInt)
      
-     WRes.mean<-data.frame("Prevalence"=apply(fitted, 2, mean))
-     WRes.PI<-data.frame(t(apply(fitted, 2, PI, prob=0.97)))
+     WRes.mean<-data.frame("Prevalence"=apply(f, 2, mean))
+     WRes.PI<-data.frame(t(apply(f, 2, PI, prob=0.97)))
 
      Prediction<-cbind(x, WRes.mean, WRes.PI)
      

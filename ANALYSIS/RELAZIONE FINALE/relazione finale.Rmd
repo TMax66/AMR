@@ -227,6 +227,9 @@ Su 670 campioni di feci, 92 presentano almeno un ceppo MULTI-RESISTENTE (numero 
 ### Associazione tra la prevalenza di animali carrier e caratteristiche ambientali
 
 Il confronto tra modelli ha permesso di selezionare il modello 2 con le migliori performance in termini di predittività rispetto agli altri due modelli come indicato dai risultati della K-fold cross-validation riportati in tabella \ref{tab:kfold}. 
+Le stime dei coefficienti di regressione e gli intervalli di credibilità sono riassunti in tabella 
+
+
 Secondo il modello, la probabilità di un animale di essere un carrier di ceppi di _Enterobacteriacee_ antibiotico resistenti aumenta all'aumentare della superficie dedicata al pascolo dei comuni in misura differente a seconda del gruppo-specie di appartenenza (interazione tra specie e pascolo) e in misura ridotta anche dall'aumentare della densità di popolazione per kmq come misura del grado di urbanizzazione dei comuni.
 
 
