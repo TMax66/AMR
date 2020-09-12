@@ -81,8 +81,9 @@ mcmc_areas(
   prob_outer = 1, # 99%
   point_est = "median",
   area_method = "equal height"
-) +
-  geom_vline(xintercept = 0, color = "red", alpha = 0.6, lwd = .8, linetype = "dashed") 
+) + theme_ipsum()+
+  geom_vline(xintercept = 0, color = "red", alpha = 0.6, lwd = .8, linetype = "dashed") +
+  xlab("stima posteriori dei coefficienti di regressione ")
 
 
 
