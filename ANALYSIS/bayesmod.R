@@ -79,6 +79,7 @@ kable(kf,booktabs = T,
 
 L <- list(mod1, mod2, mod3, kf)
 save(L, file="mod2.Rdata")
+
 ####visualizzazione mod2####
 library(bayesplot)
 library(hrbrthemes)
@@ -97,12 +98,22 @@ mcmc_areas(
   xlab("stima posteriori dei coefficienti di regressione ")
 
 
-
+library(brms)
 
 p <- conditional_effects(mod2, "pascolo:Specieagg")
 
+df <- p[["pascolo:Specieagg"]]
 
-plot(p)[[1]]+facet_wrap("effect2__")+ theme_ipsum()
+
+df %>% 
+  aes(x=pascolo, y=estimate_) +
+  geom_line() 
+
++ facet_wrap("effect2__")
+
+plot(p)[[1]]+facet_wrap("effect2__")+ 
+ scale_color_manual(values = c("blue", "blue","blue","blue","blue","blue")) + 
+  scale_fill_manual(values = c("gray","gray","gray","gray","gray","gray")) + theme_ipsum()  + theme(legend.position = "")
 
 ###tabella
 t <- model_parameters(mod2, effects= "fixed")
