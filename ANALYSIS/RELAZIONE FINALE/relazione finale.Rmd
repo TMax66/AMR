@@ -1,7 +1,8 @@
 ---
 title: ''
 author: ''
-header-includes: \usepackage[italian]{babel} \usepackage{setspace}\doublespacing \usepackage{float}
+header-includes: \usepackage[italian]{babel} \usepackage{setspace}\doublespacing \usepackage{float} 
+                  \usepackage{booktabs} \usepackage{longtable}
 output:
   pdf_document:
     toc: yes
@@ -227,7 +228,7 @@ Su 670 campioni di feci, 92 presentano almeno un ceppo MULTI-RESISTENTE (numero 
 ### Associazione tra la prevalenza di animali carrier e caratteristiche ambientali
 
 Il confronto tra modelli ha permesso di selezionare il modello 2 con le migliori performance in termini di predittività rispetto agli altri due modelli come indicato dai risultati della K-fold cross-validation riportati in tabella \ref{tab:kfold}. 
-Le stime dei coefficienti di regressione e gli intervalli di credibilità sono riassunti in tabella e le rispettive distribuzioni a posteriori rappresentate nel grafico 
+Le stime dei coefficienti di regressione e gli intervalli di credibilità sono riassunti in tabella \ref{tab:stimefe} e le rispettive distribuzioni a posteriori rappresentate nel grafico \ref{fig:stimefe}
 
 
 Secondo il modello, la probabilità di un animale di essere un carrier di ceppi di _Enterobacteriacee_ antibiotico resistenti aumenta all'aumentare della superficie dedicata al pascolo dei comuni in misura differente a seconda del gruppo-specie di appartenenza (interazione tra specie e pascolo) e in misura ridotta anche dall'aumentare della densità di popolazione per kmq come misura del grado di urbanizzazione dei comuni.
@@ -321,7 +322,10 @@ knitr::include_graphics("figure/prev.png")
 knitr::include_graphics("figure/prev.png")
 ```
 
+```{r echo=FALSE, stimefe, fig.align = "center",out.width = '90%', fig.cap="Distribuzione a posteriori delle stime dei coefficenti di regressione del modello 2"}
 
+knitr::include_graphics("figure/stimefe.png")
+```
 
 \newpage
 
@@ -352,84 +356,64 @@ Capi al pascolo & 2.00 & 52.0 & 133.0 & 293.0 & 8429 & 307.1 & 602.7\\
 \end{table}
  
 
-\begin{table}[H] 
-\centering
-\caption{Distribuzione del numero di campioni di feci in base alle differenti specie di fauna selvatica di origine, raggruppati per il gruppo-specie di appartenenza}
-\label{tab:tab2}
-\begin{tabular}{l|l|r|r}
-\hline
+
+
+
+\begin{longtable}[t]{llrr}
+\caption{\label{tab:}Distribuzione del numero di campioni di feci in base alle differenti specie di fauna selvatica di origine, raggruppati per il gruppo-specie di appartenenza}\\
+\toprule
 Gruppo & SPECIE & n & prop\\
-\hline
+\midrule
+\endfirsthead
+\caption[]{Distribuzione del numero di campioni di feci in base alle differenti specie di fauna selvatica di origine, raggruppati per il gruppo-specie di appartenenza \textit{(continued)}}\\
+\toprule
+Gruppo & SPECIE & n & prop\\
+\midrule
+\endhead
+\
+\endfoot
+\bottomrule
+\endlastfoot
 CERVIDI & CAPRIOLO & 191 & 28.51\\
-\hline
 CERVIDI & CERVO & 80 & 11.94\\
-\hline
 CERVIDI & DAINO & 1 & 0.15\\
-\hline
 BOVIDI & CAMOSCIO & 46 & 6.87\\
-\hline
 BOVIDI & MUFLONE & 43 & 6.42\\
-\hline
+\addlinespace
 BOVIDI & STAMBECCO & 6 & 0.90\\
-\hline
 CARNIVORI & TASSO & 4 & 0.60\\
-\hline
 CARNIVORI & VOLPE & 16 & 2.39\\
-\hline
 SUIDI & CINGHIALE & 76 & 11.34\\
-\hline
 LEPRE & LEPRE & 3 & 0.45\\
-\hline
+\addlinespace
 CORVIDI & CORNACCHIA & 122 & 18.21\\
-\hline
 CORVIDI & GAZZA & 12 & 1.79\\
-\hline
 CORVIDI & GHIANDAIA & 4 & 0.60\\
-\hline
 RAPACI & ALLOCCO & 3 & 0.45\\
-\hline
 RAPACI & ASSIOLO & 2 & 0.30\\
-\hline
+\addlinespace
 RAPACI & CIVETTA & 10 & 1.49\\
-\hline
 RAPACI & CIVETTA NANA & 1 & 0.15\\
-\hline
 RAPACI & FALCO PECCHIAIOLO & 5 & 0.75\\
-\hline
 RAPACI & GHEPPIO & 9 & 1.34\\
-\hline
 RAPACI & GUFO REALE & 4 & 0.60\\
-\hline
+\addlinespace
 RAPACI & NIBBIO BRUNO & 1 & 0.15\\
-\hline
 RAPACI & POIANA & 3 & 0.45\\
-\hline
 RAPACI & SPARVIERO & 11 & 1.64\\
-\hline
 UCCELLI ACQUATICI & CIGNO REALE & 3 & 0.45\\
-\hline
 UCCELLI ACQUATICI & CORMORANO & 1 & 0.15\\
-\hline
+\addlinespace
 UCCELLI ACQUATICI & FENICOTTERO & 1 & 0.15\\
-\hline
 UCCELLI ACQUATICI & GABBIANO & 1 & 0.15\\
-\hline
 UCCELLI ACQUATICI & GABBIANO REALE & 1 & 0.15\\
-\hline
 UCCELLI ACQUATICI & GERMANO REALE & 5 & 0.75\\
-\hline
 ALTRI VOLATILI & FAGIANO & 3 & 0.45\\
-\hline
+\addlinespace
 ALTRI VOLATILI & PICCIONE & 1 & 0.15\\
-\hline
 ALTRI VOLATILI & STARNA & 1 & 0.15\\
-\hline
-Total & - & 670 & 100.00\\
-\hline
-\end{tabular}
-\end{table}
-
-
+Total & - & 670 & 100.04\\*
+\end{longtable}
 
 
 \newpage
@@ -596,20 +580,45 @@ UCCELLI ACQUATICI & 0 & 12 & 0.04 & 0.00 & 0.15\\
 \end{tabular}
 \end{table}
 
-\begin{table}[H]
+\begin{table}
+
+\caption{\label{tab:kfold}Confronto tra modelli mediante K-fold cross-validation}
 \centering
-\caption{Confronto tra modelli mediante K-fold cross-validation}
-\label{tab:kfold}
-\begin{tabular}{l|r|r|r|r|r|r}
-\hline
-  & elpd\_diff & se\_diff & elpd\_kfold & se\_elpd\_kfold & p\_kfold & se\_p\_kfold\\
-\hline
-mod2 & 0.0 & 0.0 & -346 & 13 & NA & NA\\
-\hline
-mod1 & -3.1 & 4.9 & -350 & 12 & NA & NA\\
-\hline
-mod3 & -14.8 & 4.3 & -361 & 14 & NA & NA\\
-\hline
+\begin{tabular}[t]{lrrrr}
+\toprule
+  & elpd\_diff & se\_diff & elpd\_kfold & se\_elpd\_kfold\\
+\midrule
+mod2 & 0.0 & 0.0 & -354 & 13\\
+mod1 & -2.3 & 5.5 & -356 & 12\\
+mod3 & -17.6 & 5.2 & -371 & 15\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}
+
+\caption{\label{tab:stimefe}Stime a posteriori dei coefficienti di regressione, P-direction, e ROPE}
+\centering
+\begin{tabular}[t]{llrrrrrrr}
+\toprule
+  & Parameter & Median & CI\_low & CI\_high & pd & ROPE\_Percentage & Rhat & ESS\\
+\midrule
+2 & b\_Intercept & 0.28 & -0.06 & 0.63 & 0.91 & 0.31 & 1 & 9547.70\\
+4 & b\_SpecieaggBOVIDI & -0.69 & -1.23 & -0.16 & 0.98 & 0.06 & 1 & 14802.64\\
+6 & b\_SpecieaggCARNIVORI & 1.69 & -0.39 & 4.21 & 0.94 & 0.05 & 1 & 5027.61\\
+12 & b\_SpecieaggSUIDI & 2.79 & 0.71 & 5.05 & 1.00 & 0.00 & 1 & 7060.33\\
+8 & b\_SpecieaggCORVIDI & 1.64 & 0.79 & 2.52 & 1.00 & 0.00 & 1 & 8092.60\\
+\addlinespace
+10 & b\_SpecieaggRAPACI & 1.44 & 0.10 & 2.90 & 0.97 & 0.03 & 1 & 6864.94\\
+3 & b\_pascolo & 0.60 & 0.16 & 1.06 & 0.99 & 0.05 & 1 & 8210.34\\
+1 & b\_densPop & 0.08 & -0.18 & 0.32 & 0.69 & 0.70 & 1 & 9657.94\\
+5 & b\_SpecieaggBOVIDI.pascolo & -0.19 & -0.84 & 0.45 & 0.68 & 0.32 & 1 & 12027.14\\
+7 & b\_SpecieaggCARNIVORI.pascolo & 3.49 & -0.72 & 9.57 & 0.95 & 0.03 & 1 & 4632.93\\
+\addlinespace
+13 & b\_SpecieaggSUIDI.pascolo & 6.16 & 1.03 & 11.83 & 0.99 & 0.00 & 1 & 7132.00\\
+9 & b\_SpecieaggCORVIDI.pascolo & -0.92 & -2.21 & 0.33 & 0.87 & 0.09 & 1 & 9445.26\\
+11 & b\_SpecieaggRAPACI.pascolo & 2.42 & -0.53 & 5.67 & 0.94 & 0.04 & 1 & 6025.29\\
+\bottomrule
 \end{tabular}
 \end{table}
 

@@ -50,6 +50,7 @@ myprior <-  c(set_prior("normal(0, 0.5)", class = "Intercept"),
               set_prior("cauchy(0, 1)", class = "sd"))
 
 
+set.seed(999)
 mod1 <- brm(R ~ 1 + (1|comune) + Specieagg + pascolo + densPop,
             data = x, family = bernoulli, chains = 4, iter = 4000, warmup = 1000, cores = 4)
 
@@ -59,7 +60,7 @@ mod2 <- brm(R ~ 1 + (1|comune) + Specieagg + pascolo + densPop + Specieagg*pasco
 mod3 <- brm(R ~ 1 + (1|comune) +  Specieagg + pascolo + densPop + Specieagg*pascolo + Specieagg*densPop, 
             data = x, family = bernoulli, chains = 4, iter = 4000, warmup = 1000, cores = 4)
 
-loo(mod1, mod2, mod3)
+loo(mod1, mod2, mod3, moment_match = TRUE)
 
 kfm <- kfold(mod1, K=10)
 kfm2 <- kfold(mod2,K=10)
@@ -68,11 +69,21 @@ kfm3 <- kfold(mod3, K=10)
 options(digits = 2)
 kf <- loo_compare(kfm, kfm2, kfm3)
 
-kable(kf, "latex") 
+kf <- as.data.frame(kf)
 
+kf <- kf %>% 
+  select(-5,-6)
+kable(kf,booktabs = T, 
+      caption = "Confronto tra modelli mediante K-fold cross-validation", "latex") %>% 
+  kable_styling()
+
+L <- list(mod1, mod2, mod3, kf)
+save(L, file="mod2.Rdata")
 ####visualizzazione mod2####
 library(bayesplot)
 library(hrbrthemes)
+
+
 
 mcmc_areas(
   mod2,
@@ -87,10 +98,18 @@ mcmc_areas(
 
 
 
-conditions <- make_conditions(mod2, "Specieagg")
+
 p <- conditional_effects(mod2, "pascolo:Specieagg")
 
-plot(p)[[1]]+facet_wrap("effect2__")
+
+plot(p)[[1]]+facet_wrap("effect2__")+ theme_ipsum()
+
+###tabella
+t <- model_parameters(mod2, effects= "fixed")
+kable(t, booktabs = T, "latex", digits = 2,
+      caption = "Stime a posteriori dei coefficienti di regressione ") %>% 
+  kable_styling()
+
 
 library(see)
 library(bayestestR)

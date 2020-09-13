@@ -1,7 +1,7 @@
 ####DATI E PACCHETTI####
 
-#setwd("~/Library/Mobile Documents/com~apple~CloudDocs/gitProject/AMR/ANALYSIS")
-setwd("D:/Dati/vito.tranquillo/Desktop/GitProjects/AMR/ANALYSIS")
+setwd("~/Library/Mobile Documents/com~apple~CloudDocs/gitProject/AMR/ANALYSIS")
+#setwd("D:/Dati/vito.tranquillo/Desktop/GitProjects/AMR/ANALYSIS")
 source('pacchetti.r')#<-carica le librerie
 source('funzioni.r')#<-carica funzioni in-built
 source('dataset.r')#<-carica lo script di preparazione dei dataset da usare per le analisi
@@ -105,8 +105,8 @@ AMR_com%>%
   summarise(n=n()) %>% 
   mutate(prop=round(100*(n/670),  2)) %>% 
   adorn_totals(where = "row") %>% 
-  kable("latex") %>% 
-  kable_styling()
+  kable("latex",caption = "Distribuzione del numero di campioni di feci in base alle differenti specie di fauna selvatica di origine, raggruppati per il gruppo-specie di appartenenza", booktabs = T, longtable = T) %>% 
+  kable_styling(latex_options = c("repeat_header"))
   
   
   
