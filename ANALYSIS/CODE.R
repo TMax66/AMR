@@ -1,7 +1,7 @@
 ####DATI E PACCHETTI####
 
-setwd("~/Library/Mobile Documents/com~apple~CloudDocs/gitProject/AMR/ANALYSIS")
-#setwd("D:/Dati/vito.tranquillo/Desktop/GitProjects/AMR/ANALYSIS")
+#setwd("~/Library/Mobile Documents/com~apple~CloudDocs/gitProject/AMR/ANALYSIS")
+setwd("D:/Dati/vito.tranquillo/Desktop/GitProjects/AMR/ANALYSIS")
 source('pacchetti.r')#<-carica le librerie
 source('funzioni.r')#<-carica funzioni in-built
 source('dataset.r')#<-carica lo script di preparazione dei dataset da usare per le analisi

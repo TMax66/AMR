@@ -78,7 +78,13 @@ kable(kf,booktabs = T,
   kable_styling()
 
 L <- list(mod1, mod2, mod3, kf)
-save(L, file="mod2.Rdata")
+#save(L, file="mod2.Rdata")
+
+load("mod2.Rdata")
+
+mod2 <- L[[2]]
+
+
 
 ####visualizzazione mod2####
 library(bayesplot)
@@ -102,18 +108,33 @@ library(brms)
 
 p <- conditional_effects(mod2, "pascolo:Specieagg")
 
-df <- p[["pascolo:Specieagg"]]
+p <- as_tibble(p[[1]])
+
+pasc<-scale(x$hapasc)
+scale <- attr(pasc, "scaled:scale")
+center <- attr(pasc,"scaled:center")
+
+p <- p %>%
+  mutate(pascolo = pascolo* scale + center)
+
+ggplot(p, aes(x = pascolo, y = estimate__, color = Specieagg)) +
+  geom_line() +
+  geom_ribbon(aes(ymin = lower__, ymax = upper__, fill = Specieagg), 
+              alpha = .5, col = NA) +
+  ylab("Probabilità") +
+  xlab("Superficie comunale in ettari adibita a pascolo") +
+  theme_minimal() + facet_wrap(~Specieagg) +
+  scale_color_manual(values = c("blue", "blue","blue","blue","blue","blue"))+
+  scale_fill_manual(values = c("gray","gray","gray","gray","gray","gray"))   + theme_ipsum() + theme(legend.position = "")
 
 
-df %>% 
-  aes(x=pascolo, y=estimate_) +
-  geom_line() 
 
-+ facet_wrap("effect2__")
+
+
 
 plot(p)[[1]]+facet_wrap("effect2__")+ 
  scale_color_manual(values = c("blue", "blue","blue","blue","blue","blue")) + 
-  scale_fill_manual(values = c("gray","gray","gray","gray","gray","gray")) + theme_ipsum()  + theme(legend.position = "")
+  scale_fill_manual(values = c("gray","gray","gray","gray","gray","gray"))  + theme_ipsum() + theme(legend.position = "")
 
 ###tabella
 t <- model_parameters(mod2, effects= "fixed")

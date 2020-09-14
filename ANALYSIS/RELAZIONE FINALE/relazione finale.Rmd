@@ -176,18 +176,17 @@ Dove X rappresenta la matrice dei predittori e $\alpha_{\text{Comune}}$ definisc
 Il confronto tra i diversi modelli è stato effettuato mediante l'utilizzo delle tecniche di cross-validazione K-fold cross-validation con K= 10  subset di dati[@gelman2020regression].  
 
 
-
 **Prevalenza di ceppi resistenti e profili fenotipici di resistenza ai differenti antibiotici**.   Sulla base dei profili di resistenza dei singoli ceppi si è provveduto a classificare i ceppi in 
 
 * Suscettibili  (ceppi sensibili a tutti gli antibiotici del panel)
 * Resistenti (ceppi sensibili fino a 2 antibiotici del panel)
 * Multiresistenti (ceppi sensibili a 3 o più antibiotici del panel). 
 
-La stima della distribuzione a posteriori della prevalenza di ceppi delle diverse classi è stata ottenuta mediante adattamento di un modello bayesiano analogo a quello utilizzato per la stima della prevalenza di animali portatori di ceppi resistenti a cui si rimanda per i dettagli. 
+<!-- La stima della distribuzione a posteriori della prevalenza di ceppi delle diverse classi è stata ottenuta mediante adattamento di un modello bayesiano analogo a quello utilizzato per la stima della prevalenza di animali portatori di ceppi resistenti a cui si rimanda per i dettagli.  -->
 
 Per ogni singolo antibiotico è stata stimata la distribuzione a posteriori della prevalenza di ceppi resistenti complessivamente  e nelle differenti specie di provenienza dei campioni, adattando modelli bayesiani analogo al precedente a cui si rimanda. 
 
-Le distribuzioni a posteriori delle prevalenze sono state quindi riassunte mediante il calcolo della mediana e dei percentili 2.5  e 97.5, definendo quindi un intervallo di credibilità bayesiano del 95%.
+Le distribuzioni a posteriori delle prevalenze sono state quindi riassunte mediante il calcolo della mediana e dei percentili 2.5  e 97.5, definendo quindi un intervallo di credibilità  del 95%.
 
 **Biodiversità dei profili fenotipici di resistenza**
 Sulla base delle resistenze ai differenti antibiotici del panel i ceppi sono stati caratterizzati per il loro profilo di resistenza indicato da una stringa costituita dall'abbreviazione di tre lettere degli antibiotici resistenti. Ad esempio la stringa AMP-TET-COL indica un ceppo batterico con fenotipo di resistenza a Ampicillina, Tetraciclina, e Colistina. I differenti ceppi sono stati quindi aggregati per fenotipo e per gruppo-specie di provenienza dei ceppi e analizzati mediante metodi di analisi della biodiversità calcolando quattro misure di diversità legate alle misure di entropia generalizzata di Rényi secondo l'approccio descritto da [@mather2012ecological].  L'entropia di Rényi si calcola mediante la seguente formula:
@@ -217,11 +216,11 @@ Dai 671 campioni di feci analizzati sono stati isolati  911 ceppi batterici iden
 Sono stati eseguiti 910 antibiogrammi. Complessivamente 392 ceppi (43%) sono risultati Suscettibili (S) al panel di antibiotici testati ; 423 (46%) i ceppi Resistenti (R)  fino ad un massimo di 2 antibiotici e infine 95 (10%) ceppi sono risultati Multiresistenti (MR), con resistenza a 3 o più antibiotici. La distribuzione del numero di resistenze al panel di antibiotici per isolato (Antibiogram length) è sintetizzata in figura \ref{fig:fig2}
 
 
-## PREVALENZA, TRA LA FAUNA SELVATICA, DI ANIMALI PORTATORI DI CEPPI ANTIBIOTICO-RESISTENTI
+## Prevalenza, tra la fauna selvatica, di animali portatori di ceppi antibiotico-resistenti
 Complessivamente da 670 campioni di feci di fauna selvatica da cui è stato  isolato almeno un ceppo di _Enterobacteriacee_ e su cui è stato eseguito l'antibiogramma, in 421  è stato isolato almeno un ceppo resistente ad uno o più  antibiotici del panel indagato, pari ad una Prevalenza complessiva (Overall Prevalence) del 62% (95% HPD: 58-67%).
 
 
-La variabilità tra i gruppi specie è particolarmente ampia: nei CORVIDI si osserva la prevalenza più elevata (84%), mentre nei  BOVIDI la più bassa (37%). A causa della bassa numerosità campionaria si osservano stime con incertezza molto ampia nei gruppi : LEPRE, ALTRI VOLATILI, UCCELLI ACQUATICI, CARNIVORI e RAPACI. In figura \ref{fig:fprev}  è riportata per ogni gruppo specie la distribuzione a posteriori della prevalenza di animali carrier di ceppi antibiotico-resistenti e in tabella (\ref{tab:prevalenze}) le stime puntuali e i valori dell'intervallo di massima densità delle stime (95% High Probability Density HPD ).
+La variabilità tra i gruppi-specie è particolarmente ampia: nei CORVIDI si osserva la prevalenza più elevata (84%), mentre nei  BOVIDI la più bassa (37%). A causa della bassa numerosità campionaria si osservano stime con incertezza molto ampia nei gruppi : LEPRE, ALTRI VOLATILI, UCCELLI ACQUATICI, CARNIVORI e RAPACI. In figura \ref{fig:fprev}  è riportata per ogni gruppo specie la distribuzione a posteriori della prevalenza di animali carrier di ceppi antibiotico-resistenti e in tabella (\ref{tab:prevalenze}) le stime puntuali e i valori dell'intervallo di massima densità delle stime (95% High Probability Density HPD ).
 
 Su 670 campioni di feci, 92 presentano almeno un ceppo MULTI-RESISTENTE (numero di resistenze >= a 3), pari ad una prevalenza del 14% (95% HPD:11%-16%). La variabilità tra gruppi specie risulta molto ampia: la prevalenza di animali selvatici portatori di ceppi multiresistenti varia da un minimo del 4% nel gruppo UCCELLI ACQUATICI ad un massimo dell'88% nella LEPRE. La bassa numerosità dei campioni di alcuni gruppi specie rende le stime molto incerte. In figura \ref{fig:fprev2}  è riportata per ogni gruppo specie la distribuzione a posteriori della prevalenza di animali carrier di ceppi multi-resistenti e in tabella (\ref{tab:prevalenze2}) le stime puntuali e i valori dell'intervallo di massima densità delle stime (95% High Probability Density HPD ).
 
@@ -230,7 +229,7 @@ Su 670 campioni di feci, 92 presentano almeno un ceppo MULTI-RESISTENTE (numero 
 Il confronto tra modelli ha permesso di selezionare il modello 2 con le migliori performance in termini di predittività rispetto agli altri due modelli come indicato dai risultati della K-fold cross-validation riportati in tabella \ref{tab:kfold}. 
 Le stime dei coefficienti di regressione e gli intervalli di credibilità sono riassunti in tabella \ref{tab:stimefe} e le rispettive distribuzioni a posteriori rappresentate nel grafico \ref{fig:stimefe}
 
-Secondo il modello, la probabilità di un animale di essere un carrier di ceppi antibiotico resistenti di _Enterobacteriacee_  aumenta all'aumentare della superficie dedicata al pascolo dei comuni in misura differente a seconda del gruppo-specie di appartenenza (interazione tra specie e pascolo), come raffigurato in fig \ref{fig:int} dove la  dipendenza della probabilità di Resistenza dalla superficie dedicata al pascolo per comune è riportata condizionalmente ai diversi gruppi-specie a cui appartiene il campione risultato carrier di ceppi resistenti.  
+Secondo il modello, la probabilità di un animale di essere un carrier di ceppi antibiotico resistenti di _Enterobacteriacee_  aumenta all'aumentare della superficie comunale (in ettari) dedicata al pascolo   in misura differente a seconda del gruppo-specie di appartenenza (interazione tra specie e pascolo), come raffigurato in fig \ref{fig:condplot} dove la  dipendenza della probabilità di Resistenza dalla superficie dedicata al pascolo per comune è riportata condizionalmente ai diversi gruppi-specie a cui appartiene il campione risultato carrier di ceppi resistenti.  
 
 
 
@@ -321,6 +320,11 @@ knitr::include_graphics("figure/prev.png")
 ```{r echo=FALSE, stimefe, fig.align = "center",out.width = '90%', fig.cap="Distribuzione a posteriori delle stime dei coefficenti di regressione del modello 2"}
 
 knitr::include_graphics("figure/stimefe.png")
+```
+
+```{r echo=FALSE, condplot, fig.align = "center",out.width = '90%', fig.cap="Stima dell'effetto Superficie adibita al pascolo sulla probabilità di un animale di essere carrier di ceppi antibiotico-resistenti, condizionalmente al gruppo-specie di appartenenza"}
+
+knitr::include_graphics("figure/condplot.png")
 ```
 
 \newpage
