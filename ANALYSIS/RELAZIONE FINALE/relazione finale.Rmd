@@ -216,7 +216,7 @@ Dai 671 campioni di feci analizzati sono stati isolati  911 ceppi batterici iden
 Sono stati eseguiti 910 antibiogrammi. Complessivamente 392 ceppi (43%) sono risultati Suscettibili (S) al panel di antibiotici testati ; 423 (46%) i ceppi Resistenti (R)  fino ad un massimo di 2 antibiotici e infine 95 (10%) ceppi sono risultati Multiresistenti (MR), con resistenza a 3 o più antibiotici. La distribuzione del numero di resistenze al panel di antibiotici per isolato (Antibiogram length) è sintetizzata in figura \ref{fig:fig2}
 
 
-## Prevalenza, tra la fauna selvatica, di animali portatori di ceppi antibiotico-resistenti
+## PREVALENZA ANIMALI PORTATORI DI CEPPI RESISTENTI
 Complessivamente da 670 campioni di feci di fauna selvatica da cui è stato  isolato almeno un ceppo di _Enterobacteriacee_ e su cui è stato eseguito l'antibiogramma, in 421  è stato isolato almeno un ceppo resistente ad uno o più  antibiotici del panel indagato, pari ad una Prevalenza complessiva (Overall Prevalence) del 62% (95% HPD: 58-67%).
 
 
@@ -233,13 +233,13 @@ Secondo il modello, la probabilità di un animale di essere un carrier di ceppi 
 
 
 
-
-
-
-
-
 ## CARATTERIZZAZIONE FENOTIPICA DELL'ANTIBIOTICO-RESISTENZA DEGLI ISOLATI BATTERICI
-La maggior parte dei ceppi (oltre l'80%) ha mostrato resistenza nei confronti di AMP (392 ceppi 42.47%) e TET (342 ceppi 37.05%) in cui si osserva una ampia variabilità nei differenti gruppi di Specie (Fig\ref{fig:fig2}).
+
+Le resistenze nei confronti di AMP e TET sono risultate le più frquenti: su 910 ceppi testati nei confronti di AMP 388 risultano resistenti (%), 342 ceppi risultano resistenti a TET (). Si osserva una frequenza di resistenza molto contenuta nei confronti degli altri antibiotici: solo l'8% di resistenze nei confronti di CFT, 5% nei confronti di COL, 5% nei confronti di ENR , 5% nei confronti di KAN e solo l'1.3% nei confronti di GEN. In tabella \ref{tab:rab} per gli antibiotici del panel analizzato sono riportati le stime della prevalenza di resistenza con i rispettivi intervalli bayesiani di elevata densità (HPDI).
+
+
+
+in cui si osserva una ampia variabilità nei differenti gruppi di Specie (Fig\ref{fig:fig2}).
 
 In particolare, escludendo i ceppi derivati da gruppi specie con ridotta dimensione del campione,  la maggior frequenza di ceppi resistenti a AMP si osserva negli isolati del gruppo  CORVIDI (58%), del gruppo CERVIDI (45%)  e RAPACI (42%); le frequenze minori si osservano nel gruppo BOVIDI (26%) e SUIDI (22%). Le resistenze alle tetracicline sono risultate più frequenti nei ceppi isolati dai CORVIDI (51%) e RAPACI (48%), mentre le più basse in isolati da  SUIDI (34%), CERVIDI(32%), BOVIDI(20%). 
 
@@ -623,6 +623,24 @@ mod3 & -17.6 & 5.2 & -371 & 15\\
 \end{tabular}
 \end{table}
 
+\begin{table}
+
+\caption{\label{tab:rab}Stime bayesiane della prevalenza di ceppi resistenti ai differenti antibiotici}
+\centering
+\begin{tabular}[t]{lrrrrr}
+\toprule
+Antibiotico & R & N & Prevalenza & inf-HPD & sup-HPD\\
+\midrule
+AMP & 388 & 910 & 0.43 & 0.39 & 0.46\\
+TET & 342 & 910 & 0.38 & 0.34 & 0.41\\
+CFT & 77 & 910 & 0.09 & 0.07 & 0.10\\
+COL & 49 & 910 & 0.05 & 0.04 & 0.07\\
+ENR & 45 & 910 & 0.05 & 0.04 & 0.06\\
+KAN & 45 & 910 & 0.05 & 0.04 & 0.06\\
+GEN & 12 & 910 & 0.01 & 0.01 & 0.02\\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \newpage
 # Bibliografia

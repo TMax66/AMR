@@ -385,17 +385,52 @@ Rhpd<-cbind(RbyT, Rhpd[,-1])
 #CARATTERIZZAZIONE FENOTIPICA DELL'ANTIBIOTICO-RESISTENZA DEGLI ISOLATI BATTERICI####
 
 #Antibiotico-resistenza byAB <- tabella 4####
-AMR %>%
+z <-AMR %>%
+  filter(identificazione!="Non identificabile") %>% 
   select(Specieagg,identificazione, 13,14,16,17,20:22) %>% 
   pivot_longer(cols=3:9, names_to = "antibiotico") %>% 
   group_by(antibiotico,value) %>% 
   drop_na(value) %>% 
   tally() %>% 
   pivot_wider(names_from = value,values_from = n) %>% 
-  mutate("%Res"=round(100*(R/(R+S)),2)) %>% 
-  arrange(desc(`%Res`)) %>% 
-  kable("latex") %>% 
+  mutate("N"=R+S, 
+         "prop" = round(100*(R/N),2)) %>% 
+  arrange(desc(prop))
+
+  
+options(digits=2)
+Rhpd <- binom.bayes(
+  x = z$R, n = z$N, type = "highest", conf.level = 0.95, tol = 1e-9)
+# Rhpd<- cbind("Specieagg"=mr[, 1], Rhpd[,6:8]) %>% 
+#   arrange(desc(mean))
+
+Rhpd<- cbind("Antibiotico"=z[, 1], Rhpd[]) 
+
+R <- Rhpd[-8,] %>% 
+  arrange(desc(mean)) %>% 
+  mutate(Antibiotico = unique(factor(antibiotico)))
+
+R %>% 
+  select(Antibiotico,-method, "R"=x, "N"=n, "Prevalenza"=mean, "inf-HPD"=lower, "sup-HPD"=upper, -shape1, -shape2, -sig, -antibiotico) %>% 
+  kable("latex", caption = "Stime bayesiane della prevalenza di ceppi resistenti ai differenti antibiotici", booktabs = TRUE) %>% 
   kable_styling()
+
+
+pz <- binom.bayes.densityplot(R, fill.central = "steelblue", fill.lower = "steelblue",
+                              alpha = 1.2) +facet_wrap(~Antibiotico)
+
+
+
+
+ 
+
+  
+  
+  
+  
+  
+  # kable("latex") %>% 
+  # kable_styling()
 
 #--Bayesian posterior prevalence of seven antibiotic-resistence phenotype
 #--figura 5
