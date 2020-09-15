@@ -238,13 +238,9 @@ Secondo il modello, la probabilità di un animale di essere un carrier di ceppi 
 Le resistenze nei confronti di AMP e TET sono risultate le più frquenti: su 910 ceppi testati nei confronti di AMP 388 risultano resistenti (%), 342 ceppi risultano resistenti a TET (). Si osserva una frequenza di resistenza molto contenuta nei confronti degli altri antibiotici: solo l'8% di resistenze nei confronti di CFT, 5% nei confronti di COL, 5% nei confronti di ENR , 5% nei confronti di KAN e solo l'1.3% nei confronti di GEN. In tabella \ref{tab:rab} per gli antibiotici del panel analizzato sono riportati le stime della prevalenza di resistenza con i rispettivi intervalli bayesiani di elevata densità (HPDI).
 
 
+Escludendo i ceppi derivati da gruppi specie con ridotta dimensione del campione,  la maggior frequenza di ceppi resistenti a AMP si osserva negli isolati del gruppo  CORVIDI (58%), del gruppo CERVIDI (45%)  e RAPACI (42%); le frequenze minori si osservano nel gruppo BOVIDI (26%) e SUIDI (22%). Le resistenze a TET sono risultate più frequenti nei ceppi isolati dai CORVIDI (51%) e RAPACI (48%), mentre le più basse in isolati da  SUIDI (34%), CERVIDI(32%), BOVIDI(20%). 
 
-in cui si osserva una ampia variabilità nei differenti gruppi di Specie (Fig\ref{fig:fig2}).
-
-In particolare, escludendo i ceppi derivati da gruppi specie con ridotta dimensione del campione,  la maggior frequenza di ceppi resistenti a AMP si osserva negli isolati del gruppo  CORVIDI (58%), del gruppo CERVIDI (45%)  e RAPACI (42%); le frequenze minori si osservano nel gruppo BOVIDI (26%) e SUIDI (22%). Le resistenze alle tetracicline sono risultate più frequenti nei ceppi isolati dai CORVIDI (51%) e RAPACI (48%), mentre le più basse in isolati da  SUIDI (34%), CERVIDI(32%), BOVIDI(20%). 
-
-Nei confronti della COLISTINA, antibiotico di particolare interesse in ambito clinico umano, classificato come..... si osserva una bassa frequenza di ceppi resistenti da un minimo dello 0.5% osservato nei ceppi isolati dai SUIDI, ad un massimo del 16% osservato sia nei RAPACI che nella LEPRE. Anche per il CEFTIOFUR , cefalosporina di 3 generazione nei confronti dei quali si è diffusa a livello mondiale la selezione di ceppi ESBL... si osserva una bassa prevalenza di ceppi resistenti: minimo 2.1% negli UCCELLI ACQUATICI, massimo 24% nei RAPACI.
-La GEN risulta l'antibiotico verso cui gli isolati si sono mostrati in modo uniforme tra le differenti specie meno resistenti (12 ceppi 1.30%). Anche per ENR e KAN si osserva una bassa e uniforme prevelenza di ceppi resistenti tra i diversi gruppi specie.
+Nei confronti della COLISTINA, antibiotico di particolare interesse in ambito clinico umano, si osserva una bassa frequenza di ceppi resistenti da un minimo dello 0.5% osservato nei ceppi isolati dai SUIDI, ad un massimo del 16% osservato sia nei RAPACI che nella LEPRE. Anche per il CEFTIOFUR , cefalosporina di 3 generazione nei confronti dei quali si è diffusa a livello mondiale la selezione di ceppi ESBL... si osserva una bassa prevalenza di ceppi resistenti: minimo 2.1% negli UCCELLI ACQUATICI, massimo 24% nei RAPACI. La GEN risulta l'antibiotico verso cui gli isolati si sono mostrati in modo uniforme tra le differenti specie meno resistenti (12 ceppi 1.30%). Anche per ENR e KAN si osserva una bassa e uniforme prevelenza di ceppi resistenti tra i diversi gruppi specie.
 (tabella 4)
 
 Il profilo di resistenza tra i differenti generi di ceppi isolati conferma che AMP e TET sono gli antibiotici verso i quali la maggior parte degli isolati mostra la maggior frequenza di resistenze (tabella 5).
@@ -331,36 +327,29 @@ knitr::include_graphics("figure/condplot.png")
 
 **ELENCO TABELLE** 
 
- 
 \begin{table}[H]
+\caption{\label{tab:tab1}Caratterizzazione territoriale e demografica dei comuni di provenienza dei campioni}
 \centering
-\caption{Caratterizzazione dei comuni di provenienza dei campioni}
-\label{tab:tab1}
-\begin{tabular}{l|r|r|r|r|r|r|r}
-\hline
+\begin{tabular}[t]{lrrrrrrr}
+\toprule
 Parametri & min & q25 & median & q75 & max & mean & sd\\
-\hline
-Superficie (Kmq) & 1.97 & 10.6 & 17.1 & 29.2 & 227 & 29.8 & 43.9\\
-\hline
-Densità di popolazione (Ab/Kmq) & 4.02 & 45.1 & 128.1 & 257.1 & 2210 & 250.7 & 357.3\\
-\hline
-Altitudine mediana & 48.00 & 185.0 & 600.0 & 1120.0 & 2650 & 773.3 & 684.6\\
-\hline
-Superficie al pascolo (ettari) & 0.09 & 11.0 & 60.0 & 170.9 & 2630 & 178.8 & 338.8\\
-\hline
+\midrule
+Superficie (Kmq) & 1.97 & 10.6 & 17.1 & 29.4 & 227 & 29.8 & 44.0\\
+Densità di popolazione (Ab/Kmq) & 4.02 & 45.1 & 128.1 & 257.1 & 2210 & 250.0 & 356.9\\
+Altitudine mediana & 48.00 & 185.0 & 600.0 & 1120.0 & 2650 & 773.8 & 684.8\\
+Superficie al pascolo (ettari) & 0.09 & 11.0 & 60.0 & 170.9 & 2630 & 179.1 & 339.0\\
 Aziende con pascolo & 1.00 & 3.0 & 8.0 & 16.0 & 425 & 12.6 & 20.3\\
-\hline
-Capi al pascolo & 2.00 & 52.0 & 133.0 & 293.0 & 8429 & 307.1 & 602.7\\
-\hline
+\addlinespace
+Capi al pascolo & 2.00 & 52.0 & 133.0 & 293.0 & 8429 & 307.5 & 603.1\\
+\bottomrule
 \end{tabular}
 \end{table}
- 
 
 
 
 
 \begin{longtable}[t]{llrr}
-\caption{\label{tab:}Distribuzione del numero di campioni di feci in base alle differenti specie di fauna selvatica di origine, raggruppati per il gruppo-specie di appartenenza}\\
+\caption{\label{tab:tab2}Distribuzione del numero di campioni di feci in base alle differenti specie di fauna selvatica di origine, raggruppati per il gruppo-specie di appartenenza}\\
 \toprule
 Gruppo & SPECIE & n & prop\\
 \midrule
@@ -377,210 +366,184 @@ Gruppo & SPECIE & n & prop\\
 CERVIDI & CAPRIOLO & 191 & 28.51\\
 CERVIDI & CERVO & 80 & 11.94\\
 CERVIDI & DAINO & 1 & 0.15\\
+\addlinespace
 BOVIDI & CAMOSCIO & 46 & 6.87\\
 BOVIDI & MUFLONE & 43 & 6.42\\
-\addlinespace
 BOVIDI & STAMBECCO & 6 & 0.90\\
+\addlinespace
 CARNIVORI & TASSO & 4 & 0.60\\
 CARNIVORI & VOLPE & 16 & 2.39\\
+\addlinespace
 SUIDI & CINGHIALE & 76 & 11.34\\
+\addlinespace
 LEPRE & LEPRE & 3 & 0.45\\
 \addlinespace
 CORVIDI & CORNACCHIA & 122 & 18.21\\
 CORVIDI & GAZZA & 12 & 1.79\\
 CORVIDI & GHIANDAIA & 4 & 0.60\\
+\addlinespace
 RAPACI & ALLOCCO & 3 & 0.45\\
 RAPACI & ASSIOLO & 2 & 0.30\\
-\addlinespace
 RAPACI & CIVETTA & 10 & 1.49\\
 RAPACI & CIVETTA NANA & 1 & 0.15\\
 RAPACI & FALCO PECCHIAIOLO & 5 & 0.75\\
 RAPACI & GHEPPIO & 9 & 1.34\\
 RAPACI & GUFO REALE & 4 & 0.60\\
-\addlinespace
 RAPACI & NIBBIO BRUNO & 1 & 0.15\\
 RAPACI & POIANA & 3 & 0.45\\
 RAPACI & SPARVIERO & 11 & 1.64\\
+\addlinespace
 UCCELLI ACQUATICI & CIGNO REALE & 3 & 0.45\\
 UCCELLI ACQUATICI & CORMORANO & 1 & 0.15\\
-\addlinespace
 UCCELLI ACQUATICI & FENICOTTERO & 1 & 0.15\\
 UCCELLI ACQUATICI & GABBIANO & 1 & 0.15\\
 UCCELLI ACQUATICI & GABBIANO REALE & 1 & 0.15\\
 UCCELLI ACQUATICI & GERMANO REALE & 5 & 0.75\\
-ALTRI VOLATILI & FAGIANO & 3 & 0.45\\
 \addlinespace
+ALTRI VOLATILI & FAGIANO & 3 & 0.45\\
 ALTRI VOLATILI & PICCIONE & 1 & 0.15\\
 ALTRI VOLATILI & STARNA & 1 & 0.15\\
-Total & - & 670 & 100.04\\*
+\addlinespace
+Totale &  & 670 & 100.00\\*
 \end{longtable}
-
 
 \newpage
 
-\begin{table}[H]
+\begin{table}
+\caption{\label{tab:tab2b}Distribuzione del numero di campioni di feci in base alle caratteristiche territoriali di provenienza per i differenti gruppo-specie di appartenenza (NM= Non Montani, P= Parzialmente Montani, T= Totalmente Montani)}
 \centering
-\caption{Distribuzione del numero di campioni di feci in base alle caratteristiche territoriali di provenienza per i differenti gruppo-specie di appartenenza (NM= Non Montani, P= Parzialmente Montani, T= Totalmente Montani)}
-\label{tab:tab2b}
-\begin{tabular}{l|r|r|r|r}
-\hline
-Specieagg & NM & P & T & Total\\
-\hline
+\begin{tabular}[t]{lrrrr}
+\toprule
+Gruppo Specie & NM & P & T & Totale\\
+\midrule
 CERVIDI & 3 & 5 & 248 & 256\\
-\hline
 BOVIDI & 0 & 4 & 88 & 92\\
-\hline
 CARNIVORI & 5 & 0 & 15 & 20\\
-\hline
 SUIDI & 3 & 1 & 68 & 72\\
-\hline
 LEPRE & 1 & 0 & 2 & 3\\
-\hline
 CORVIDI & 118 & 1 & 19 & 138\\
-\hline
 RAPACI & 24 & 0 & 25 & 49\\
-\hline
 UCCELLI ACQUATICI & 3 & 3 & 6 & 12\\
-\hline
 ALTRI VOLATILI & 4 & 0 & 1 & 5\\
-\hline
-\end{tabular}
-\end{table}
-
-
-\begin{table}[H]
-\centering
-\caption{Distribuzione del numero di campioni di feci in base al grado di urbanizzazione  dei comuni di provenienza per i differenti gruppo-specie di appartenenza (UA= Urbanizzazione ALta, UM= Urbanizzazione Media, UB= Urbanizzazione Bassa)}
-\label{tab:tab2c}
-\begin{tabular}{l|r|r|r}
-\hline
-Gruppo Specie & UA & UM & UB\\
-\hline
-CERVIDI & 1 & 70 & 185\\
-\hline
-BOVIDI & 4 & 19 & 69\\
-\hline
-CARNIVORI & 0 & 6 & 14\\
-\hline
-SUIDI & 0 & 24 & 48\\
-\hline
-LEPRE & 0 & 1 & 2\\
-\hline
-CORVIDI & 1 & 58 & 79\\
-\hline
-RAPACI & 1 & 33 & 15\\
-\hline
-UCCELLI ACQUATICI & 3 & 6 & 3\\
-\hline
-ALTRI VOLATILI & 1 & 4 & 0\\
-\hline
-\end{tabular}
-\end{table}
-
-
-\begin{table}[H]
-\centering
-\caption{Distribuzione del numero e proprorzione di ceppi della famiglia Enterobacteriacee suddivise per genere, isolati dai 671 campioni di feci analizzati)}
-\label{tab:micro}
-\begin{tabular}{l|r|r}
-\hline
-identificazione & n & prop(\%)\\
-\hline
-E.coli & 615 & 67.58\\
-\hline
-Klebsiella & 61 & 6.70\\
-\hline
-Enterobacter & 56 & 6.15\\
-\hline
-Serratia & 40 & 4.40\\
-\hline
-Pantoea & 39 & 4.29\\
-\hline
-Hafnia & 36 & 3.96\\
-\hline
-Proteus & 14 & 1.54\\
-\hline
-Acinetobacter & 13 & 1.43\\
-\hline
-Citrobacter & 12 & 1.32\\
-\hline
-Yersinia & 7 & 0.77\\
-\hline
-Cronobacter & 6 & 0.66\\
-\hline
-Salmonella & 5 & 0.55\\
-\hline
-Providencia & 4 & 0.44\\
-\hline
-Pseudomonas & 1 & 0.11\\
-\hline
-Shigella & 1 & 0.11\\
-\hline
-Total & 910 & 100.00\\
-\hline
-\end{tabular}
-\end{table}
-
-
-\begin{table}[H]
-\centering
-\caption{Stime della prevalenza di campioni resistenti suddivisi per gruppo-specie: R= numero di campioni resistenti, N= numero campioni esaminati, Prevalenza = media della distribuzione beta, inf-HPD= valore inferiore dell'intervallo HPD, sup-HPD = valore superiore dell'intervallo HPD)}
-\label{tab:prevalenze}
-\begin{tabular}{l|r|r|r|r|r}
-\hline
-Specieagg & R & N & Prevalenza & inf HPD & sup HPD\\
-\hline
-LEPRE & 3 & 3 & 0.88 & 0.56 & 1.00\\
-\hline
-CORVIDI & 115 & 138 & 0.83 & 0.77 & 0.89\\
-\hline
-ALTRI VOLATILI & 4 & 5 & 0.75 & 0.44 & 1.00\\
-\hline
-CARNIVORI & 15 & 20 & 0.74 & 0.55 & 0.91\\
-\hline
-RAPACI & 34 & 49 & 0.69 & 0.56 & 0.81\\
-\hline
-CERVIDI & 166 & 272 & 0.61 & 0.55 & 0.67\\
-\hline
-SUIDI & 43 & 76 & 0.56 & 0.45 & 0.67\\
-\hline
-UCCELLI ACQUATICI & 6 & 12 & 0.50 & 0.24 & 0.76\\
-\hline
-BOVIDI & 35 & 95 & 0.37 & 0.27 & 0.47\\
-\hline
-\end{tabular}
-\end{table}
-
-\begin{table}[H]
-\centering
-\caption{Stime della prevalenza di campioni multi-resistenti suddivisi per gruppo-specie: MR= numero di campioni resistenti, N= numero campioni esaminati, Prevalenza = media della distribuzione beta, inf-HPD= valore inferiore dell'intervallo HPD, sup-HPD = valore superiore dell'intervallo HPD)}
-\label{tab:prevalenze2}
-\begin{tabular}{l|r|r|r|r|r}
-\hline
-Specieagg & MR & N & Prevalenza & inf HPD & sup HPD\\
-\hline
-LEPRE & 1 & 3 & 0.38 & 0.01 & 0.77\\
-\hline
-RAPACI & 15 & 49 & 0.31 & 0.19 & 0.44\\
-\hline
-CORVIDI & 29 & 138 & 0.21 & 0.15 & 0.28\\
-\hline
-CARNIVORI & 3 & 20 & 0.17 & 0.03 & 0.32\\
-\hline
-CERVIDI & 32 & 272 & 0.12 & 0.08 & 0.16\\
-\hline
-SUIDI & 7 & 76 & 0.10 & 0.04 & 0.16\\
-\hline
-ALTRI VOLATILI & 0 & 5 & 0.08 & 0.00 & 0.31\\
-\hline
-BOVIDI & 5 & 95 & 0.06 & 0.02 & 0.10\\
-\hline
-UCCELLI ACQUATICI & 0 & 12 & 0.04 & 0.00 & 0.15\\
-\hline
+Totale & 161 & 14 & 472 & 647\\
+\bottomrule
 \end{tabular}
 \end{table}
 
 \begin{table}
+
+\caption{\label{tab:tab2c}Distribuzione del numero di campioni di feci in base al grado di urbanizzazione  dei comuni di provenienza per i differenti gruppo-specie di appartenenza (UA= Urbanizzazione ALta, UM= Urbanizzazione Media, UB= Urbanizzazione Bassa)}
+\centering
+\begin{tabular}[t]{lrrrr}
+\toprule
+Gruppo Specie & UA & UM & UB & Totale\\
+\midrule
+CERVIDI & 1 & 70 & 185 & 256\\
+BOVIDI & 4 & 19 & 69 & 92\\
+CARNIVORI & 0 & 6 & 14 & 20\\
+SUIDI & 0 & 24 & 48 & 72\\
+LEPRE & 0 & 1 & 2 & 3\\
+\addlinespace
+CORVIDI & 1 & 58 & 79 & 138\\
+RAPACI & 1 & 33 & 15 & 49\\
+UCCELLI ACQUATICI & 3 & 6 & 3 & 12\\
+ALTRI VOLATILI & 1 & 4 & 0 & 5\\
+Total & 11 & 221 & 415 & 647\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{longtable}[t]{lrr}
+\caption{\label{tab:micro}Distribuzione del numero e proprorzione di ceppi della famiglia Enterobacteriacee suddivise per genere, isolati dai 670 campioni di feci analizzati}\\
+\toprule
+Genere & n & prop(\%)\\
+\midrule
+\endfirsthead
+\caption[]{Distribuzione del numero e proprorzione di ceppi della famiglia Enterobacteriacee suddivise per genere, isolati dai 670 campioni di feci analizzati \textit{(continued)}}\\
+\toprule
+identificazione & n & prop(\%)\\
+\midrule
+\endhead
+\
+\endfoot
+\bottomrule
+\endlastfoot
+E.coli & 615 & 67.58\\
+Klebsiella & 61 & 6.70\\
+Enterobacter & 56 & 6.15\\
+Serratia & 40 & 4.40\\
+Pantoea & 39 & 4.29\\
+Hafnia & 36 & 3.96\\
+Proteus & 14 & 1.54\\
+Acinetobacter & 13 & 1.43\\
+Citrobacter & 12 & 1.32\\
+Yersinia & 7 & 0.77\\
+Cronobacter & 6 & 0.66\\
+Salmonella & 5 & 0.55\\
+Providencia & 4 & 0.44\\
+Pseudomonas & 1 & 0.11\\
+Shigella & 1 & 0.11\\
+\addlinespace
+Total & 910 & 100.00\\*
+\end{longtable}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{table}
+\caption{\label{tab:}Stime della prevalenza di campioni resistenti suddivisi per gruppo-specie: R= numero di campioni resistenti, N= numero campioni esaminati, Prevalenza = media della distribuzione beta, inf-HPD= valore inferiore dell'intervallo HPD, sup-HPD = valore superiore dell'intervallo HPD}
+\centering
+\begin{tabular}[t]{lrrrrr}
+\toprule
+Gruppo Specie & R & N & Prevalenza & inf-HPD & sup-HPD\\
+\midrule
+LEPRE & 3 & 3 & 0.88 & 0.56 & 1.00\\
+CORVIDI & 115 & 138 & 0.83 & 0.77 & 0.89\\
+ALTRI VOLATILI & 4 & 5 & 0.75 & 0.44 & 1.00\\
+CARNIVORI & 15 & 20 & 0.74 & 0.55 & 0.91\\
+RAPACI & 34 & 49 & 0.69 & 0.56 & 0.81\\
+CERVIDI & 166 & 272 & 0.61 & 0.55 & 0.67\\
+SUIDI & 43 & 76 & 0.56 & 0.45 & 0.67\\
+UCCELLI ACQUATICI & 6 & 12 & 0.50 & 0.24 & 0.76\\
+BOVIDI & 35 & 95 & 0.37 & 0.27 & 0.47\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}
+
+\caption{\label{tab:prevalenze2}Stime della prevalenza di campioni multi-resistenti suddivisi per gruppo-specie: MR= numero di campioni resistenti, N= numero campioni esaminati, Prevalenza = media della distribuzione beta, inf-HPD= valore inferiore dell'intervallo HPD, sup-HPD = valore superiore dell'intervallo HPD)}
+\centering
+\begin{tabular}[t]{lrrrrr}
+\toprule
+Specieagg & MR & N & Prevalenza & inf-HPD & sup-HPD\\
+\midrule
+LEPRE & 1 & 3 & 0.38 & 0.01 & 0.77\\
+RAPACI & 15 & 49 & 0.31 & 0.19 & 0.44\\
+CORVIDI & 29 & 138 & 0.21 & 0.15 & 0.28\\
+CARNIVORI & 3 & 20 & 0.17 & 0.03 & 0.32\\
+CERVIDI & 32 & 272 & 0.12 & 0.08 & 0.16\\
+\addlinespace
+SUIDI & 7 & 76 & 0.10 & 0.04 & 0.16\\
+ALTRI VOLATILI & 0 & 5 & 0.08 & 0.00 & 0.31\\
+BOVIDI & 5 & 95 & 0.06 & 0.02 & 0.10\\
+UCCELLI ACQUATICI & 0 & 12 & 0.04 & 0.00 & 0.15\\
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{table}
+
 
 \caption{\label{tab:kfold}Confronto tra modelli mediante K-fold cross-validation}
 \centering

@@ -1,7 +1,7 @@
 ####DATI E PACCHETTI####
 
-#setwd("~/Library/Mobile Documents/com~apple~CloudDocs/gitProject/AMR/ANALYSIS")
-setwd("D:/Dati/vito.tranquillo/Desktop/GitProjects/AMR/ANALYSIS")
+setwd("~/Library/Mobile Documents/com~apple~CloudDocs/gitProject/AMR/ANALYSIS")
+#setwd("D:/Dati/vito.tranquillo/Desktop/GitProjects/AMR/ANALYSIS")
 source('pacchetti.r')#<-carica le librerie
 source('funzioni.r')#<-carica funzioni in-built
 source('dataset.r')#<-carica lo script di preparazione dei dataset da usare per le analisi
@@ -70,7 +70,7 @@ AMR_istat %>%
   ))) %>% 
   arrange(ord) %>% 
   select(Parametri, 2:8) %>% 
-  kable("latex") %>% 
+  kable("latex", booktabs = TRUE, caption = "Caratterizzazione territoriale e demografica dei comuni di provenienza dei campioni") %>% 
   kable_styling()
 
 AMR_istat %>% 
@@ -119,10 +119,12 @@ AMR_istat %>%
   group_by(Specieagg, montano) %>% 
   summarise(N=n()) %>% 
   pivot_wider(names_from = montano, values_from = N, values_fill = list(N=0)) %>% 
-  janitor::adorn_totals(where = "col")  %>% 
-  kable("latex") %>% 
+  adorn_totals(where = "col")  %>% 
+  adorn_totals(where = "row") %>% 
+  kable("latex", booktabs = TRUE, caption = "Distribuzione del numero di campioni di feci in base alle caratteristiche territoriali di provenienza per i differenti gruppo-specie di appartenenza (NM= Non Montani, P= Parzialmente Montani, T= Totalmente Montani)") %>% 
   kable_styling()
 #tabella 2c<-campioni by urbanizzazione
+
 AMR_istat %>% 
   mutate(urb=ifelse(urb==1, "densPop alta",
                     ifelse(urb==2,"densPop media", "densPop scarsa" ))) %>% 
@@ -130,9 +132,11 @@ AMR_istat %>%
   group_by(Specieagg, urb) %>% 
   summarise(N=n()) %>% 
   pivot_wider(names_from = urb, values_from = N, values_fill = list(N=0)) %>% 
-  janitor::adorn_totals(where = "col")  %>% 
-  select("Gruppo Specie"=Specieagg, "UA"= "densPop alta", "UM" = "densPop media", "UB" = "densPop scarsa") %>% 
-  kable("latex") %>% 
+  adorn_totals(where = "col")  %>% 
+  adorn_totals(where = "row") %>% 
+  select("Gruppo Specie"=Specieagg, "UA"= "densPop alta", "UM" = "densPop media", "UB" = "densPop scarsa", "Totale"= Total) %>% 
+  kable("latex",  caption = "Distribuzione del numero di campioni di feci in base al grado di urbanizzazione  dei comuni di provenienza per i differenti gruppo-specie di appartenenza (UA= Urbanizzazione ALta, UM= Urbanizzazione Media, UB= Urbanizzazione Bassa)",
+        booktabs = TRUE) %>% 
   kable_styling()
 
 
@@ -147,8 +151,9 @@ AMR %>%
   tally() %>% arrange(desc(n)) %>% 
   mutate("prop(%)"=round(100*prop.table(n),2)) %>% 
   adorn_totals(where = c("row")) %>% 
-  kable("latex" ) %>% 
-  kable_styling()
+  kable("latex", caption = "Distribuzione del numero e proprorzione di ceppi della famiglia Enterobacteriacee suddivise per genere, isolati dai 670 campioni di feci analizzati",
+        booktabs = TRUE, longtable = T) %>% 
+  kable_styling(latex_options = c("repeat_header"))
 
 ##Antibiogrammi####
 ab<-AMR %>% 
@@ -219,8 +224,7 @@ mr<-Prev%>%
   tally() %>%
   pivot_wider(names_from = RSelv, values_from = n, values_fill = list(n = 0)) %>% 
   data.frame() %>% 
-  mutate(N=rowSums(.[2:3],na.rm = TRUE)) %>% 
-  adorn_totals()
+  mutate(N=rowSums(.[2:3],na.rm = TRUE)) 
   
 
 
@@ -237,8 +241,9 @@ R <- Rhpd %>%
   mutate(Specieagg = unique(factor(Specieagg)))
 
 R %>% 
-  select(-method, "R"=x, "N"=n, "Prevalenza"=mean, "inf-HPD"=lower, "sup-HPD"=upper, -shape1, -shape2, -sig) %>% 
-  kable("latex") %>% 
+  select("Gruppo Specie" = Specieagg, -method, "R"=x, "N"=n, "Prevalenza"=mean, "inf-HPD"=lower, "sup-HPD"=upper, -shape1, -shape2, -sig) %>% 
+  kable("latex", booktabs = T,
+        caption = "Stime della prevalenza di campioni resistenti suddivisi per gruppo-specie: R= numero di campioni resistenti, N= numero campioni esaminati, Prevalenza = media della distribuzione beta, inf-HPD= valore inferiore dell'intervallo HPD, sup-HPD = valore superiore dell'intervallo HPD") %>% 
   kable_styling()
   
 
@@ -333,7 +338,8 @@ MR <- MRhpd %>%
 
 MR %>% 
   select(-method, "MR"=x, "N"=n, "Prevalenza"=mean, "inf-HPD"=lower, "sup-HPD"=upper, -shape1, -shape2, -sig) %>% 
-  kable("latex") %>% 
+  kable("latex", caption = "Stime della prevalenza di campioni multi-resistenti suddivisi per gruppo-specie: MR= numero di campioni resistenti, N= numero campioni esaminati, Prevalenza = media della distribuzione beta, inf-HPD= valore inferiore dell'intervallo HPD, sup-HPD = valore superiore dell'intervallo HPD)",
+        booktabs = T) %>% 
   kable_styling()
 
 
@@ -419,18 +425,6 @@ R %>%
 pz <- binom.bayes.densityplot(R, fill.central = "steelblue", fill.lower = "steelblue",
                               alpha = 1.2) +facet_wrap(~Antibiotico)
 
-
-
-
- 
-
-  
-  
-  
-  
-  
-  # kable("latex") %>% 
-  # kable_styling()
 
 #--Bayesian posterior prevalence of seven antibiotic-resistence phenotype
 #--figura 5
