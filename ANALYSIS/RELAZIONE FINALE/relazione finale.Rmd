@@ -236,14 +236,9 @@ Secondo il modello, la probabilità di un animale di essere un carrier di ceppi 
 ## CARATTERIZZAZIONE FENOTIPICA DELL'ANTIBIOTICO-RESISTENZA DEGLI ISOLATI BATTERICI
 
 Le resistenze nei confronti di AMP e TET sono risultate le più frquenti: su 910 ceppi testati nei confronti di AMP 388 risultano resistenti (%), 342 ceppi risultano resistenti a TET (). Si osserva una frequenza di resistenza molto contenuta nei confronti degli altri antibiotici: solo l'8% di resistenze nei confronti di CFT, 5% nei confronti di COL, 5% nei confronti di ENR , 5% nei confronti di KAN e solo l'1.3% nei confronti di GEN. In tabella \ref{tab:rab} per gli antibiotici del panel analizzato sono riportati le stime della prevalenza di resistenza con i rispettivi intervalli bayesiani di elevata densità (HPDI).
+In tabella \ref{tab:rabprof} sono riportate le stime puntuali della prevalenza di ceppi resistenti ai diversi antibiotici suddivisi per il gruppo specie di provenienza. Escludendo i ceppi derivati da gruppi specie con ridotta dimensione del campione,  la maggior frequenza di ceppi resistenti a AMP si osserva negli isolati del gruppo  CORVIDI (58%), del gruppo CERVIDI (45%)  e RAPACI (42%); le frequenze minori si osservano nel gruppo BOVIDI (26%) e SUIDI (22%). Le resistenze a TET sono risultate più frequenti nei ceppi isolati dai CORVIDI (51%) e RAPACI (48%), mentre le più basse in isolati da  SUIDI (34%), CERVIDI(32%), BOVIDI(20%). Nei confronti della COLISTINA, antibiotico di particolare interesse in ambito clinico umano, si osserva una bassa frequenza di ceppi resistenti da un minimo dello 0.5% osservato nei ceppi isolati dai SUIDI, ad un massimo del 16% osservato sia nei RAPACI che nella LEPRE. Anche per il CEFTIOFUR , cefalosporina di 3 generazione nei confronti dei quali si è diffusa a livello mondiale la selezione di ceppi ESBL, si osserva una bassa prevalenza di ceppi resistenti: minimo 2.1% negli UCCELLI ACQUATICI, massimo 24% nei RAPACI. La GEN risulta l'antibiotico verso cui gli isolati si sono mostrati in modo uniforme tra le differenti specie meno resistenti (12 ceppi 1.30%). Anche per ENR e KAN si osserva una bassa e uniforme prevelenza di ceppi resistenti tra i diversi gruppi specie. L'incertezza delle  suddette stime sono rappresentate graficamente in figura \ref{fig:rabplot}. 
 
-
-Escludendo i ceppi derivati da gruppi specie con ridotta dimensione del campione,  la maggior frequenza di ceppi resistenti a AMP si osserva negli isolati del gruppo  CORVIDI (58%), del gruppo CERVIDI (45%)  e RAPACI (42%); le frequenze minori si osservano nel gruppo BOVIDI (26%) e SUIDI (22%). Le resistenze a TET sono risultate più frequenti nei ceppi isolati dai CORVIDI (51%) e RAPACI (48%), mentre le più basse in isolati da  SUIDI (34%), CERVIDI(32%), BOVIDI(20%). 
-
-Nei confronti della COLISTINA, antibiotico di particolare interesse in ambito clinico umano, si osserva una bassa frequenza di ceppi resistenti da un minimo dello 0.5% osservato nei ceppi isolati dai SUIDI, ad un massimo del 16% osservato sia nei RAPACI che nella LEPRE. Anche per il CEFTIOFUR , cefalosporina di 3 generazione nei confronti dei quali si è diffusa a livello mondiale la selezione di ceppi ESBL... si osserva una bassa prevalenza di ceppi resistenti: minimo 2.1% negli UCCELLI ACQUATICI, massimo 24% nei RAPACI. La GEN risulta l'antibiotico verso cui gli isolati si sono mostrati in modo uniforme tra le differenti specie meno resistenti (12 ceppi 1.30%). Anche per ENR e KAN si osserva una bassa e uniforme prevelenza di ceppi resistenti tra i diversi gruppi specie.
-(tabella 4)
-
-Il profilo di resistenza tra i differenti generi di ceppi isolati conferma che AMP e TET sono gli antibiotici verso i quali la maggior parte degli isolati mostra la maggior frequenza di resistenze (tabella 5).
+Il profilo di resistenza tra i differenti generi di ceppi isolati conferma che AMP e TET sono gli antibiotici verso i quali la maggior parte degli isolati mostra la maggior frequenza di resistenze (tabella \ref{tab:profab}).
     
 Si osservano 39 differenti profili di co-resistenza (da 1 a più AB) (fig.6). I profili più frequenti risultano: TET-AMP (141 ceppi), AMP (130 ceppi), TET (85 ceppi), CFT-TET-AMP (27 ceppi), COL-TET-AMP (14 ceppi), COL-TET (12 ceppi) e CFT-TET (12 ceppi), che rappresentano più dell'80% dei ceppi. Il restante 20% è distribuito nei restanti 32 profili.
 
@@ -321,6 +316,12 @@ knitr::include_graphics("figure/stimefe.png")
 ```{r echo=FALSE, condplot, fig.align = "center",out.width = '90%', fig.cap="Stima dell'effetto Superficie adibita al pascolo sulla probabilità di un animale di essere carrier di ceppi antibiotico-resistenti, condizionalmente al gruppo-specie di appartenenza"}
 
 knitr::include_graphics("figure/condplot.png")
+```
+
+
+```{r echo=FALSE, rabplot, fig.align = "center",out.width = '90%', fig.cap="Distribuzione a posteriori delle stime di prevalenza di ceppi resistenti al panel di antibiotici nei differenti gruppi-specie"}
+
+knitr::include_graphics("figure/rabgraf.png")
 ```
 
 \newpage
@@ -604,6 +605,54 @@ GEN & 12 & 910 & 0.01 & 0.01 & 0.02\\
 \bottomrule
 \end{tabular}
 \end{table}
+
+\begin{table}
+
+\caption{\label{tab:rabprof}Profilo di resistenza dei ceppi ai diversi antibiotici per gruppo-specie di provevienza del campione di feci}
+\centering
+\begin{tabular}[t]{lrrrrrrr}
+\toprule
+Specieagg & AMP & CFT & COL & ENR & GEN & KAN & TET\\
+\midrule
+CERVIDI & 0.45 & 0.09 & 0.04 & 0.03 & 0.01 & 0.05 & 0.32\\
+BOVIDI & 0.26 & 0.06 & 0.02 & 0.00 & 0.02 & 0.03 & 0.20\\
+CARNIVORI & 0.43 & 0.13 & 0.13 & 0.04 & 0.04 & 0.04 & 0.39\\
+SUIDI & 0.21 & 0.08 & 0.00 & 0.01 & 0.01 & 0.07 & 0.34\\
+LEPRE & 0.80 & 0.01 & 0.20 & 0.01 & 0.01 & 0.00 & 0.60\\
+CORVIDI & 0.58 & 0.07 & 0.08 & 0.10 & 0.01 & 0.04 & 0.51\\
+RAPACI & 0.42 & 0.24 & 0.17 & 0.16 & 0.05 & 0.07 & 0.48\\
+UCCELLI ACQUATICI & 0.18 & 0.00 & 0.00 & 0.00 & 0.00 & 0.12 & 0.35\\
+ALTRI VOLATILI & 0.50 & 0.00 & 0.00 & 0.00 & 0.01 & 0.01 & 0.67\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}
+\caption{\label{tab:}Profilo di antibiotico-resistenza tra i  diversi generi dei ceppi isolati}
+\centering
+\begin{tabular}[t]{lrrrrrrrr}
+\toprule
+Genere & N.ceppi & AMP & TET & CFT & COL & ENR & KAN & GEN\\
+\midrule
+E.coli & 615 & 32.52 & 34.96 & 9.43 & 2.93 & 4.07 & 6.50 & 1.30\\
+Klebsiella & 61 & 68.85 & 22.95 & 1.64 & 0.00 & 8.20 & 0.00 & 0.00\\
+Enterobacter & 56 & 87.50 & 67.86 & 0.00 & 7.14 & 5.36 & 1.79 & 1.79\\
+Serratia & 40 & 72.50 & 55.00 & 7.50 & 15.00 & 7.50 & 0.00 & 2.50\\
+Pantoea & 39 & 15.38 & 5.13 & 0.00 & 2.56 & 0.00 & 0.00 & 0.00\\
+Hafnia & 36 & 75.00 & 61.11 & 2.78 & 0.00 & 2.78 & 2.78 & 0.00\\
+Proteus & 14 & 14.29 & 100.00 & 21.43 & 100.00 & 0.00 & 7.14 & 14.29\\
+Acinetobacter & 13 & 84.62 & 23.08 & 76.92 & 7.69 & 30.77 & 0.00 & 0.00\\
+Citrobacter & 12 & 66.67 & 41.67 & 0.00 & 0.00 & 16.67 & 8.33 & 0.00\\
+Yersinia & 7 & 42.86 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00\\
+Cronobacter & 6 & 66.67 & 16.67 & 0.00 & 0.00 & 16.67 & 0.00 & 0.00\\
+Salmonella & 5 & 100.00 & 80.00 & 0.00 & 20.00 & 0.00 & 0.00 & 0.00\\
+Providencia & 4 & 0.00 & 25.00 & 0.00 & 100.00 & 0.00 & 0.00 & 0.00\\
+Pseudomonas & 1 & 100.00 & 100.00 & 100.00 & 0.00 & 100.00 & 100.00 & 0.00\\
+Shigella & 1 & 100.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00\\
+\bottomrule
+\end{tabular}
+\end{table}
+
 
 \newpage
 # Bibliografia

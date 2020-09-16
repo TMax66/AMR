@@ -1,7 +1,8 @@
 ####DATI E PACCHETTI####
 
-setwd("~/Library/Mobile Documents/com~apple~CloudDocs/gitProject/AMR/ANALYSIS")
-#setwd("D:/Dati/vito.tranquillo/Desktop/GitProjects/AMR/ANALYSIS")
+#setwd("~/Library/Mobile Documents/com~apple~CloudDocs/gitProject/AMR/ANALYSIS") CON MAC
+
+#setwd("D:/Dati/vito.tranquillo/Desktop/GitProjects/AMR/ANALYSIS") CON PC
 source('pacchetti.r')#<-carica le librerie
 source('funzioni.r')#<-carica funzioni in-built
 source('dataset.r')#<-carica lo script di preparazione dei dataset da usare per le analisi
@@ -429,6 +430,8 @@ pz <- binom.bayes.densityplot(R, fill.central = "steelblue", fill.lower = "steel
 #--Bayesian posterior prevalence of seven antibiotic-resistence phenotype
 #--figura 5
 
+
+
 dt<-AMR %>%
   select(Specieagg,identificazione, 13,14,16,17,20:22) %>% 
   na.omit() 
@@ -445,19 +448,20 @@ ab<-c(rep("COL", 36000), rep("CFT", 36000), rep("KAN", 36000), rep("ENR",36000),
       rep("GEN", 36000), rep("TET",36000), rep("AMP",36000))
 
 bigdf<-cbind(bigdf, "ab"=ab)
-bigfg<-bigdf %>% 
-  #mutate(Specie=gsub(" effect", " ", contrast)) %>% 
+bigdf <- bigdf %>% 
+  mutate(ab = factor(ab, levels = c("AMP", "TET","CFT", "COL", "ENR", "KAN", "GEN")))  
+bigfg<- bigdf %>% 
   ggplot(aes(x = logit2prob(.value), y=Specieagg,fill = Specieagg)) +geom_density_ridges(panel_scaling=TRUE)+
   theme_ridges()+facet_wrap(~ab)+
-  scale_fill_brewer(palette = 7) +
-  theme_ridges() + theme(legend.position = "NULL")+labs(x="Prevalenza",
-                                                        y="")
+  scale_fill_brewer(palette = "Blues") +
+  theme_ridges() + theme(legend.position = "NULL")+labs(x="Prevalenza", y="")
 #tabella 4
+
 bigdf %>% 
   group_by(Specieagg,ab) %>% 
   summarise(prev=round(mean(logit2prob(.value)),2)) %>% 
   pivot_wider(names_from = ab, values_from = "prev") %>% 
-  kable("latex") %>% 
+  kable("latex", booktabs = T, caption = "Profilo di resistenza dei ceppi ai diversi antibiotici per gruppo-specie di provevienza del campione di feci") %>% 
   kable_styling()
 
 
@@ -482,7 +486,9 @@ tot %>% full_join(res)%>%
   mutate("%R"=(res/tot)*100) %>% 
   select(-res) %>% 
   pivot_wider(names_from = antibiotico, values_from = `%R`) %>% 
-  kable("latex", digits = 2) %>% 
+  arrange(desc(tot)) %>% 
+  select("Genere" = identificazione, "N.ceppi" = tot, AMP, TET, CFT, COL, ENR, KAN, GEN, ) %>% 
+  kable("latex", digits = 2, booktabs= T, caption = "Profilo di antibiotico-resistenza tra i  diversi generi dei ceppi isolati") %>% 
   kable_styling()
 
 #Profilo di multiresistenza####
