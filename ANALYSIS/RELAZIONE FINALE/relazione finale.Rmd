@@ -196,7 +196,7 @@ $\alpha$ rappresenta un parametro di scala, lungo il quale la richezza del profi
 \newpage
 # RISULTATI
 
-## QUADRO GENERALE
+## Quadro generale
 
 ### Territorio
 L'attività di campionamento si è svolta tra Settembre 2017 e Dicembre 2019  in sette province della Lombardia : Bergamo, Pavia, Varese,Como, Lecco e Brescia da un totale di 223 comuni (Fig\ref{fig:fig1}). 
@@ -216,7 +216,7 @@ Dai 671 campioni di feci analizzati sono stati isolati  911 ceppi batterici iden
 Sono stati eseguiti 910 antibiogrammi. Complessivamente 392 ceppi (43%) sono risultati Suscettibili (S) al panel di antibiotici testati ; 423 (46%) i ceppi Resistenti (R)  fino ad un massimo di 2 antibiotici e infine 95 (10%) ceppi sono risultati Multiresistenti (MR), con resistenza a 3 o più antibiotici. La distribuzione del numero di resistenze al panel di antibiotici per isolato (Antibiogram length) è sintetizzata in figura \ref{fig:fig2}
 
 
-## PREVALENZA ANIMALI PORTATORI DI CEPPI RESISTENTI
+## Prevalenza animali carrier di ceppi resistenti
 Complessivamente da 670 campioni di feci di fauna selvatica da cui è stato  isolato almeno un ceppo di _Enterobacteriacee_ e su cui è stato eseguito l'antibiogramma, in 421  è stato isolato almeno un ceppo resistente ad uno o più  antibiotici del panel indagato, pari ad una Prevalenza complessiva (Overall Prevalence) del 62% (95% HPD: 58-67%).
 
 
@@ -233,17 +233,20 @@ Secondo il modello, la probabilità di un animale di essere un carrier di ceppi 
 
 
 
-## CARATTERIZZAZIONE FENOTIPICA DELL'ANTIBIOTICO-RESISTENZA DEGLI ISOLATI BATTERICI
+## Caratterizzazione fenotipica dell'antibiotico-resistenza degli isolati batterici
+
 
 Le resistenze nei confronti di AMP e TET sono risultate le più frquenti: su 910 ceppi testati nei confronti di AMP 388 risultano resistenti (%), 342 ceppi risultano resistenti a TET (). Si osserva una frequenza di resistenza molto contenuta nei confronti degli altri antibiotici: solo l'8% di resistenze nei confronti di CFT, 5% nei confronti di COL, 5% nei confronti di ENR , 5% nei confronti di KAN e solo l'1.3% nei confronti di GEN. In tabella \ref{tab:rab} per gli antibiotici del panel analizzato sono riportati le stime della prevalenza di resistenza con i rispettivi intervalli bayesiani di elevata densità (HPDI).
 In tabella \ref{tab:rabprof} sono riportate le stime puntuali della prevalenza di ceppi resistenti ai diversi antibiotici suddivisi per il gruppo specie di provenienza. Escludendo i ceppi derivati da gruppi specie con ridotta dimensione del campione,  la maggior frequenza di ceppi resistenti a AMP si osserva negli isolati del gruppo  CORVIDI (58%), del gruppo CERVIDI (45%)  e RAPACI (42%); le frequenze minori si osservano nel gruppo BOVIDI (26%) e SUIDI (22%). Le resistenze a TET sono risultate più frequenti nei ceppi isolati dai CORVIDI (51%) e RAPACI (48%), mentre le più basse in isolati da  SUIDI (34%), CERVIDI(32%), BOVIDI(20%). Nei confronti della COLISTINA, antibiotico di particolare interesse in ambito clinico umano, si osserva una bassa frequenza di ceppi resistenti da un minimo dello 0.5% osservato nei ceppi isolati dai SUIDI, ad un massimo del 16% osservato sia nei RAPACI che nella LEPRE. Anche per il CEFTIOFUR , cefalosporina di 3 generazione nei confronti dei quali si è diffusa a livello mondiale la selezione di ceppi ESBL, si osserva una bassa prevalenza di ceppi resistenti: minimo 2.1% negli UCCELLI ACQUATICI, massimo 24% nei RAPACI. La GEN risulta l'antibiotico verso cui gli isolati si sono mostrati in modo uniforme tra le differenti specie meno resistenti (12 ceppi 1.30%). Anche per ENR e KAN si osserva una bassa e uniforme prevelenza di ceppi resistenti tra i diversi gruppi specie. L'incertezza delle  suddette stime sono rappresentate graficamente in figura \ref{fig:rabplot}. 
-
 Il profilo di resistenza tra i differenti generi di ceppi isolati conferma che AMP e TET sono gli antibiotici verso i quali la maggior parte degli isolati mostra la maggior frequenza di resistenze (tabella \ref{tab:profab}).
     
-Si osservano 39 differenti profili di co-resistenza (da 1 a più AB) (fig.6). I profili più frequenti risultano: TET-AMP (141 ceppi), AMP (130 ceppi), TET (85 ceppi), CFT-TET-AMP (27 ceppi), COL-TET-AMP (14 ceppi), COL-TET (12 ceppi) e CFT-TET (12 ceppi), che rappresentano più dell'80% dei ceppi. Il restante 20% è distribuito nei restanti 32 profili.
 
-Diversità ecologica dei differenti profili di antibiotico-resistenza
-La figura 6 illustra la distribuzione dei ceppi in base al profilo di co-resistenza e la specie di fauna selvatica da cui provengono. Si può osservare la "rarità" di molti profili presenti solo in determinati gruppi Specie. Complessivamente si osserva una scarsa uniformità di profili tra i gruppi specie, con una particolare ricchezza di differenti profili nel gruppo CERVIDI e CORVIDI che sono i più rappresentati ma anche nei ceppi isolati dai RAPACI sebbene in numero sensibilmente più ridotto rispetto ai precedenti.
+
+
+### Profili fenotipici di resistenza dei ceppi isolati e diversità ecologica
+
+Complessivamente si osservano 39 differenti profili fenotipici basati sulle resistenze osservate. I profili più frequenti  sono:  TET-AMP (141 ceppi), AMP (130 ceppi), TET (85 ceppi), CFT-TET-AMP (27 ceppi), COL-TET-AMP (14 ceppi), COL-TET (12 ceppi) e CFT-TET (12 ceppi), che rappresentano più dell'80% dei ceppi. Il restante 20% è distribuito nei restanti 32 profili come rappresentato in figura \ref{fig:pcores}
+La distribuzione della frequenza ceppi in base al profilo di co-resistenza e la specie di fauna selvatica da cui provengono è rappresentata in figura \ref{fig:heatmap}. Si può osservare la "rarità" di molti profili presenti solo in determinati gruppi Specie. Complessivamente si osserva una scarsa uniformità di profili tra i gruppi specie, con una particolare ricchezza di differenti profili nel gruppo CERVIDI e CORVIDI che sono i più rappresentati ma anche nei ceppi isolati dai RAPACI sebbene in numero sensibilmente più ridotto rispetto ai precedenti.
 
 Gli indici di diversità (tab.6)sono riassunti in un grafico di Renyi entropy standardizzato (fig.7). Nella popolazione di CERVIDI si osserva un profilo di dominanza in termini di diversità con una minore diversità di profili di co-resistenza con una forte dominanza di pochi profili.
 AL contrario i gruppi specie BOVIDI, SUIDI, CARNIVORI, LEPRE, UCCELLI ACQUATICI e ALRI VOLATILI, mostrano un profilo di uniformità (evenness), quindi caratterizzato da maggiore diversità senza la presenza di profili di co-resistenza relativamente dominanti. 
@@ -256,7 +259,7 @@ Le popolazione di CORVIDI e RAPACI mostrano un sovrapponibile profilo di diversi
 Caratterizzazione genomica dei ceppi ceftiofur-resistenti
 La resistenza dei ceppi isolati al Ceftiofur è risultata poco frequente (prev.....)
 
-## POOL METAGENOMICI
+## Pool metagenomici
 
 \newpage
 
@@ -313,15 +316,27 @@ knitr::include_graphics("figure/prev.png")
 knitr::include_graphics("figure/stimefe.png")
 ```
 
-```{r echo=FALSE, condplot, fig.align = "center",out.width = '90%', fig.cap="Stima dell'effetto Superficie adibita al pascolo sulla probabilità di un animale di essere carrier di ceppi antibiotico-resistenti, condizionalmente al gruppo-specie di appartenenza"}
+```{r echo=FALSE, condplot, fig.align = "left",out.width = '110%', fig.cap="Stima dell'effetto 'Superficie adibita al pascolo' sulla probabilità di un animale di essere carrier di ceppi antibiotico-resistenti, condizionalmente al gruppo-specie di appartenenza"}
 
 knitr::include_graphics("figure/condplot.png")
 ```
 
 
-```{r echo=FALSE, rabplot, fig.align = "center",out.width = '90%', fig.cap="Distribuzione a posteriori delle stime di prevalenza di ceppi resistenti al panel di antibiotici nei differenti gruppi-specie"}
+```{r echo=FALSE, rabplot, fig.align = "center",out.width = '110%', fig.cap="Distribuzione a posteriori delle stime di prevalenza di ceppi resistenti al panel di antibiotici nei differenti gruppi-specie"}
 
 knitr::include_graphics("figure/rabgraf.png")
+```
+
+
+```{r echo=FALSE, pcores, fig.align = "center",out.width = '100%', fig.cap="Distribuzione della frequenza dei differenti profili fenotipici di resistenza"}
+
+knitr::include_graphics("figure/cores.png")
+```
+
+
+```{r echo=FALSE, heatmap, fig.align = "center", out.width = '100%', fig.cap="Distribuzione della frequenza dei differenti profili fenotipici di resistenza nei differenti gruppi-specie di provenienza dei campioni"}
+
+knitr::include_graphics("figure/heatm.png")
 ```
 
 \newpage
@@ -628,7 +643,7 @@ ALTRI VOLATILI & 0.50 & 0.00 & 0.00 & 0.00 & 0.01 & 0.01 & 0.67\\
 \end{table}
 
 \begin{table}
-\caption{\label{tab:}Profilo di antibiotico-resistenza tra i  diversi generi dei ceppi isolati}
+\caption{\label{tab:profab}Profilo di antibiotico-resistenza tra i  diversi generi dei ceppi isolati}
 \centering
 \begin{tabular}[t]{lrrrrrrrr}
 \toprule

@@ -2,7 +2,7 @@
 
 #setwd("~/Library/Mobile Documents/com~apple~CloudDocs/gitProject/AMR/ANALYSIS") CON MAC
 
-#setwd("D:/Dati/vito.tranquillo/Desktop/GitProjects/AMR/ANALYSIS") CON PC
+setwd("D:/Dati/vito.tranquillo/Desktop/GitProjects/AMR/ANALYSIS") #CON PC
 source('pacchetti.r')#<-carica le librerie
 source('funzioni.r')#<-carica funzioni in-built
 source('dataset.r')#<-carica lo script di preparazione dei dataset da usare per le analisi
@@ -491,6 +491,8 @@ tot %>% full_join(res)%>%
   kable("latex", digits = 2, booktabs= T, caption = "Profilo di antibiotico-resistenza tra i  diversi generi dei ceppi isolati") %>% 
   kable_styling()
 
+
+
 #Profilo di multiresistenza####
  amr %>% 
   filter(profilo!="SUSC") %>% 
@@ -502,11 +504,11 @@ tot %>% full_join(res)%>%
   #ggplot(aes(x=profilo, y=n))+geom_bar(stat = "identity")+coord_flip()
   ggplot(aes(x=profilo, y=n, label=n))+
   geom_segment( aes(x=profilo, xend=profilo, y=0, yend=n), color="grey")+
-  geom_point( aes(x=profilo, y=n), size=8.4, color="lightblue" )+
-  geom_text(color="black", size=4)+
+  geom_point( aes(x=profilo, y=n), size=8.4, color="steelblue" )+
+  geom_text(color="white", size=4)+
   coord_flip()+
-  theme_ipsum_rc(axis_title_just = "mc")+
-  labs(y="n.ceppi",x="Profilo di resistenza/multiresistenza")
+  theme_ipsum_rc()+
+  labs(y="n.ceppi",x="")
 
 
 #prevalenza ceppi ABr e MAbr per gruppo-specie di provenienza del campione
@@ -521,12 +523,12 @@ amr %>%
     dplyr::summarise(n=n()) %>% 
     ggplot( aes(Specieagg,profilo), label=n) + 
     geom_tile(aes(fill = n)) + 
-    geom_text(aes(label = n), size=2) +
+    geom_text(aes(label = n), size=4) +
     scale_fill_gradient(low = "gray", high = "red")+
     #scale_fill_gradient(low = "lightgrey",high = "steelblue")+
     scale_x_discrete(expand = c(0, 0)) + theme_ipsum_rc()+
     scale_y_discrete(expand = c(0, 0)) + labs(x="Gruppo Specie")+
-    theme(legend.position = "bottom",axis.ticks = element_blank(),axis.text.x = element_text(angle = 90, hjust = 1,size=5),axis.text.y = element_text(size=5))
+    theme(legend.position = "bottom",axis.ticks = element_blank(),axis.text.x = element_text(angle = 90, hjust = 1,size=8),axis.text.y = element_text(size=8))
 
  profili<-amr %>% 
     group_by(Specieagg,profilo) %>% 
