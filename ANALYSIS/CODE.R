@@ -538,13 +538,13 @@ amr %>%
  
   renyis<-renyi(profili[-1], hill=TRUE)
   
-  #tabella valori renyis <-tabella 6
+  # tabella valori renyis <-tabella 6
   specie<-levels(profili$Specieagg)
   
   tab<-renyis
   row.names(tab)<-specie
   tab%>% 
-    kable("latex", digits = 2) %>% 
+    kable("latex", digits = 2, booktabs = T, caption = "Valori di entropia di Renyi standardizzati tra i diversi gruppi specie" ) %>% 
     kable_styling()
 
  ###fig.7#<-graifico di Renyis standardizzato
@@ -554,12 +554,20 @@ amr %>%
     pivot_longer(cols=1:11, names_to="alpha",values_to = "indici" ) %>% 
     mutate(alpha=factor(alpha, levels=c("0", "0.25", "0.5","1", "2", "4", "8", "16","32","64","Inf"))) %>% 
     ggplot(aes(x=alpha, y=indici, color=Specie, group=Specie))+
-    geom_point()+geom_line()+theme_bw()+
+    geom_line()+theme_bw()+
     labs(y="Rényi entropy", x="Rényi scale (alpha)")+
     theme(legend.position="bottom",legend.text=element_text(size=7),
           legend.title = element_blank())#+
     #scale_color_manual(values = brewer.pal(12, "Set1"))
   
+   
+   
+   
+   
+   
+   
+   
+   
 #####META-ANALISI PREVALENZE####
    amrbib <- read_excel("meta.xlsx")
    amrbib<-amrbib %>% 

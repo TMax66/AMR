@@ -247,23 +247,24 @@ Il profilo di resistenza tra i differenti generi di ceppi isolati conferma che A
 
 Complessivamente si osservano 39 differenti profili fenotipici basati sulle resistenze osservate. I profili più frequenti  sono:  TET-AMP (141 ceppi), AMP (130 ceppi), TET (85 ceppi), CFT-TET-AMP (27 ceppi), COL-TET-AMP (14 ceppi), COL-TET (12 ceppi) e CFT-TET (12 ceppi), che rappresentano più dell'80% dei ceppi. Il restante 20% è distribuito nei restanti 32 profili come rappresentato in figura \ref{fig:pcores}
 La distribuzione della frequenza ceppi in base al profilo di co-resistenza e la specie di fauna selvatica da cui provengono è rappresentata in figura \ref{fig:heatmap}. Si può osservare la "rarità" di molti profili presenti solo in determinati gruppi Specie. Complessivamente si osserva una scarsa uniformità di profili tra i gruppi specie, con una particolare ricchezza di differenti profili nel gruppo CERVIDI e CORVIDI che sono i più rappresentati ma anche nei ceppi isolati dai RAPACI sebbene in numero sensibilmente più ridotto rispetto ai precedenti.
-
-Gli indici di diversità (tab.6)sono riassunti in un grafico di Renyi entropy standardizzato (fig.7). Nella popolazione di CERVIDI si osserva un profilo di dominanza in termini di diversità con una minore diversità di profili di co-resistenza con una forte dominanza di pochi profili.
-AL contrario i gruppi specie BOVIDI, SUIDI, CARNIVORI, LEPRE, UCCELLI ACQUATICI e ALRI VOLATILI, mostrano un profilo di uniformità (evenness), quindi caratterizzato da maggiore diversità senza la presenza di profili di co-resistenza relativamente dominanti. 
-Le popolazione di CORVIDI e RAPACI mostrano un sovrapponibile profilo di diversità intermedio rispetto a quello di dominanza dei CERVIDI e di evenness degli altri gruppi-specie. 
+Gli indici di diversità (\ref{tab:reny})sono riassunti in un grafico di Renyi entropy standardizzato (\ref{fig:greny}). Nella popolazione di CERVIDI si osserva un profilo di dominanza in termini di diversità con una minore diversità di profili di co-resistenza con una forte dominanza di pochi profili. AL contrario i gruppi specie BOVIDI, SUIDI, CARNIVORI, LEPRE, UCCELLI ACQUATICI e ALRI VOLATILI, mostrano un profilo di uniformità (evenness), quindi caratterizzato da maggiore diversità senza la presenza di profili di co-resistenza relativamente dominanti.  Le popolazione di CORVIDI e RAPACI mostrano un  profilo di diversità sovrapponibile e intermedio  rispetto a quello di dominanza dei CERVIDI e di uniformità  degli altri gruppi-specie. 
 
 
 
+### Caratterizzazione genomica dei ceppi ceftiofur-resistenti
+La resistenza dei ceppi isolati al Ceftiofur è risultata poco frequente......
 
-    
-Caratterizzazione genomica dei ceppi ceftiofur-resistenti
-La resistenza dei ceppi isolati al Ceftiofur è risultata poco frequente (prev.....)
 
 ## Pool metagenomici
+
 
 \newpage
 
 # DISCUSSIONE E CONCLUSIONI (max 10 pagine)
+
+
+
+
 
 \newpage
 
@@ -311,33 +312,40 @@ knitr::include_graphics("figure/prev.png")
 knitr::include_graphics("figure/prev.png")
 ```
 
-```{r echo=FALSE, stimefe, fig.align = "center",out.width = '90%', fig.cap="Distribuzione a posteriori delle stime dei coefficenti di regressione del modello 2"}
+```{r echo=FALSE, stimefe, fig.align = "center",out.width = '85%', fig.cap="Distribuzione a posteriori delle stime dei coefficenti di regressione del modello 2"}
 
 knitr::include_graphics("figure/stimefe.png")
 ```
 
-```{r echo=FALSE, condplot, fig.align = "left",out.width = '110%', fig.cap="Stima dell'effetto 'Superficie adibita al pascolo' sulla probabilità di un animale di essere carrier di ceppi antibiotico-resistenti, condizionalmente al gruppo-specie di appartenenza"}
+```{r echo=FALSE, condplot, fig.align = "center",out.width = '85%', fig.cap="Stima dell'effetto 'Superficie adibita al pascolo' sulla probabilità di un animale di essere carrier di ceppi antibiotico-resistenti, condizionalmente al gruppo-specie di appartenenza"}
 
 knitr::include_graphics("figure/condplot.png")
 ```
 
-
-```{r echo=FALSE, rabplot, fig.align = "center",out.width = '110%', fig.cap="Distribuzione a posteriori delle stime di prevalenza di ceppi resistenti al panel di antibiotici nei differenti gruppi-specie"}
+```{r echo=FALSE, rabplot, fig.align = "center",out.width = '85%', fig.cap="Distribuzione a posteriori delle stime di prevalenza di ceppi resistenti al panel di antibiotici nei differenti gruppi-specie"}
 
 knitr::include_graphics("figure/rabgraf.png")
 ```
 
-
-```{r echo=FALSE, pcores, fig.align = "center",out.width = '100%', fig.cap="Distribuzione della frequenza dei differenti profili fenotipici di resistenza"}
+```{r echo=FALSE, pcores, fig.align = "center",out.width = '85%', fig.cap="Distribuzione della frequenza dei differenti profili fenotipici di resistenza"}
 
 knitr::include_graphics("figure/cores.png")
 ```
 
-
-```{r echo=FALSE, heatmap, fig.align = "center", out.width = '100%', fig.cap="Distribuzione della frequenza dei differenti profili fenotipici di resistenza nei differenti gruppi-specie di provenienza dei campioni"}
+```{r echo=FALSE, greny, fig.align = "center",out.width = '85%', fig.cap="Distribuzione della frequenza di fenotipi di resistenza nei diversi gruppi specie"}
 
 knitr::include_graphics("figure/heatm.png")
 ```
+
+```{r echo=FALSE, heatmap, fig.align = "center",out.width = '85%', fig.cap="Profili di diversità dei fenotipi di ceppi resistenti nei diversi gruppi specie (Reny's entropy standardized"}
+
+knitr::include_graphics("figure/f9.png")
+```
+
+
+
+
+
 
 \newpage
 
@@ -503,20 +511,6 @@ Shigella & 1 & 0.11\\
 Total & 910 & 100.00\\*
 \end{longtable}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \begin{table}
 \caption{\label{tab:}Stime della prevalenza di campioni resistenti suddivisi per gruppo-specie: R= numero di campioni resistenti, N= numero campioni esaminati, Prevalenza = media della distribuzione beta, inf-HPD= valore inferiore dell'intervallo HPD, sup-HPD = valore superiore dell'intervallo HPD}
 \centering
@@ -621,8 +615,8 @@ GEN & 12 & 910 & 0.01 & 0.01 & 0.02\\
 \end{tabular}
 \end{table}
 
-\begin{table}
 
+\begin{table}
 \caption{\label{tab:rabprof}Profilo di resistenza dei ceppi ai diversi antibiotici per gruppo-specie di provevienza del campione di feci}
 \centering
 \begin{tabular}[t]{lrrrrrrr}
@@ -669,5 +663,30 @@ Shigella & 1 & 100.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00\\
 \end{table}
 
 
+\begin{table}
+
+\caption{\label{tab:reny}Valori di entropia di Renyi standardizzati tra i diversi gruppi specie}
+\centering
+\begin{tabular}[t]{lrrrrrrrrrrr}
+\toprule
+  & 0 & 0.25 & 0.5 & 1 & 2 & 4 & 8 & 16 & 32 & 64 & Inf\\
+\midrule
+CERVIDI & 27 & 18.24 & 12.13 & 6.36 & 3.75 & 2.81 & 2.45 & 2.31 & 2.25 & 2.22 & 2.19\\
+BOVIDI & 9 & 6.88 & 5.26 & 3.36 & 2.15 & 1.73 & 1.60 & 1.55 & 1.53 & 1.52 & 1.51\\
+CARNIVORI & 10 & 9.24 & 8.51 & 7.28 & 5.76 & 4.75 & 4.27 & 3.98 & 3.82 & 3.74 & 3.67\\
+SUIDI & 11 & 8.83 & 7.06 & 4.74 & 2.98 & 2.26 & 2.02 & 1.93 & 1.89 & 1.87 & 1.85\\
+LEPRE & 4 & 3.95 & 3.90 & 3.79 & 3.57 & 3.20 & 2.84 & 2.66 & 2.57 & 2.54 & 2.50\\
+\addlinespace
+CORVIDI & 22 & 16.75 & 12.85 & 8.49 & 5.89 & 4.94 & 4.55 & 4.35 & 4.22 & 4.14 & 4.05\\
+RAPACI & 21 & 18.18 & 15.41 & 10.66 & 5.73 & 3.64 & 3.03 & 2.82 & 2.72 & 2.68 & 2.64\\
+UCCELLI ACQUATICI & 5 & 4.57 & 4.16 & 3.44 & 2.56 & 2.03 & 1.83 & 1.76 & 1.73 & 1.71 & 1.70\\
+ALTRI VOLATILI & 3 & 2.93 & 2.87 & 2.75 & 2.57 & 2.36 & 2.20 & 2.09 & 2.05 & 2.02 & 2.00\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
 \newpage
+
 # Bibliografia
