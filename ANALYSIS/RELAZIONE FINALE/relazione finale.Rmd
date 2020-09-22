@@ -83,7 +83,7 @@ Sulla base di questi dati è stato progettato un studio osservazionale con l'obi
 @ahmed_prevalence_2016
 
 \newpage
-# MATERIALE E METODI (max 10 pagine)
+# MATERIALE E METODI
 
 ## Campionamento
 Si è proceduto ad un campionamento non probabilistico di convenienza utilizzando sia i campioni raccolti durante le attività di sorveglianza del piano regionale fauna selvatica della Lombardia (cinghiali, ruminanti selvatici, lagomorfi, volatili) , sia i campioni provenienti da attività di sorveglianza del piano CWD (cervi e caprioli) e del piano West Nile Disease (Cornacchie, Gazze). I campioni di feci raccolti dall'intestino degli animali, direttamente in campo per i mammiferi abbattuti durante la stagione venatoria ( prevalentemente cinghiali), o durante la necroscopia per gli animali rinvenuti morti o volatili abbattuti nell'ambito del monitoraggio WND,  sono stati stoccati a temperatura di congelamento in attesa di essere processati. La raccolta dei campioni è avvenuta nel periodo compreso tra la fine del 2017 e primi mesi del 2019. 
@@ -241,8 +241,6 @@ In tabella \ref{tab:rabprof} sono riportate le stime puntuali della prevalenza d
 Il profilo di resistenza tra i differenti generi di ceppi isolati conferma che AMP e TET sono gli antibiotici verso i quali la maggior parte degli isolati mostra la maggior frequenza di resistenze (tabella \ref{tab:profab}).
     
 
-
-
 ### Profili fenotipici di resistenza dei ceppi isolati e diversità ecologica
 
 Complessivamente si osservano 39 differenti profili fenotipici basati sulle resistenze osservate. I profili più frequenti  sono:  TET-AMP (141 ceppi), AMP (130 ceppi), TET (85 ceppi), CFT-TET-AMP (27 ceppi), COL-TET-AMP (14 ceppi), COL-TET (12 ceppi) e CFT-TET (12 ceppi), che rappresentano più dell'80% dei ceppi. Il restante 20% è distribuito nei restanti 32 profili come rappresentato in figura \ref{fig:pcores}
@@ -260,7 +258,8 @@ La resistenza dei ceppi isolati al Ceftiofur è risultata poco frequente......
 
 \newpage
 
-# DISCUSSIONE E CONCLUSIONI (max 10 pagine)
+# DISCUSSIONE E CONCLUSIONI
+
 
 
 
