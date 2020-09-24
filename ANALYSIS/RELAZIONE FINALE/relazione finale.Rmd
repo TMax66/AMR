@@ -260,7 +260,7 @@ La resistenza dei ceppi isolati al Ceftiofur è risultata poco frequente......
 
 # DISCUSSIONE E CONCLUSIONI
 
-
+L'accumularsi di evidenza della presenza e diffusione nella fauna selvatica e in ambienti silvestri di ceppi batterici antimicrobico-resistenti ha portato molti autori a ritenere  che il problema AMR non è più e non solo confinato al comparto zootencino e quello umano ma è un problema di sanità pubblica più vasto con un carattere ambientale che coinvolge il comparto uomo (uso/abuso degli antibiotici nella popolazione generale e in particolare in quella ospedalizzata), animali domestici (uso/abuso degli antibiotici negli allevamenti da reddito e in animali da compagnia) e ambiente selvatico sia con il convolgimento diretto della fauna selvatica che per contaminazione ambientale. 
 
 
 
