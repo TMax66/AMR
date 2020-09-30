@@ -115,7 +115,17 @@ Batteriostatico, penetra nella cellula complessata a Mg 2+ . Lega la sub-unità
     
 **Enrofloxacin (ENR)**. Molecola prototipo dei fluorochinolonici, tra cui Danofloxacin, Ciprofloxacin, Marbofloxacin, Orbifloxacin, Pradofloxacin. Antibiotici classificati da WHO come **Critically Important Antimicrobial** e **Highest Priority** in quanto soddisfano sia i criteri d'importanza C1, C2 e C3 sia i fattori di prioritizzazione P1, P2 e P3). Sono antibiotici conosciuti per selezionare negli animali ceppi di E.coli e Salmonella spp resistenti ai chinoloni che sono tra i pochi strumenti terapeutici nel caso di gravi forme di infezioni da Salmonella e E.coli. 
     
- 
+
+## Caratterizzazione genotipica di ceppi ESBL e MCR
+
+### Screening
+
+
+### Conferma
+I 49 campioni conferiti sono stati sottoposti a esame batteriologico con semina su piastre di agar MacConkey e di agar sangue (Oxoid, Italia) e successiva incubazione in aerobiosi per 18 ± 2 ore a 37 ± 2° C. Le colonie sospette di E. coli sono state identificate morfologicamente (appaiono rosa su MacConkey e/o con emolisi su piastre di agar sangue) e colorazione di Gram. Per ogni caso/animale, è stata prelevata una colonia sospetta e seminata in BHI (Brain Heart Infusion) agar inclinato (Oxoid, Italia) e l’identificazione è stata condotta tramite il metodo biochimico API 20E (bioMérieux, Francia).
+Per l'indagine ESBL (produttori di beta-lattamasi a spettro allargato), una colonia sospetta di E. coli è stata inoculata in 1 ml di brodo BHI con supplemento di 1 mg/L di cefotaxime per la fase di pre-arricchimento. In seguito ad incubazione overnight, una goccia di BHI brodo è stata seminata su agar MacConkey con supplemento di 1 mg/L di cefotaxime. I ceppi positivi sono stati identificati attraverso la crescita di colonie rosa-rosa scuro ed una di queste è stata prelevata per le successive analisi molecolari.
+### Caratterizzazione genomica
+
 
 
 ## Analisi metagenomiche
@@ -248,9 +258,9 @@ La distribuzione della frequenza ceppi in base al profilo di co-resistenza e la 
 Gli indici di diversità (\ref{tab:reny})sono riassunti in un grafico di Renyi entropy standardizzato (\ref{fig:greny}). Nella popolazione di CERVIDI si osserva un profilo di dominanza in termini di diversità con una minore diversità di profili di co-resistenza con una forte dominanza di pochi profili. AL contrario i gruppi specie BOVIDI, SUIDI, CARNIVORI, LEPRE, UCCELLI ACQUATICI e ALRI VOLATILI, mostrano un profilo di uniformità (evenness), quindi caratterizzato da maggiore diversità senza la presenza di profili di co-resistenza relativamente dominanti.  Le popolazione di CORVIDI e RAPACI mostrano un  profilo di diversità sovrapponibile e intermedio  rispetto a quello di dominanza dei CERVIDI e di uniformità  degli altri gruppi-specie. 
 
 
-
 ### Caratterizzazione genomica dei ceppi ceftiofur-resistenti
 La resistenza dei ceppi isolati al Ceftiofur è risultata poco frequente......
+Su un totale di 49 ceppi conferiti, le analisi sono state condotte su 47 isolati dal momento che due di essi sono risultati inquinati. Dalle analisi molecolari è emersa una prevalenza di E. coli dell’85,10% (40/47) e del 14,89% (7/47) per E. fergusonii (Tabella 1). Rispetto alle analisi sui geni di resistenza, nei ceppi di E. coli è emersa una prevalenza dell’10,00% (4/40) per il gene TEM e del 2,50% (1/40) per SHV (Tabella 1). Rispetto a E. fergusonii, è stata riscontrata una prevalenza del 14,29% (1/7) per il gene SHV (Tabella 1). 
 
 
 ## Pool metagenomici
