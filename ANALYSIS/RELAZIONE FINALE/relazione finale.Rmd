@@ -2,7 +2,7 @@
 title: ''
 author: ''
 header-includes: \usepackage[italian]{babel} \usepackage{setspace}\doublespacing \usepackage{float} 
-                  \usepackage{booktabs} \usepackage{longtable}
+                  \usepackage{booktabs} \usepackage{longtable} 
 output:
   pdf_document:
     toc: yes
@@ -119,12 +119,16 @@ Batteriostatico, penetra nella cellula complessata a Mg 2+ . Lega la sub-unità
 ## Caratterizzazione genotipica di ceppi ESBL e MCR
 
 ### Screening
-
+Sulla base dei risultati dell'antibiogramma sono stati selezionati i ceppi risultati resistenti a Ceftiofur e quindi sottoposti al test .... per identificare i ceppi ESBL fenotipicamente resistenti.  I ceppi positivi al test sono quindi stati inviati all'U.O.x per la caratterizzazione genomica.
 
 ### Conferma
-I 49 campioni conferiti sono stati sottoposti a esame batteriologico con semina su piastre di agar MacConkey e di agar sangue (Oxoid, Italia) e successiva incubazione in aerobiosi per 18 ± 2 ore a 37 ± 2° C. Le colonie sospette di E. coli sono state identificate morfologicamente (appaiono rosa su MacConkey e/o con emolisi su piastre di agar sangue) e colorazione di Gram. Per ogni caso/animale, è stata prelevata una colonia sospetta e seminata in BHI (Brain Heart Infusion) agar inclinato (Oxoid, Italia) e l’identificazione è stata condotta tramite il metodo biochimico API 20E (bioMérieux, Francia).
+I [49]campioni conferiti sono stati sottoposti a esame batteriologico con semina su piastre di agar MacConkey e di agar sangue (Oxoid, Italia) e successiva incubazione in aerobiosi per 18 ± 2 ore a 37 ± 2° C. Le colonie sospette di E. coli sono state identificate morfologicamente colorazione di Gram. Si è quindi proceduto a prelevare  una colonia sospetta e seminata in BHI (Brain Heart Infusion) agar inclinato (Oxoid, Italia) e l’identificazione è stata condotta tramite il metodo biochimico API 20E (bioMérieux, Francia).
 Per l'indagine ESBL (produttori di beta-lattamasi a spettro allargato), una colonia sospetta di E. coli è stata inoculata in 1 ml di brodo BHI con supplemento di 1 mg/L di cefotaxime per la fase di pre-arricchimento. In seguito ad incubazione overnight, una goccia di BHI brodo è stata seminata su agar MacConkey con supplemento di 1 mg/L di cefotaxime. I ceppi positivi sono stati identificati attraverso la crescita di colonie rosa-rosa scuro ed una di queste è stata prelevata per le successive analisi molecolari.
+
 ### Caratterizzazione genomica
+Una singola colonia batterica per campione è stata risospesa in 250 $\mu$l di acqua DNasi-RNasi free e il DNA è stato estratto mediante lisi-ebollizione (98°C per 10 minuti). Il gruppo filogenetico di ciascun isolato è stato determinato attraverso una PCR multiplex che discrimina i sette gruppi principali (A, B1, B2, C, D, E o F) come descritto da [@clermont2013c].
+La rilevazione dei geni di resistenza presenti negli isolati è stata eseguita utilizzando un pannello di reazioni PCR. I geni del gruppo CTX-M sono stati analizzati tramite PCR multiplex, la cui positività singola o multipla, identifica i cinque gruppi filogenetici principali: CTX-M1, CTX-M2, CTX-M9 e CTX-M8 e CTX-M25 [@woodford2006multiplex]. Inoltre, singole reazioni PCR sono state utilizzate per il gene SHV [@arlet1997substitution], il gene TEM [@mabilat1990direct], utilizzando primer universali come precedentemente descritto ([@chang2001diversity]; [@ahmed2007zoo];[@cremet2011prevalence]; [@gbonon2018detection]) e geni AmpC (CMY-2, CMY-4, CMY -6, CMY-7, CMY-12, CMY-13, CMY-14, CMY-18, LAT-3) [@dierikx2010increased]. La ricerca dei geni mcr (plasmid-mediated colistin resistance determinants), mcr-1, mcr-2, mcr-3, mcr-4 and mcr-5, è stata condotta tramite PCR multiplex come descritto da [@rebelo2018multiplex].
+
 
 
 
@@ -259,8 +263,8 @@ Gli indici di diversità (\ref{tab:reny})sono riassunti in un grafico di Renyi e
 
 
 ### Caratterizzazione genomica dei ceppi ceftiofur-resistenti
-La resistenza dei ceppi isolati al Ceftiofur è risultata poco frequente......
-Su un totale di 49 ceppi conferiti, le analisi sono state condotte su 47 isolati dal momento che due di essi sono risultati inquinati. Dalle analisi molecolari è emersa una prevalenza di E. coli dell’85,10% (40/47) e del 14,89% (7/47) per E. fergusonii (Tabella 1). Rispetto alle analisi sui geni di resistenza, nei ceppi di E. coli è emersa una prevalenza dell’10,00% (4/40) per il gene TEM e del 2,50% (1/40) per SHV (Tabella 1). Rispetto a E. fergusonii, è stata riscontrata una prevalenza del 14,29% (1/7) per il gene SHV (Tabella 1). 
+La resistenza dei ceppi isolati al Ceftiofur è risultata poco frequente x/su... di questi sono risultati positivi al test 49 ceppi  z.... 
+Le analisi genomiche  sono state condotte su 47 isolati dal momento che due di essi sono risultati inquinati. Dalle analisi molecolari è emersa una prevalenza di E. coli dell’85,10% (40/47) e del 14,89% (7/47) per E. fergusonii. Rispetto alle analisi sui geni di resistenza, nei ceppi di E. coli è emersa una prevalenza dell’10,00% (4/40) per il gene TEM e del 2,50% (1/40) per SHV (Tabella 1). Rispetto a E. fergusonii, è stata riscontrata una prevalenza del 14,29% (1/7) per il gene SHV \ref{tab:cftres}. 
 
 
 ## Pool metagenomici
@@ -270,7 +274,7 @@ Su un totale di 49 ceppi conferiti, le analisi sono state condotte su 47 isolati
 
 # DISCUSSIONE E CONCLUSIONI
 
-L'accumularsi di evidenza della presenza e diffusione nella fauna selvatica e in ambienti silvestri di ceppi batterici antimicrobico-resistenti ha portato molti autori a ritenere  che il problema AMR non è più e non solo confinato al comparto zootencino e quello umano ma è un problema di sanità pubblica più vasto con un carattere ambientale che coinvolge il comparto uomo (uso/abuso degli antibiotici nella popolazione generale e in particolare in quella ospedalizzata), animali domestici (uso/abuso degli antibiotici negli allevamenti da reddito e in animali da compagnia) e ambiente selvatico sia con il convolgimento diretto della fauna selvatica che per contaminazione ambientale. 
+L'accumularsi di evidenza della presenza e diffusione nella fauna selvatica e in ambienti silvestri di ceppi batterici antimicrobico-resistenti ha portato molti Autori a ritenere  che il problema AMR non è più e non solo confinato al comparto zootencino e quello umano ma è un problema di sanità pubblica più vasto con un carattere ambientale che coinvolge il comparto uomo (uso/abuso degli antibiotici nella popolazione generale e in particolare in quella ospedalizzata), animali domestici (uso/abuso degli antibiotici negli allevamenti da reddito e in animali da compagnia) e ambiente selvatico sia con il convolgimento diretto della fauna selvatica che per contaminazione ambientale. Come contributo al crescente interesse intorno al ruolo svolto dalla fauna selvatica nel mantenimento e diffusione dell'antibiotico resistenza, questo progetto di ricerca ha permesso di raccogliere dati su un ampio spettro di specie in un territorio con differenti gradi di antropomorfizzazione. Trattandosi di uno studio osservazionale, con un campionamento non probabilistico di convenienza, come la maggior parte degli studi effettuati sulla fauna selvatica, soffre delle limitazioni derivanti principalmente dalle modalità non randomizzate di selezione del campione, che introduce nelle stime distorsioni derivanti da bias di selezione non prevedibili sia in termini quantitativi che direzionali. A differenza degli studi pubblicati sull'argomento che focalizzano l'attenzione sul ceppo batterico,  in questo progetto si è proceduto a quantificare anche la prevalenza di animali carrier di ceppi antibiotico-resistenti, definendo come "caso", il campione di feci con almeno un ceppo risultato resistente ad almeno un antibiotico del panel testato. Indubbiamente questa definizione non protegge da bias di misclassificazione, ma in questo caso siamo confidenti che il bias abbia una direzionalità precisa e cioè comporta una sottostima del numero di "casi" dovuta ad esempio al mancato isolamento di ceppi resistenti presenti nel campione di feci ma non isolati e processati per l'esame batteriologico. Da questo punto di vista quindi le stime di prevalenza di animali carrier vanno intese come  limite inferiore della vera prevalenza, al di là dell'incertezza dovuta alla dimensione campionaria e quantificata medianti gli intervalli di credibilità bayesiani. 
 
 
 
@@ -521,7 +525,7 @@ Total & 910 & 100.00\\*
 \end{longtable}
 
 \begin{table}
-\caption{\label{tab:}Stime della prevalenza di campioni resistenti suddivisi per gruppo-specie: R= numero di campioni resistenti, N= numero campioni esaminati, Prevalenza = media della distribuzione beta, inf-HPD= valore inferiore dell'intervallo HPD, sup-HPD = valore superiore dell'intervallo HPD}
+\caption{\label{tab:prevalenze}Stime della prevalenza di campioni resistenti suddivisi per gruppo-specie: R= numero di campioni resistenti, N= numero campioni esaminati, Prevalenza = media della distribuzione beta, inf-HPD= valore inferiore dell'intervallo HPD, sup-HPD = valore superiore dell'intervallo HPD}
 \centering
 \begin{tabular}[t]{lrrrrr}
 \toprule
@@ -685,7 +689,6 @@ BOVIDI & 9 & 6.88 & 5.26 & 3.36 & 2.15 & 1.73 & 1.60 & 1.55 & 1.53 & 1.52 & 1.51
 CARNIVORI & 10 & 9.24 & 8.51 & 7.28 & 5.76 & 4.75 & 4.27 & 3.98 & 3.82 & 3.74 & 3.67\\
 SUIDI & 11 & 8.83 & 7.06 & 4.74 & 2.98 & 2.26 & 2.02 & 1.93 & 1.89 & 1.87 & 1.85\\
 LEPRE & 4 & 3.95 & 3.90 & 3.79 & 3.57 & 3.20 & 2.84 & 2.66 & 2.57 & 2.54 & 2.50\\
-\addlinespace
 CORVIDI & 22 & 16.75 & 12.85 & 8.49 & 5.89 & 4.94 & 4.55 & 4.35 & 4.22 & 4.14 & 4.05\\
 RAPACI & 21 & 18.18 & 15.41 & 10.66 & 5.73 & 3.64 & 3.03 & 2.82 & 2.72 & 2.68 & 2.64\\
 UCCELLI ACQUATICI & 5 & 4.57 & 4.16 & 3.44 & 2.56 & 2.03 & 1.83 & 1.76 & 1.73 & 1.71 & 1.70\\
@@ -694,7 +697,69 @@ ALTRI VOLATILI & 3 & 2.93 & 2.87 & 2.75 & 2.57 & 2.36 & 2.20 & 2.09 & 2.05 & 2.0
 \end{tabular}
 \end{table}
 
+\begin{longtable}[t]{rllllll}
+\caption{\label{tab:cftres}Caratterizzazione genotipica dei geni di resistenza dei 47 ceppi resistenti a Ceftiofur}\\
+\toprule
+idceppo & gruppo filogenetico & CTX-M & SHV & CMY & TEM & MCR\\
+\midrule
+\endfirsthead
+\caption[]{Caratterizzazione genotipica dei geni di resistenza dei 47 ceppi resistenti a Ceftiofur \textit{(continued)}}\\
+\toprule
+ID Ceppo & Gruppo filogenetico & CTX-M & SHV & CMY & TEM & MCR\\
+\midrule
+\endhead
 
+\endfoot
+\bottomrule
+\endlastfoot
+1 & A & N & N & N & N & N\\
+2 & A & N & N & N & N & N\\
+3 & F & N & N & N & N & N\\
+4 & A & N & N & N & N & N\\
+5 & F & N & N & N & N & N\\
+6 & E. fergusonii & N & N & N & N & N\\
+7 & A & N & N & N & P & N\\
+8 & A & N & N & N & N & N\\
+9 & A & N & N & N & N & N\\
+10 & A & N & N & N & N & N\\
+11 & F & N & N & N & N & N\\
+12 & E. fergusonii & N & P & N & N & N\\
+13 & A & N & N & N & N & N\\
+14 & D & N & N & N & N & N\\
+15 & A & N & N & N & N & N\\
+16 & E. fergusonii & N & N & N & N & N\\
+17 & A & N & N & N & N & N\\
+18 & A & N & N & N & N & N\\
+19 & A & N & N & N & N & N\\
+20 & A & N & N & N & P & N\\
+21 & A & N & N & N & N & N\\
+22 & F & N & N & N & N & N\\
+23 & A & N & N & N & N & N\\
+24 & A & N & N & N & N & N\\
+25 & F & N & N & N & N & N\\
+26 & F & N & N & N & N & N\\
+27 & E. fergusonii & N & N & N & N & N\\
+28 & F & N & N & N & N & N\\
+29 & A & N & N & N & N & N\\
+30 & A & N & N & N & P & N\\
+31 & A & N & N & N & N & N\\
+32 & A & N & N & N & N & N\\
+33 & A & N & N & N & N & N\\
+34 & F & N & N & N & N & N\\
+35 & A & N & N & N & N & N\\
+36 & E. fergusonii & N & N & N & N & N\\
+37 & A & N & N & N & N & N\\
+38 & A & N & P & N & N & N\\
+39 & A & N & N & N & N & N\\
+40 & B1 & N & N & N & P & N\\
+41 & A & N & N & N & N & N\\
+43 & A & N & N & N & N & N\\
+44 & A & N & N & N & N & N\\
+45 & E & N & N & N & N & N\\
+46 & A & N & N & N & N & N\\
+47 & E. fergusonii & N & N & N & N & N\\
+48 & E. fergusonii & N & N & N & N & N\\*
+\end{longtable}
 
 \newpage
 

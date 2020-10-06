@@ -1,6 +1,7 @@
 ####DATI E PACCHETTI####
 
-#setwd("~/Library/Mobile Documents/com~apple~CloudDocs/gitProject/AMR/ANALYSIS") CON MAC
+
+setwd("~/Library/Mobile Documents/com~apple~CloudDocs/gitProject/AMR/ANALYSIS") #CON MAC
 
 setwd("D:/Dati/vito.tranquillo/Desktop/GitProjects/AMR/ANALYSIS") #CON PC
 source('pacchetti.r')#<-carica le librerie
@@ -900,7 +901,15 @@ ARispec<-d2 %>%
 plot(density(d2$ARi))
 
 
+#######################
 
+esbl <- read_excel("RELAZIONE FINALE/esbl.xlsx")
+
+esbl %>% 
+  drop_na() %>% 
+  kable("latex", caption = "Caratterizzazione genotipica dei geni di resistenza dei 47 ceppi resistenti a Ceftiofur",
+        booktabs = TRUE, longtable = T) %>% 
+  kable_styling(latex_options = c("repeat_header"))
 
 
 ###Grafico
