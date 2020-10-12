@@ -1,0 +1,184 @@
+###########################################################################
+# Parameter distributions are given as discrete across
+# a fine grid since these are non-conjugate models e.g. parameters
+# may not conform to a standard probability distribution
+#
+##########################################################################
+
+model {    
+
+       # BINARY NODES
+
+       #- NODE Altrivol -------------------------------------------------------------
+       Av  ~ dbern(p1) #binary response 
+       logit(p1)<- Av.b0 # logistic regression
+       ### empirical densities from abn fitabn()
+       Av.M0 ~ dcat(Av.p[     ,2])  #Av.p[,2] is the vector of density values= f(x)
+       Av.b0 <- Av.p[Av.M0,1]   #Av.p[,1] is the vector of x values
+       #-----------------------------------------------------------------------
+
+       #- NODE Carnivori -------------------------------------------------------------
+       Cr  ~ dbern(p2) #binary response 
+       logit(p2)<- Cr.b0 # logistic regression
+       ### empirical densities from abn fitabn()
+       Cr.M0 ~ dcat(Cr.p[,2])  #Cr.p[,2] is the vector of density values= f(x)
+       Cr.b0 <- Cr.p[Cr.M0,1]   #Cr.p[,1] is the vector of x values
+       #-----------------------------------------------------------------------
+       
+       #- NODE Cervidi -------------------------------------------------------------
+       Cv  ~ dbern(p3) #binary response 
+       logit(p3)<- Cv.b0 # logistic regression
+       ### empirical densities from abn fitabn()
+       Cv.M0 ~ dcat(Cv.p[,2])  #Cv.p[,2] is the vector of density values= f(x)
+       Cv.b0 <- Cv.p[Cv.M0,1]   #Cv.p[,1] is the vector of x values
+       #-----------------------------------------------------------------------
+       
+       #- NODE Cinghiale -------------------------------------------------------------
+       Cn  ~ dbern(p4) #binary response 
+       logit(p4)<- Cn.b0 # logistic regression
+       ### empirical densities from abn fitabn()
+       Cn.M0 ~ dcat(Cn.p[,2])  #Cn.p[,2] is the vector of density values= f(x)
+       Cn.b0 <- Cv.p[Cn.M0,1]   #Cn.p[,1] is the vector of x values
+       #-----------------------------------------------------------------------
+
+
+       #- NODE Corvidi -------------------------------------------------------------
+       Co  ~ dbern(p5) #binary response 
+       logit(p5)<- Co.b0 # logistic regression
+       ### empirical densities from abn fitabn()
+       Co.M0 ~ dcat(Co.p[,2])  #Co.p[,2] is the vector of density values= f(x)
+       Co.b0 <- Co.p[Co.M0,1]   #Co.p[,1] is the vector of x values
+       #-----------------------------------------------------------------------
+
+       #- NODE Lepre -------------------------------------------------------------
+       Le  ~ dbern(p6) #binary response 
+       logit(p6)<- Le.b0 # logistic regression
+       ### empirical densities from abn fitabn()
+       Le.M0 ~ dcat(Le.p[,2])  #Le.p[,2] is the vector of density values= f(x)
+       Le.b0 <- Le.p[Le.M0,1]   #Le.p[,1] is the vector of x values
+       #-----------------------------------------------------------------------
+
+
+       #- NODE Rapaci -------------------------------------------------------------
+       Ra  ~ dbern(p7) #binary response 
+       logit(p7)<- Ra.b0 # logistic regression
+       ### empirical densities from abn fitabn()
+       Ra.M0 ~ dcat(Ra.p[,2])  #Ra.p[,2] is the vector of density values= f(x)
+       Ra.b0 <- Ra.p[Ra.M0,1]   #Ra.p[,1] is the vector of x values
+       #-----------------------------------------------------------------------
+
+       #- NODE sCaprinae -------------------------------------------------------------
+       sCa  ~ dbern(p8) #binary response 
+       logit(p8)<- sCa.b0 # logistic regression
+       ### empirical densities from abn fitabn()
+       sCa.M0 ~ dcat(sCa.p[,2])  #sCa.p[,2] is the vector of density values= f(x)
+       sCa.b0 <- sCa.p[sCa.M0,1]   #sCa.p[,1] is the vector of x values
+       #-----------------------------------------------------------------------
+
+        #- NODE uccAcqu-------------------------------------------------------------
+       uAq  ~ dbern(p9) #binary response 
+       logit(p9)<- uAq.b0 # logistic regression
+       ### empirical densities from abn fitabn()
+       uAq.M0 ~ dcat(uAq.p[,2])  #uAq.p[,2] is the vector of density values= f(x)
+       uAq.b0 <- uAq.p[uAq.M0,1]   #uAq.p[,1] is the vector of x values
+       #-----------------------------------------------------------------------
+
+
+       #- NODE COL| TET, AMP, Cn, sCa------------------------------------------
+       COL  ~ dbern(p10) #binary response 
+       logit(p10)<- COL.b0 + COL.b1*TET + COL.b2*AMP + COL.b3*Cn+ COL.b4*sCa # logistic regression
+       ### empirical densities from abn fitabn()
+       COL.M0 ~ dcat(COL.p[,2]) #COL.p[,2] is the vector of density values= f(x)
+       COL.b0 <-     COL.p[COL.M0,1]  #COL.p[,1] is the vector of x values
+       COL.M1 ~ dcat(COL.p[,4]) #COL.p[,4] is the vector of density values= f(x)
+       COL.b1 <-     COL.p[COL.M1,3]  #COL.p[,3] is the vector of x values
+       COL.M2 ~ dcat(COL.p[,6]) #COL.p[,6] is the vector of density values= f(x)
+       COL.b2 <-     COL.p[COL.M2,5]  #COL.p[,5] is the vector of x values
+       COL.M3 ~ dcat(COL.p[,8]) #COL.p[,8] is the vector of density values= f(x)
+       COL.b3 <-     COL.p[COL.M3,7]  #COL.p[,7] is the vector of x values
+       COL.M4 ~ dcat(COL.p[,10]) #COL.p[,10] is the vector of density values= f(x)
+       COL.b4 <-     COL.p[COL.M4,9]  #COL.p[,9] is the vector of x values
+       #-----------------------------------------------------------------------------
+
+
+               
+ #- NODE CFT| Ra, TET, uAq, KAN------------------------------------------
+       CFT  ~ dbern(p11) #binary response 
+       logit(p11)<- CFT.b0 + CFT.b1*Ra + CFT.b2*TET + CFT.b3*uAq+ CFT.b4*KAN # logistic regression
+       ### empirical densities from abn fitabn()
+       CFT.M0 ~ dcat(CFT.p[,2]) #CFT.p[,2] is the vector of density values= f(x)
+       CFT.b0 <-     CFT.p[CFT.M0,1]  #CFT.p[,1] is the vector of x values
+       CFT.M1 ~ dcat(CFT.p[,4]) #CFT.p[,4] is the vector of density values= f(x)
+       CFT.b1 <-     CFT.p[CFT.M1,3]  #CFT.p[,3] is the vector of x values
+       CFT.M2 ~ dcat(CFT.p[,6]) #CFT.p[,6] is the vector of density values= f(x)
+       CFT.b2 <-     CFT.p[CFT.M2,5]  #CFT.p[,5] is the vector of x values
+       CFT.M3 ~ dcat(CFT.p[,8]) #CFT.p[,8] is the vector of density values= f(x)
+       CFT.b3 <-     CFT.p[CFT.M3,7]  #CFT.p[,7] is the vector of x values
+       CFT.M4 ~ dcat(CFT.p[,10]) #CFT.p[,10] is the vector of density values= f(x)
+       CFT.b4 <-     CFT.p[CFT.M4,9]  #CFT.p[,9] is the vector of x values
+
+       #-----------------------------------------------------------------------------
+              
+ 
+      #- NODE KAN| GEN------------------------------------------
+       KAN  ~ dbern(p12) #binary response 
+       logit(p12)<- KAN.b0 + KAN.b1*GEN # logistic regression
+       ### empirical densities from abn fitabn()
+       KAN.M0 ~ dcat(KAN.p[,2]) #KAN.p[,2] is the vector of density values= f(x)
+       KAN.b0 <-     KAN.p[KAN.M0,1]  #KAN.p[,1] is the vector of x values
+       KAN.M1 ~ dcat(KAN.p[,4]) #KAN.p[,4] is the vector of density values= f(x)
+       KAN.b1 <-     KAN.p[KAN.M1,3]  #KAN.p[,3] is the vector of x values
+      #-----------------------------------------------------------------------------
+      
+  
+  #-NODE ENR| Co, Ra, KAN, AMP ------------------------------------------
+       ENR  ~ dbern(p13) #binary response 
+       logit(p13)<- ENR.b0 + ENR.b1*Co + ENR.b2*Ra + ENR.b3*KAN+ ENR.b4*AMP # logistic regression
+       ### empirical densities from abn fitabn()
+       ENR.M0 ~ dcat(ENR.p[,2]) #ENR.p[,2] is the vector of density values= f(x)
+       ENR.b0 <-     ENR.p[ENR.M0,1]  #ENR.p[,1] is the vector of x values
+       ENR.M1 ~ dcat(ENR.p[,4]) #ENR.p[,4] is the vector of density values= f(x)
+       ENR.b1 <-     ENR.p[ENR.M1,3]  #ENR.p[,3] is the vector of x values
+       ENR.M2 ~ dcat(ENR.p[,6]) #ENR.p[,6] is the vector of density values= f(x)
+       ENR.b2 <-     ENR.p[ENR.M2,5]  #ENR.p[,5] is the vector of x values
+       ENR.M3 ~ dcat(ENR.p[,8]) #ENR.p[,8] is the vector of density values= f(x)
+       ENR.b3 <-     ENR.p[ENR.M3,7]  #ENR.p[,7] is the vector of x values
+       ENR.M4 ~ dcat(ENR.p[,10]) #ENR.p[,10] is the vector of density values= f(x)
+       ENR.b4 <-     ENR.p[ENR.M4,9]  #ENR.p[,9] is the vector of x values
+       #-----------------------------------------------------------------------------
+      
+   #- NODE GEN -------------------------------------------------------------
+       GEN  ~ dbern(p14) #binary response 
+       logit(p14)<- GEN.b0 # logistic regression
+       ### empirical densities from abn fitabn()
+       GEN.M0 ~ dcat(GEN.p[,2])  #GEN.p[,2] is the vector of density values= f(x)
+       GEN.b0 <- GEN.p[GEN.M0,1]   #GEN.p[,1] is the vector of x values
+       #-----------------------------------------------------------------------
+       
+
+       
+   #- NODE TET|KAN -------------------------------------------------------------
+       TET  ~ dbern(p15) #binary response 
+       logit(p15)<- TET.b0 + TET.b1*KAN # logistic regression
+       ### empirical densities from abn fitabn()
+       TET.M0 ~ dcat(TET.p[,2])  #TET.p[,2] is the vector of density values= f(x)
+       TET.b0 <- TET.p[TET.M0,1]   #TET.p[,1] is the vector of x values
+       TET.M1 ~ dcat(TET.p[,4]) #TET.p[,4] is the vector of density values= f(x)
+       TET.b1 <-TET.p[TET.M1,3]  #TET.p[,3] is the vector of x values
+       #-----------------------------------------------------------------------
+       
+      
+       #- NODE AMP| Cv, CFT, TET ------------------------------------------
+       AMP  ~ dbern(p16) #binary response 
+       logit(p16)<- AMP.b0 + AMP.b1*Cv + AMP.b2*CFT + AMP.b3*TET # logistic regression
+       AMP.M0 ~ dcat(AMP.p[,2]) #AMP.p[,2] is the vector of density values= f(x)
+       AMP.b0 <-     AMP.p[AMP.M0,1]  #AMP.p[,1] is the vector of x values
+       AMP.M1 ~ dcat(AMP.p[,4]) #AMP.p[,4] is the vector of density values= f(x)
+       AMP.b1 <-     AMP.p[AMP.M1,3]  #AMP.p[,3] is the vector of x values
+       AMP.M2 ~ dcat(AMP.p[,6]) #AMP.p[,6] is the vector of density values= f(x)
+       AMP.b2 <-     AMP.p[AMP.M2,5]  #AMP.p[,5] is the vector of x values
+       AMP.M3 ~ dcat(AMP.p[,8]) #AMP.p[,8] is the vector of density values= f(x)
+       AMP.b3 <-     AMP.p[AMP.M3,7]  #AMP.p[,7] is the vector of x values       
+     #-----------------------------------------------------------------------
+       
+}

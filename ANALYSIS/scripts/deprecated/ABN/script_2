@@ -1,0 +1,24 @@
+model in model.bug
+      data in post_params.R
+      compile, nchains(1)
+      parameters in init_2
+initialize
+      update 100000
+      monitor Av, thin(10)
+      monitor Cr, thin(10)
+      monitor Cv, thin(10)
+      monitor Cn, thin(10)
+      monitor Co, thin(10)
+      monitor Le, thin(10)
+      monitor Ra, thin(10)
+      monitor sCa, thin(10)
+      monitor vAq, thin(10)
+      monitor COL, thin(10)
+      monitor CFT, thin(10)
+      monitor KAN, thin(10)
+      monitor ENR, thin(10)
+      monitor GEN, thin(10)
+      monitor TET, thin(10)
+      monitor AMP, thin(10)
+      update 6140, by(1000)
+      coda *, stem("out2")
