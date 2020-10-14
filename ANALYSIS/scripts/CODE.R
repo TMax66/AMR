@@ -565,7 +565,7 @@ amr %>%
    
    
 #####META-ANALISI PREVALENZE####
-   amrbib <- read_excel("meta.xlsx")
+   amrbib <- read_excel(here("ANALYSIS",  "data", "raw",  "meta.xlsx"))
    amrbib<-amrbib %>% 
      filter(articolo!="8") %>% 
      filter(articolo!="10")
