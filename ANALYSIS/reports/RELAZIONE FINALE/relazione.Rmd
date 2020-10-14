@@ -12,16 +12,16 @@ output:
     toc: yes
     number_sections: yes
     fig_caption: yes
+ 
     
      
   
 bibliography: amrRef.bib
 link-citations: yes
 linkcolor: blue
-fontsize: 20pt
+ 
 
 ---
-
 \listoffigures
 \listoftables
 
