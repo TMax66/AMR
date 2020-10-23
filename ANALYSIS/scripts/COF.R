@@ -1,4 +1,44 @@
-domestici<- read_excel("Antibiogrammi domestici.xlsx")
+library("tidyverse")
+library("lubridate")
+library("timevis")
+library("here")
+library("readxl")
+library("vistime")
+
+
+
+
+
+mytime<- read_excel(sheet = "timing", here("ANALYSIS", "data", "raw", "AMR2.xlsx"))
+
+mytime <- mytime %>% 
+  mutate(start = as.character(start), 
+         end = as.character(end))
+
+vistime(mytime)
+
+
+png(filename = "time.png")
+timevis(timevisData)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 dom<-domestici %>% 
