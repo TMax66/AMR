@@ -3,23 +3,32 @@ library("lubridate")
 library("timevis")
 library("here")
 library("readxl")
-library("vistime")
+library(shiny)
+library(DT)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(rpivotTable)
+library(timevis)
+library(janitor)
+#library("vistime")
 
 
 
 
 
-mytime<- read_excel(sheet = "timing", here("ANALYSIS", "data", "raw", "AMR2.xlsx"))
+mytime<- read_excel(here("ANALYSIS", "data", "raw", "timing.xlsx"))
 
 mytime <- mytime %>% 
   mutate(start = as.character(start), 
-         end = as.character(end))
+         end = as.character(end), 
+         id = as.integer(id)) %>% 
+  data.frame()
 
-vistime(mytime)
 
 
 png(filename = "time.png")
-timevis(timevisData)
+timevis(mytime)
 
 
 
