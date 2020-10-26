@@ -1,30 +1,23 @@
 ---
-title: "PRC2016020-Summary"
-author: "Max"
-date: "14/10/2020"
-output: html_document
+title: "Role of wildlife in the spread and maintenance of Antibiotic Resistance (PRC 2016020) "
+author: "Summary"
+output:
+  pdf_document:
+    latex_engine: xelatex
+
+
+bibliography: amrRef.bib
+link-citations: yes
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+### Introduction
+Interest in the role of wildlife in the spread and maintenance of antibiotic resistance has increased over the past 10 years. The main concern arises from the fear that any demonstration of a role of wildlife as a "reservoir" and "maintenance" of bacteria carrying resistance genes, contributing to the environmental contamination of resistant bacteria or genetic material of resistance, could compromise efforts implemented, especially in recent years, in the medical and veterinary fields to reduce the spread of the phenomenon of antibiotic resistance. Antibiotic resistance is in itself a natural phenomenon and as such it is not surprising that antibiotic-resistant strains are found in wild animals even in remote areas of the globe. Available data [@greig_scoping_2015] show that numerous species of wild animals are carriers of resistant antimicrobial bacteria in a wide range of habitats, which raises the question of their role in the dynamics of spread and maintenance at the interface between human populations, domestic animals and natural ecosystems. The presence in wildlife, normally not subjected to antibiotic treatments, of resistant bacterial strains and in general of resistance genes, is probably attributable to environmental contamination phenomena.
+To define the role of wildlife in the complex mechanism of diffusion and maintenance of antibiotic resistance, it is necessary to acquire information on: which species of bacteria are most frequently found resistant to antimicrobial drugs in wild vertebrates and their phenotypic and above all genotypic characterization; how wild species are colonized by antibiotic-resistant bacteria and what exchanges of these bacteria take place between humans, domestic animals and wildlife; what characterizes the habitats most contaminated by antibiotic-resistant bacteria and finally which ecological traits favor colonization and potential infection with antibiotic-resistant bacteria in wildlife [@vittecoq_antimicrobial_2016]. Based on the available data on the spread in Italy and in the rest of the world of antibiotic resistance in wild fauna, an observational study was designed with the aim of collecting information on the presence and spread of antibiotic resistance in bacterial strains of the Enterobacteriaceae family. isolated from faeces of a wide spectrum of wildlife species, present in various provinces of Lombardy with different degrees of urbanization, thus proceeding to their phenotypic characterization of resistance and their genotypic characterization using metagenomic analysis methods.
 
-## R Markdown
+### Materials and Methods
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+In the period between the end of 2017 and the first months of 2019, a non-probabilistic sampling of convenience was carried out using both the samples collected during the surveillance activities of the regional wildlife plan of Lombardy (wild boars, wild ruminants, lagomorphs, birds ), and samples from surveillance activities of the Chronic Wasting Disease plan (deer and roe deer) and of the West Nile Disease plan (Cornacchie, Magpies). The stool samples were then processed using common classical microbiology methods to obtain the isolation of Enterobacteriaceae strains, identified by biochemical tests both in macro and micromethod. The isolated strains were tested with a panel of seven antibiotics (AMPICILLIN, TETRACYCLIN, CEFTIOFUR, COLISTIN, KANAMYCIN, GENTAMYCIN, ENROFLOXACIN) to define their phenotypic resistance profile. Strains of Escherichia coli found to be resistant to CEFTIOFUR were subjected to phenotypic and genotypic analyzes for the determination of the presence of ESBL enzymes. Ten pools of E. coli strains, grouped by species of origin and by geographical location, were analyzed by means of metagenomic techniques to define their genotypic resistance profiles. Phenotypic data were analyzed by Bayesian statistical methods to obtain estimates of the prevalence of carrier animals of resistant and multi-resistant strains and of the prevalence of resistant and multi-resistant strains and to study the relationship between territorial characteristics (anthropogenic gradient) and prevalence of carrier animals of resistant strains. The biodiversity of the different phenotypic profiles was studied through the definition of Renyi's profiles
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+### Risults
+### Discussion
+### Bibliografia
