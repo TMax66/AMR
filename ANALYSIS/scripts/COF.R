@@ -17,6 +17,9 @@ library("tidyverse")
 library("timevis")
 library("readxl")
 library("here")
+library("reshape2")
+library("hrbrthemes")
+library("scales")
 
 
 
@@ -31,18 +34,40 @@ mytime %>%
 
 
 timing <- read_excel("ANALYSIS/data/raw/timing.xlsx", 
-                     col_types = c("text", "text", "date", 
+                     col_types = c( "text", "date", 
                                    "date"))
 
-p <- vistime(timing, optimize_y = T)
-  timing
+timing <- timing %>% 
+  mutate(event = factor(event, levels = c("Presentazione proposta", 
+                                         "Approvazione CS IZSLER",
+                                         "Approvazione MS e Inizio Progetto",
+                                         "Inizio attività borsa di studio",
+                                         "Attività di raccolta campioni di feci",
+                                         "Analisi  microbiologiche isolamento, identificazione e test di suscettibilità",
+                                         "Invio Relazione Parziale",
+                                         "Analisi metagenomica su pool di E.coli",
+                                         "Approvazione richiesta proroga durata progetto",
+                                         "Analisi genoma ceppi E.coli resistenti a Ceftiofur",
+                                         "Elaborazione dati genoma ceppi E.coli resistenti a Ceftiofur",
+                                         "Analisi statistica dati  dei profili fenotipici di resistenza",
+                                         "Analisi dati metagenomici",
+                                         "Editing relazione finale",
+                                         "Invio Relazione Finale", 
+                                         "Sospensione per emergenza COVID-19")))  
+ 
 
-melt(timing,  measure.vars = c("start", "end")) %>% 
-  ggplot(aes(value, event, label = event))+
-  geom_line(size = 6, color = "lightblue")+
-  geom_text()+
+
+
+  melt(timing,  measure.vars = c("start", "end")) %>% 
+    mutate(event = fct_rev(event), 
+           value = as.Date(value)) %>% 
+  ggplot(aes(value, event,  color = event))+
+  geom_line(size = 6, alpha = 0.8)+ 
   xlab(NULL) + 
-  ylab(NULL)
+  ylab(NULL) +
+    theme_ipsum_rc()+
+    theme(legend.position = "blank")+
+    scale_x_date(labels = date_format("%m-%Y"), breaks = "6 month")
 
 
 
@@ -51,8 +76,7 @@ melt(timing,  measure.vars = c("start", "end")) %>%
 
 
 
-
-)dom<-domestici %>% 
+dom<-domestici %>% 
 mutate(Specieagg=recode(Specieagg,"BOVIDE"="domBOVIDI"))
 
 names(dom)[c(13:22)]<-c("COL", "CFT", "til","KAN",
