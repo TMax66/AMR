@@ -13,44 +13,46 @@ library(timevis)
 library(janitor)
 #library("vistime")
 
+library("tidyverse")
+library("timevis")
+library("readxl")
+library("here")
+
+
+
+mytime<- read_excel(sheet = "timing", col_types = c("numeric", 
+                                                    "text", "date", "date", "text"), here("ANALYSIS", "data", "raw", "timing.xlsx"))
+
+
+
+mytime %>% 
+  select("event" = content, start, end) %>% 
+  vistime()
+
+
+timing <- read_excel("ANALYSIS/data/raw/timing.xlsx", 
+                     col_types = c("text", "text", "date", 
+                                   "date"))
+
+p <- vistime(timing, optimize_y = T)
+  timing
+
+melt(timing,  measure.vars = c("start", "end")) %>% 
+  ggplot(aes(value, event, label = event))+
+  geom_line(size = 6, color = "lightblue")+
+  geom_text()+
+  xlab(NULL) + 
+  ylab(NULL)
 
 
 
 
-mytime<- read_excel(here("ANALYSIS", "data", "raw", "timing.xlsx"))
-
-mytime <- mytime %>% 
-  mutate(start = as.character(start), 
-         end = as.character(end), 
-         id = as.integer(id)) %>% 
-  data.frame()
-
-
-
-png(filename = "time.png")
-timevis(mytime)
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-dom<-domestici %>% 
+)dom<-domestici %>% 
 mutate(Specieagg=recode(Specieagg,"BOVIDE"="domBOVIDI"))
 
 names(dom)[c(13:22)]<-c("COL", "CFT", "til","KAN",
