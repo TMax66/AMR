@@ -169,7 +169,9 @@ ab %>%
   drop_na(MDR) %>% 
   ggplot(aes(x=as.factor(MDR)))+geom_bar(aes(fill=MR))+
   labs(x="numero di resistenze al panel di antibiotici", 
-       y="numero ceppi")
+       y="numero ceppi")+
+  theme_ipsum_rc()+ theme(legend.title = element_blank())+
+  scale_fill_brewer(labels = c("Ceppi multiresistenti", "Ceppi Resistenti", "Ceppi Suscettibili"), direction = -1)
   
 
 

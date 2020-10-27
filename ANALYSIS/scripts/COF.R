@@ -67,13 +67,8 @@ timing <- timing %>%
   ylab(NULL) +
     theme_ipsum_rc()+
     theme(legend.position = "blank")+
-    scale_x_date(labels = date_format("%m-%Y"), breaks = "6 month")
-
-
-
-
-
-
+    scale_x_date(labels = date_format("%m-%Y"), breaks = "6 month")+
+    scale_color_manual(values=c(rep("#487DA8", 16)))
 
 
 dom<-domestici %>% 

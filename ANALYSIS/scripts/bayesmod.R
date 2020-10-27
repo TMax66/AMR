@@ -26,15 +26,18 @@ x<-ComAMRsel %>%
       drop_na(densPop)  
      
   
-library(dagitty)
+library("dagitty")
+
+library("hrbrthemes")
     
 WildRes<-dagitty( "dag{    
                      
-             Specie->R
+             
+             R <- Specie
              Pascolo->R
-             Urbanizzazione->R
-             Urbanizzazione->Specie
-             Urbanizzazione->Pascolo
+             Urb->R
+             Urb->Specie
+             Urb->Pascolo
              
                      }")
     
@@ -42,7 +45,33 @@ WildRes<-dagitty( "dag{
     plot(graphLayout(WildRes))
     
    impliedConditionalIndependencies(WildRes)    
-    
+
+   
+ggdag(WildRes, layout = "circle", text_col = "red")
+   
+
+
+WildRes %>% 
+  node_parents(c("Urb")) %>% 
+  ggplot(aes(x =x, y=y,xend = xend, yend = yend))+
+  geom_dag_edges() + geom_dag_point()+
+  geom_dag_text(col = "red")+ theme_dag()
+
+library("ggdag")
+theme_set(theme_dag())
+wdag <- dagify(
+  R  ~ S  + P  + U , 
+  S  ~ U ,
+  P  ~ U ,
+  exposure = "S", 
+  outcome = "R", 
+  labels = c("R" = "Prevalenza\n animali carrier\n ceppi resistenti",
+             "U" = "Grado di\n urbanizzazione", 
+             "P" = "Area comunale\n adibita a pascolo", 
+             "S" = "Gruppo Specie\n fauna selvatica")
+)
+
+ggdag(wdag, text = TRUE)
     
 #############BAYES MULTILEVEL MODEL WITH BRMS#######
 library(brms)
