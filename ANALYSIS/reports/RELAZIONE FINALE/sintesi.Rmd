@@ -10,7 +10,6 @@ bibliography: amrRef.bib
 link-citations: yes
 ---
 
-(max 3 pagine)
 
 ### Introduzione
 

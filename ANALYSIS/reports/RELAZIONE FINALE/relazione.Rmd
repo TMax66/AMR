@@ -9,7 +9,7 @@ header-includes: \usepackage[italian]{babel} \usepackage{setspace}\doublespacing
 output:
   pdf_document:
     latex_engine: xelatex
-    toc: yes
+    #toc: yes
     number_sections: yes
     fig_caption: yes
  
@@ -22,10 +22,15 @@ linkcolor: blue
  
 
 ---
-\listoffigures
-\listoftables
+\newpage
 
-### ELENCO DEI COLLABORATORI {-}
+```{r child='frontespizio.Rmd'}
+```
+
+\newpage
+\tableofcontents
+
+ELENCO DEI COLLABORATORI
 
 * **Dr. Tranquillo Vito** U.O. 1-Responsabile scientifico del progetto.Coordinamento delle U.O., Analisi statistica dei dati fenotipici. 
 * **Dr. Fiocchi Alfredo** U.O. 1-Analisi microbiologiche e antibiogrammi.
@@ -38,10 +43,10 @@ linkcolor: blue
 * **Dr. Prati Paola** U.O. 5- Attività di raccolta e invio campioni a U.O.1 per successive analisi
 * **Dr. Gianni Sala** U.O. 6- Attività di raccolta e invio campioni a U.O.1 per successive analisi
 
-\newpage 
-
-# RELAZIONE FINALE VERSIONE INTEGRALE {-}
-
+\newpage
+\listoffigures
+\newpage
+\listoftables
 
 
 # INTRODUZIONE 
@@ -797,3 +802,5 @@ ID Ceppo & Gruppo filogenetico & CTX-M & SHV & CMY & TEM & MCR\\
 \newpage
 
 # Bibliografia
+
+ 

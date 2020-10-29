@@ -1,0 +1,51 @@
+---
+output: pdf_document
+---
+\thispagestyle{empty}
+ <!-- \begin{titlepage} -->
+\begin{bfseries}
+  \vspace*{-2cm}
+  \begin{center}
+    \Large
+    Istituto Zooprofilattico Sperimentale della Lombardia e dell'Emilia Romagna\\
+    \vspace*{1cm} 
+    
+   \LARGE
+    PRC 2016020 \\
+    \vspace*{1cm}
+  
+  \LARGE
+   Ruolo della fauna selvatica del mantenimento e diffusione dell'antibiotico-resistenza\\
+  
+  \vspace*{1cm}
+  \end{center}
+  
+  
+  
+  \vspace*{1cm} \large
+  \begin{flushleft}
+
+
+    Responsabile Scientifico: Dr. Tranquillo Vito \\
+    Data scadenza progetto: 14/11/2020
+
+  \end{flushleft}
+  
+  \vspace*{6.0cm}
+  \begin{center}
+   Ricerca finanziata dal Ministero del Lavoro, della Salute e delle Politiche Sociali \\
+   Dipartimento per la Sanità Pubblica Veterinaria, la Nutrizione e la Sicurezza degli Alimenti
+  \end{center}
+  
+
+
+  \begin{figure}[htbp]
+      \begin{center}
+        \includegraphics[width=4cm]{figure/logo.png}
+      \end{center}
+    \end{figure}
+\end{bfseries}
+
+\begin{center}
+Documento editato in rmarkdown [@xie2018r]
+\end{center}
