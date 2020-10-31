@@ -1,26 +1,36 @@
 ---
-title: "Ruolo della fauna selvatica nel mantenimento e diffusione dell'Antibiotico-Resistenza (PRC 2016020) "
-author: "Sintesi"
-output:
-  pdf_document:
-    latex_engine: xelatex
-    
-
-bibliography: amrRef.bib
-link-citations: yes
+output: pdf_document
 ---
 
+# SINTESI {-}
 
-### Introduzione
+**Introduzione**
 
 L'interesse per il ruolo della fauna selvatica nella diffusione e nel mantenimento dell'antibiotico-resistenza è aumentato nel corso degli ultimi 10 anni.  La principale preoccupazione nasce dal timore che l'eventuale dimostrazione di un ruolo della fauna selvatica come "serbatoio" e "mantenimento" di batteri portatori di geni di resistenza, contribuendo alla contaminazione ambientale di batteri resistenti o materiale genetico di resistenza, possa compromettere gli sforzi messi in atto, soprattutto in questi ultimi anni, in campo medico e veterinario per ridurre la diffusione del fenomeno dell'antibiotico-resistenza. La resistenza agli antibiotici è di per se un fenomeno naturale e come tale non sorprende il riscontro di ceppi antibiotico-resistenti in animali selvatici anche in aree remote del globo. I dati disponibili [@greig_scoping_2015] mostrano che numerose specie di animali selvatici sono portatori di  batteri antimicrobici resistenti  in una vasta gamma di habitat, il che solleva la questione del loro ruolo nelle dinamiche di diffusione e mantenimento all'interfaccia tra popolazioni umane, animali domestici ed ecosistemi naturali. La presenza nella fauna selvatica, normalmente non sottoposta a trattamenti antibiotici, di ceppi batterici resistenti e in generale di geni di resistenza, è verosimilmente attribuibile a fenomeni di contaminazione ambientale. 
 Per definire il ruolo della fauna selvatica nel complesso meccanismo di diffusione e mantenimento dell'antibiotico resistenza è necessario acquisire informazioni relativamente a: quali specie di batteri sono le più frequentemente trovate resistenti ai farmaci antimicrobici nei vertebrati selvatici e la loro caratterizzazione fenotipica e soprattutto genotipica;  in che modo le specie selvatiche vengono colonizzate da batteri antibiotico-resistenti e quali scambi di tali batteri avvengono tra l'uomo, gli animali domestici e la fauna selvatica;  cosa caratterizza gli habitat più contaminati da batteri antibiotico-resistenti e infine quali tratti ecologici favoriscono la colonizzazione e la potenziale infezione da batteri antibiotico-resistenti nella fauna selvatica [@vittecoq_antimicrobial_2016]. Sulla base dei dati disponibili sulla diffusione in Italia e nel resto del mondo dell'antibiotico resistenza nella fauna selvativca è stato progettato un studio osservazionale con l'obiettivo  di raccogliere informazioni sulla presenza e diffusione dell'antibiotico-resistenza in ceppi batterici della famiglia delle Enterobacteriacee isolati da feci di un ampio spettro di specie di fauna selvatica, presente in varie province della Lombardia con differenti gradi di urbanizzazione, procedendo quindi alla loro caratterizzazione fenotipica  di resistenza e quella genotipica utilizzando metodiche di analisi metagenomica. 
 
-### Materiali e Metodi
+**Materiali e Metodi**
 
 Nel periodo compreso tra la fine del 2017 e primi mesi del 2019, si è proceduto ad un campionamento non probabilistico di convenienza utilizzando sia i campioni raccolti durante le attività di sorveglianza del piano regionale fauna selvatica della Lombardia (cinghiali, ruminanti selvatici, lagomorfi, volatili) , sia i campioni provenienti da attività di sorveglianza del piano Chronic Wasting Disease (cervi e caprioli) e del piano West Nile Disease (Cornacchie, Gazze). I campioni di feci sono stati quindi processati mediante comuni metodi di microbiologia classica per ottenere l'isolamento di ceppi di Enterobacteriacee, identificati mediante test biochimici sia in macro che micrometodo. I ceppi isolati sono stati testati con un panel di sette antibiotici (AMPICILLINA, TETRACICLINA, CEFTIOFUR, COLISTINA, KANAMICINA, GENTAMICINA, ENROFLOXACIN) per definirne il profilo fenotipico di resistenza. Ceppi di Escherichia coli risultati resistenti a CEFTIOFUR sono stati sottoposti ad analisi fenotipiche e genotipiche per la determinazione della presenza di enzimi ESBL. Dieci pool di ceppi di E.coli, raggurppati per specie di provenienza e per localizzazione geografica sono stati analizzati mediante tecniche di metagenomica per definirne i profili genotipici di resistenza. I dati fenotipici sono stati analizzati mediante metodi di statistica bayesiana per ottenere stime di prevalenza di animali carrier di ceppi resistenti e multi-resistenti e della prevalenza di ceppi resistenti e multi-resistenti e per studiare la relazione tra caratteristiche territoriali ( grado di antropomorfizzazione) e prevalenza di animali carrier di ceppi resistenti. La biodiversità dei differenti profili fenotipici è stat studiata mediante la definizione dei priofili di Renyi's. 
 
 
-### Risultati
-### Discussioni
-### Bibliografia
+**Risultati**
+
+**Discussioni**
+
+**Bibliografia**
+
+# SUMMARY {-}
+
+**Introduction**
+Interest in the role of wildlife in the spread and maintenance of antibiotic resistance has increased over the past 10 years. The main concern arises from the fear that any demonstration of a role of wildlife as a "reservoir" and "maintenance" of bacteria carrying resistance genes, contributing to the environmental contamination of resistant bacteria or genetic material of resistance, could compromise efforts implemented, especially in recent years, in the medical and veterinary fields to reduce the spread of the phenomenon of antibiotic resistance. Antibiotic resistance is in itself a natural phenomenon and as such it is not surprising that antibiotic-resistant strains are found in wild animals even in remote areas of the globe. Available data [@greig_scoping_2015] show that numerous species of wild animals are carriers of resistant antimicrobial bacteria in a wide range of habitats, which raises the question of their role in the dynamics of spread and maintenance at the interface between human populations, domestic animals and natural ecosystems. The presence in wildlife, normally not subjected to antibiotic treatments, of resistant bacterial strains and in general of resistance genes, is probably attributable to environmental contamination phenomena.
+To define the role of wildlife in the complex mechanism of diffusion and maintenance of antibiotic resistance, it is necessary to acquire information on: which species of bacteria are most frequently found resistant to antimicrobial drugs in wild vertebrates and their phenotypic and above all genotypic characterization; how wild species are colonized by antibiotic-resistant bacteria and what exchanges of these bacteria take place between humans, domestic animals and wildlife; what characterizes the habitats most contaminated by antibiotic-resistant bacteria and finally which ecological traits favor colonization and potential infection with antibiotic-resistant bacteria in wildlife [@vittecoq_antimicrobial_2016]. Based on the available data on the spread in Italy and in the rest of the world of antibiotic resistance in wild fauna, an observational study was designed with the aim of collecting information on the presence and spread of antibiotic resistance in bacterial strains of the Enterobacteriaceae family. isolated from faeces of a wide spectrum of wildlife species, present in various provinces of Lombardy with different degrees of urbanization, thus proceeding to their phenotypic characterization of resistance and their genotypic characterization using metagenomic analysis methods.
+
+**Materials and Methods**
+
+In the period between the end of 2017 and the first months of 2019, a non-probabilistic sampling of convenience was carried out using both the samples collected during the surveillance activities of the regional wildlife plan of Lombardy (wild boars, wild ruminants, lagomorphs, birds ), and samples from surveillance activities of the Chronic Wasting Disease plan (deer and roe deer) and of the West Nile Disease plan (Cornacchie, Magpies). The stool samples were then processed using common classical microbiology methods to obtain the isolation of Enterobacteriaceae strains, identified by biochemical tests both in macro and micromethod. The isolated strains were tested with a panel of seven antibiotics (AMPICILLIN, TETRACYCLIN, CEFTIOFUR, COLISTIN, KANAMYCIN, GENTAMYCIN, ENROFLOXACIN) to define their phenotypic resistance profile. Strains of Escherichia coli found to be resistant to CEFTIOFUR were subjected to phenotypic and genotypic analyzes for the determination of the presence of ESBL enzymes. Ten pools of E. coli strains, grouped by species of origin and by geographical location, were analyzed by means of metagenomic techniques to define their genotypic resistance profiles. Phenotypic data were analyzed by Bayesian statistical methods to obtain estimates of the prevalence of carrier animals of resistant and multi-resistant strains and of the prevalence of resistant and multi-resistant strains and to study the relationship between territorial characteristics (anthropogenic gradient) and prevalence of carrier animals of resistant strains. The biodiversity of the different phenotypic profiles was studied through the definition of Renyi's profiles
+
+**Risults**
+
+**Discussion**
+

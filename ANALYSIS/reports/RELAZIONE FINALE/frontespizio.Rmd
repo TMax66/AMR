@@ -1,13 +1,20 @@
 ---
 output: pdf_document
+
+bibliography: amrRef.bib
+link-citations: yes
+linkcolor: blue
 ---
 \thispagestyle{empty}
  <!-- \begin{titlepage} -->
 \begin{bfseries}
   \vspace*{-2cm}
   \begin{center}
+ 
+    \textcolor{blue}{
     \Large
-    Istituto Zooprofilattico Sperimentale della Lombardia e dell'Emilia Romagna\\
+    Istituto Zooprofilattico Sperimentale\\
+    della Lombardia e dell'Emilia Romagna}\\
     \vspace*{1cm} 
     
    \LARGE
@@ -19,7 +26,6 @@ output: pdf_document
   
   \vspace*{1cm}
   \end{center}
-  
   
   
   \vspace*{1cm} \large
@@ -47,5 +53,7 @@ output: pdf_document
 \end{bfseries}
 
 \begin{center}
+
 Documento editato in rmarkdown [@xie2018r]
+
 \end{center}

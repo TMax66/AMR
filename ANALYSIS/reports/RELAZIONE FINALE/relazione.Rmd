@@ -22,13 +22,22 @@ linkcolor: blue
  
 
 ---
+\newcommand*\NewPage{\newpage\null\thispagestyle{empty}\newpage\thispagestyle{empty}}
+
 \newpage
 
 ```{r child='frontespizio.Rmd'}
 ```
 
 \newpage
+\pagenumbering{Roman}
+
+```{r child='sintesi.rmd'}
+```
+
+\newpage
 \tableofcontents
+\pagenumbering{arabic}
 
 ELENCO DEI COLLABORATORI
 
