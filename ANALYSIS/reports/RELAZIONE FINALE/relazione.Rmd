@@ -161,7 +161,34 @@ La rilevazione dei geni di resistenza presenti negli isolati è stata eseguita u
 
 
 ## Analisi metagenomiche
-I pool di isolati sui quali sono state applicate tecniche di metagenomica shotgun sono stati allestiti in modo da valutare eventuali differenze nel corredo di geni di antibioresistenza in Escerichia coli tra specie di ospiti differenti (i.e. cervidi, cinghiali, caprini, corvidi e rapaci) e, all’interno dello stesso gruppo di ospiti (i.e. cervidi), tra aree differenti corrispondenti alle province di Bergamo e Sondrio e a livelli altitudinali differenti all’interno della stessa provincia. In particolare, gli isolati di E. coli prelevati da cervidi nella provincia di Bergamo sono stati divisi in tre pool corrispondenti alle prealpi bergamasche (Pool 1), la Val Brembana (Pool 2) e le Valli Seriana e Borlezza (Pool 3). Gli isolati di E. coli prelevati da cervidi nella provincia di Sondrio sono stati divisi in due pool corrispondenti alla media valle (Pool 4) e l’alta valle (Pool 5). I pool per gli isolati di E. coli prelevati da altri gruppi di ospiti sono stati suddivisi tra cinghiali (Pool 6), corvidi (Pool 7), caprini (Pool 8) e rapaci (Pool 9).
+I pool di isolati sui quali sono state applicate tecniche di metagenomica shotgun sono stati allestiti in modo da valutare eventuali differenze nel corredo di geni di antibioresistenza in _Escerichia coli_ tra gruppi-specie di ospiti differenti e, all’interno dello stesso gruppo-specie , tra aree differenti corrispondenti alle province di Bergamo e Sondrio e a livelli altitudinali differenti all’interno della stessa provincia. In particolare, gli isolati di _Escherichia coli_ ottenuti  da campioni di feci di CERVIDI nella provincia di Bergamo sono stati divisi in tre pool corrispondenti alle prealpi bergamasche (Pool 1), la Val Brembana (Pool 2) e le Valli Seriana e Borlezza (Pool 3). Gli isolati di _Escherichia coli_  da feci di CERVIDI nella provincia di Sondrio sono stati divisi in due pool corrispondenti alla media valle (Pool 4) e l’alta valle (Pool 5). I pool per gli isolati di _Escherichia coli_ da feci da altri gruppi di ospiti sono stati suddivisi tra SUIDI (Pool 6), CORVIDI (Pool 7), BOVIDI (Pool 8) e RAPACI (Pool 9).
+
+In aggiunta ai pool già descritti per valutare i profili di geni di resistenza in _Escherichia coli_ nei selvatici è stato inserito un ulteriore pool (Pool 10) per ricercare i geni di resistenza in _Klebsiella pneumoniae_ in considerazione della particolare importanza nella clinica umana e nelle problematiche di antibiotico-resistenza nosocomiali.  Quest’ultimo pool è composto da isolati ottenuti da feci di  CORVIDI (13 isolati), RAPACI (4 isolati), CERVIDI (2 isolati) e LEPRI (1 isolato).
+
+Il numero massimo di isolati per pool è stato scelto sulla base di prove preliminari con un ceppo a resistenze note in cui si è valutata la quantità di dato necessaria per avere una buona copertura dei geni di antibiotico resistenza (>10x), soglia al di sopra della quale il centro di referenza europeo per l’antibiotico resistenza  del DTU riporta di poter rintracciare con buona confidenza tutti i geni di resistenza presenti (Valeria Bertolaia, comunicazione personale).
+
+I pool degli isolati selezionati sono stati preparati come indicato nei punti sottostanti:
+
+  1. preincubazione dei singoli isolati in 3 ml di terreno liquido BHI (Brain Heart Infusion) overnight come verifica di sterilità;
+
+  2. dopo 24h, allestimento delle brodo colture per l’estrazione del DNA in 3 ml di terreno liquido BHI (Brain Heart Infusion) overnight; 
+  
+  3. dopo 24h  e non oltre, sono stati prelevati 100 $\mu$L di brodocoltura per ciascun isolato e inseriti nella provetta di pool  prelevando solo le brodocolture normalmente sviluppate (fase stazionaria), per evitare di  alterare il bilanciamento del pool nel caso di crescita non adeguate; 
+
+  4. miscelamento accurato del pool mediante vortex e trasferimento del pool al laboratorio di sequenziamento in giornata per evitare degradazione del materiale e risultati non affidabili. 
+
+### Sequenziamento genomico.
+
+Il DNA genomico è stato estratto mediante il kit DNeasy Blood & Tissue Kit (Qiagen) a partire da 1 ml di brodocoltura di ciascun pool di isolati seguendo il protocollo della ditta produttrice per l’estrazione del DNA genomico di batteri gram negativi.
+
+Il DNA estratto è stato quantificato mediante sistema fluorimetrico Quantus (Promega), mentre la purezza del DNA è stata valutata mediante sistema spettrofotometrico Synergy (Biotek) considerando processabili i DNA dei pool con rapporto dell'assorbanza a 260 e 280 nm (A 260/280) compreso tra 1.8 e 2.2.
+
+Partendo dal DNA estratto sono state preparate librerie genomiche utilizzando il kit Nextera XT Flex DNA e le librerie preparate sono state corse mediante sistema Miseq (Illumina) con cartuccia MiSeq Reagent Kit v2 (500 cycles) per la generazione di paired-end 2x250bp reads.
+
+Le reads grezze prodotte dal sequenziatore sono state valutate sulla base di criteri di qualità della sequenza mediante FastQC (http://www.bioinformatics.babraham.ac.uk/projects/fastqc/). Le reads sono state successivamente filtrate per qualità (rimozione di basi iniziali e finali con PHRED <20 considerando finestre di basi di 20 nt con PHRED medio <20) e lunghezza (reads con lunghezza > 50 bp) mediante il software Trimmomatic [@bolger2014trimmomatic].
+
+
+Le reads filtrate sono state poi utilizzate come input per l’individuazione di geni conferenti antibiotico resistenza utilizzando il database Resfinder ver. 4.0 [@bortolaia2020resfinder] usando i parametri di default (80% di identità su 60% di lunghezza di un gene target). Tra gli output dell’analisi sono stati considerati e comparati i geni presenti in ciascun pool di campioni associati alle principali classi di antibiotici (Amminoglicosidi, Beta lattamici, Colistina, Fluorochinoloni, Fosfomicina, Acido Fusico, Glicopeptidi, Macrolidi, Lincosamina, Streptomicina A, Nitroimidazolo, Fenicolo, Oxazolidinone, Rifampicina, Sulfonamide, Tetraciclina, Trimetoprim) ed i profili di resistenza in-silico per gli antibiotici considerati.
 
 
 
@@ -209,7 +236,7 @@ Formalmente il modello è il seguente:
 
 $$R_i \sim Bernoulli(p)$$
 $$\text logit(p) = \alpha_{\text{Comune}} + \beta*X $$ $$\alpha_{\text{Comune}} \sim Normal (\alpha, \sigma)$$  $$ \alpha \sim Normal(0, 1) $$ $$\sigma \sim \text{HalfCauchy(0,1)} $$    $$\beta \sim Normal (0, 1)$$
-Dove X rappresenta la matrice dei predittori e $\alpha_{\text{Comune}}$ definisce il fattore con intercetta variabile.  Tutte le variabili quantitative predittorie (Urbanizzazione e Pascolo) sono state standardizzate in accordo a quanto suggerisce  [@gelman2020regression], sia per una maggior interpretabilità dei coefficienti sia per una migliore performance del motore HCMCM sia per una miglior utilizzo delle priors del modello. Le stime dei parametri del modello sono state ottenute mediante campionamento con l'algoritmo Hamiltonian Monte Carlo utilizzando quattro catene, con 4000 iterazioni di cui 1000 di warmup ( escluse dopo il campionamento). Per questo modello è stato utilizzato il pacchetto brms [@brms] come interfaccia del linguaggio STAN [@gelman2015stan] implementato in R nel pacchetto rstan [@rstan]. Si è proceduto ad adattare  i seguenti modelli utilizzando i diversi predittori esplorando termini d'interazione ragionevoli dal punto di vista epidemiologico:
+Dove X rappresenta la matrice dei predittori e $\alpha_{\text{Comune}}$ definisce il fattore con intercetta variabile.  Tutte le variabili quantitative predittorie (Urbanizzazione e Pascolo) sono state standardizzate in accordo a quanto suggerisce  [@gelman2020regression], sia per una maggior interpretabilità dei coefficienti sia per una migliore performance del motore HMCM sia per una miglior utilizzo delle priors del modello. Le stime dei parametri del modello sono state ottenute mediante campionamento con l'algoritmo Hamiltonian Monte Carlo utilizzando quattro catene, con 4000 iterazioni di cui 1000 di warmup ( escluse dopo il campionamento). Per questo modello è stato utilizzato il pacchetto brms [@brms] come interfaccia del linguaggio STAN [@gelman2015stan] implementato in R nel pacchetto rstan [@rstan]. Si è proceduto ad adattare  i seguenti modelli utilizzando i diversi predittori esplorando termini d'interazione ragionevoli dal punto di vista epidemiologico:
 
 * modello 1 : $logit(p) =  \alpha_{\text{Comune}} + \beta_{\text{Specie}} + \beta_{\text{Pascolo}} + \beta_{\text{Urbanizzazione}}$
 
