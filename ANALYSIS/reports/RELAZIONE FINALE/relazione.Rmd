@@ -3,8 +3,9 @@ title: ''
 author: ''
 header-includes: \usepackage[italian]{babel} \usepackage{setspace}\doublespacing \usepackage{float} 
                   \usepackage{booktabs} \usepackage{longtable} 
-                  \usepackage{fontspec}
+                  \usepackage{fontspec} \usepackage{caption}
                   \setmainfont{Times New Roman}
+                  
               
 output:
   pdf_document:
@@ -14,8 +15,6 @@ output:
     fig_caption: yes
  
     
-     
-  
 bibliography: amrRef.bib
 link-citations: yes
 linkcolor: blue
@@ -161,35 +160,6 @@ La rilevazione dei geni di resistenza presenti negli isolati è stata eseguita u
 
 
 ## Analisi metagenomiche
-I pool di isolati sui quali sono state applicate tecniche di metagenomica shotgun sono stati allestiti in modo da valutare eventuali differenze nel corredo di geni di antibioresistenza in _Escerichia coli_ tra gruppi-specie di ospiti differenti e, all’interno dello stesso gruppo-specie , tra aree differenti corrispondenti alle province di Bergamo e Sondrio e a livelli altitudinali differenti all’interno della stessa provincia. In particolare, gli isolati di _Escherichia coli_ ottenuti  da campioni di feci di CERVIDI nella provincia di Bergamo sono stati divisi in tre pool corrispondenti alle prealpi bergamasche (Pool 1), la Val Brembana (Pool 2) e le Valli Seriana e Borlezza (Pool 3). Gli isolati di _Escherichia coli_  da feci di CERVIDI nella provincia di Sondrio sono stati divisi in due pool corrispondenti alla media valle (Pool 4) e l’alta valle (Pool 5). I pool per gli isolati di _Escherichia coli_ da feci da altri gruppi di ospiti sono stati suddivisi tra SUIDI (Pool 6), CORVIDI (Pool 7), BOVIDI (Pool 8) e RAPACI (Pool 9).
-
-In aggiunta ai pool già descritti per valutare i profili di geni di resistenza in _Escherichia coli_ nei selvatici è stato inserito un ulteriore pool (Pool 10) per ricercare i geni di resistenza in _Klebsiella pneumoniae_ in considerazione della particolare importanza nella clinica umana e nelle problematiche di antibiotico-resistenza nosocomiali.  Quest’ultimo pool è composto da isolati ottenuti da feci di  CORVIDI (13 isolati), RAPACI (4 isolati), CERVIDI (2 isolati) e LEPRI (1 isolato).
-
-Il numero massimo di isolati per pool è stato scelto sulla base di prove preliminari con un ceppo a resistenze note in cui si è valutata la quantità di dato necessaria per avere una buona copertura dei geni di antibiotico resistenza (>10x), soglia al di sopra della quale il centro di referenza europeo per l’antibiotico resistenza  del DTU riporta di poter rintracciare con buona confidenza tutti i geni di resistenza presenti (Valeria Bertolaia, comunicazione personale).
-
-I pool degli isolati selezionati sono stati preparati come indicato nei punti sottostanti:
-
-  1. preincubazione dei singoli isolati in 3 ml di terreno liquido BHI (Brain Heart Infusion) overnight come verifica di sterilità;
-
-  2. dopo 24h, allestimento delle brodo colture per l’estrazione del DNA in 3 ml di terreno liquido BHI (Brain Heart Infusion) overnight; 
-  
-  3. dopo 24h  e non oltre, sono stati prelevati 100 $\mu$L di brodocoltura per ciascun isolato e inseriti nella provetta di pool  prelevando solo le brodocolture normalmente sviluppate (fase stazionaria), per evitare di  alterare il bilanciamento del pool nel caso di crescita non adeguate; 
-
-  4. miscelamento accurato del pool mediante vortex e trasferimento del pool al laboratorio di sequenziamento in giornata per evitare degradazione del materiale e risultati non affidabili. 
-
-### Sequenziamento genomico.
-
-Il DNA genomico è stato estratto mediante il kit DNeasy Blood & Tissue Kit (Qiagen) a partire da 1 ml di brodocoltura di ciascun pool di isolati seguendo il protocollo della ditta produttrice per l’estrazione del DNA genomico di batteri gram negativi.
-
-Il DNA estratto è stato quantificato mediante sistema fluorimetrico Quantus (Promega), mentre la purezza del DNA è stata valutata mediante sistema spettrofotometrico Synergy (Biotek) considerando processabili i DNA dei pool con rapporto dell'assorbanza a 260 e 280 nm (A 260/280) compreso tra 1.8 e 2.2.
-
-Partendo dal DNA estratto sono state preparate librerie genomiche utilizzando il kit Nextera XT Flex DNA e le librerie preparate sono state corse mediante sistema Miseq (Illumina) con cartuccia MiSeq Reagent Kit v2 (500 cycles) per la generazione di paired-end 2x250bp reads.
-
-Le reads grezze prodotte dal sequenziatore sono state valutate sulla base di criteri di qualità della sequenza mediante FastQC (http://www.bioinformatics.babraham.ac.uk/projects/fastqc/). Le reads sono state successivamente filtrate per qualità (rimozione di basi iniziali e finali con PHRED <20 considerando finestre di basi di 20 nt con PHRED medio <20) e lunghezza (reads con lunghezza > 50 bp) mediante il software Trimmomatic [@bolger2014trimmomatic].
-
-
-Le reads filtrate sono state poi utilizzate come input per l’individuazione di geni conferenti antibiotico resistenza utilizzando il database Resfinder ver. 4.0 [@bortolaia2020resfinder] usando i parametri di default (80% di identità su 60% di lunghezza di un gene target). Tra gli output dell’analisi sono stati considerati e comparati i geni presenti in ciascun pool di campioni associati alle principali classi di antibiotici (Amminoglicosidi, Beta lattamici, Colistina, Fluorochinoloni, Fosfomicina, Acido Fusico, Glicopeptidi, Macrolidi, Lincosamina, Streptomicina A, Nitroimidazolo, Fenicolo, Oxazolidinone, Rifampicina, Sulfonamide, Tetraciclina, Trimetoprim) ed i profili di resistenza in-silico per gli antibiotici considerati.
-
 
 
 ## Analisi dei dati
@@ -837,4 +807,167 @@ ID Ceppo & Gruppo filogenetico & CTX-M & SHV & CMY & TEM & MCR\\
 
 # Bibliografia
 
- 
+<div id="refs"></div>
+
+\newpage
+
+# Allegato 
+
+## Analisi metagenomiche (Responsabile scientifico Dr. Stefano Pongolini- U.O.2) {-}
+
+### Materiali e metodi{-}
+I pool di isolati sui quali sono state applicate tecniche di metagenomica shotgun sono stati allestiti in modo da valutare eventuali differenze nel corredo di geni di antibioresistenza in _Escerichia coli_ tra gruppi-specie di ospiti differenti e, all’interno dello stesso gruppo-specie , tra aree differenti corrispondenti alle province di Bergamo e Sondrio e a livelli altitudinali differenti all’interno della stessa provincia. In particolare, gli isolati di _Escherichia coli_ ottenuti  da campioni di feci di CERVIDI nella provincia di Bergamo sono stati divisi in tre pool corrispondenti alle prealpi bergamasche (Pool 1), la Val Brembana (Pool 2) e le Valli Seriana e Borlezza (Pool 3). Gli isolati di _Escherichia coli_  da feci di CERVIDI nella provincia di Sondrio sono stati divisi in due pool corrispondenti alla media valle (Pool 4) e l’alta valle (Pool 5). I pool per gli isolati di _Escherichia coli_ da feci da altri gruppi di ospiti sono stati suddivisi tra SUIDI (Pool 6), CORVIDI (Pool 7), BOVIDI (Pool 8) e RAPACI (Pool 9).
+
+In aggiunta ai pool già descritti per valutare i profili di geni di resistenza in _Escherichia coli_ nei selvatici è stato inserito un ulteriore pool (Pool 10) per ricercare i geni di resistenza in _Klebsiella pneumoniae_ in considerazione della particolare importanza nella clinica umana e nelle problematiche di antibiotico-resistenza nosocomiali.  Quest’ultimo pool è composto da isolati ottenuti da feci di  CORVIDI (13 isolati), RAPACI (4 isolati), CERVIDI (2 isolati) e LEPRI (1 isolato).
+
+Il numero massimo di isolati per pool è stato scelto sulla base di prove preliminari con un ceppo a resistenze note in cui si è valutata la quantità di dato necessaria per avere una buona copertura dei geni di antibiotico resistenza (>10x), soglia al di sopra della quale il centro di referenza europeo per l’antibiotico resistenza  del DTU riporta di poter rintracciare con buona confidenza tutti i geni di resistenza presenti (Valeria Bertolaia, comunicazione personale).
+
+\begin{table}[H]
+\caption*{Tabella 1: Composizione dei pool di ceppi utilizzati per l'analisi metagenomica}
+\centering
+\begin{tabular}[t]{rllr}
+\toprule
+POOL & Specie animale origine & Specie batterica isolata & n.isolati\\
+\midrule
+1 & CERVIDI & Escherichia coli & 50\\
+2 & CERVIDI & Escherichia coli & 50\\
+3 & CERVIDI & Escherichia coli & 31\\
+4 & CERVIDI & Escherichia coli & 50\\
+5 & CERVIDI & Escherichia coli & 35\\
+\addlinespace
+6 & SUIDI & Escherichia coli & 50\\
+7 & CORVIDI & Escherichia coli & 50\\
+8 & BOVIDI & Escherichia coli & 50\\
+9 & RAPACI & Escherichia coli & 50\\
+10 & CERVIDI, RAPACI, CORVIDI, LEPRE & Klebsiella  pneumoniae & 20\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+I pool degli isolati selezionati sono stati preparati come indicato nei punti sottostanti:
+
+  1. preincubazione dei singoli isolati in 3 ml di terreno liquido BHI (Brain Heart Infusion) overnight come verifica di sterilità;
+
+  2. dopo 24h, allestimento delle brodo colture per l’estrazione del DNA in 3 ml di terreno liquido BHI (Brain Heart Infusion) overnight; 
+  
+  3. dopo 24h  e non oltre, sono stati prelevati 100 $\mu$L di brodocoltura per ciascun isolato e inseriti nella provetta di pool  prelevando solo le brodocolture normalmente sviluppate (fase stazionaria), per evitare di  alterare il bilanciamento del pool nel caso di crescita non adeguate; 
+
+  4. miscelamento accurato del pool mediante vortex e trasferimento del pool al laboratorio di sequenziamento in giornata per evitare degradazione del materiale e risultati non affidabili. 
+
+### Sequenziamento genomico {-}
+
+Il DNA genomico è stato estratto mediante il kit DNeasy Blood & Tissue Kit (Qiagen) a partire da 1 ml di brodocoltura di ciascun pool di isolati seguendo il protocollo della ditta produttrice per l’estrazione del DNA genomico di batteri gram negativi.
+
+Il DNA estratto è stato quantificato mediante sistema fluorimetrico Quantus (Promega), mentre la purezza del DNA è stata valutata mediante sistema spettrofotometrico Synergy (Biotek) considerando processabili i DNA dei pool con rapporto dell'assorbanza a 260 e 280 nm (A 260/280) compreso tra 1.8 e 2.2.
+
+Partendo dal DNA estratto sono state preparate librerie genomiche utilizzando il kit Nextera XT Flex DNA e le librerie preparate sono state corse mediante sistema Miseq (Illumina) con cartuccia MiSeq Reagent Kit v2 (500 cycles) per la generazione di paired-end 2x250bp reads.
+
+Le reads grezze prodotte dal sequenziatore sono state valutate sulla base di criteri di qualità della sequenza mediante FastQC (http://www.bioinformatics.babraham.ac.uk/projects/fastqc/). Le reads sono state successivamente filtrate per qualità (rimozione di basi iniziali e finali con PHRED <20 considerando finestre di basi di 20 nt con PHRED medio <20) e lunghezza (reads con lunghezza > 50 bp) mediante il software Trimmomatic (Bolger A. et al, 2014)
+
+
+Le reads filtrate sono state poi utilizzate come input per l’individuazione di geni conferenti antibiotico resistenza utilizzando il database Resfinder ver. 4.0 (Bortolaia V. et al.2020) usando i parametri di default (80% di identità su 60% di lunghezza di un gene target). Tra gli output dell’analisi sono stati considerati e comparati i geni presenti in ciascun pool di campioni associati alle principali classi di antibiotici (Amminoglicosidi, Beta lattamici, Colistina, Fluorochinoloni, Fosfomicina, Acido Fusico, Glicopeptidi, Macrolidi, Lincosamina, Streptomicina A, Nitroimidazolo, Fenicolo, Oxazolidinone, Rifampicina, Sulfonamide, Tetraciclina, Trimetoprim) ed i profili di resistenza in-silico per gli antibiotici considerati.
+
+
+## Risultati {-}
+
+### Estrazione del DNA genomico  {-}
+
+Il DNA genomico dei 10 pool analizzati è stato estratto con rese non elevate ma sufficienti per la preparazione delle librerie genomiche (tabella 2). La purezza del DNA è risultata adeguata in tutti i campioni tranne che nel campione n. 11  che perciò non è risultato processabile.
+
+\begin{table}[H]
+\caption*{Tabella 2: Elenco dei pool analizzati e relative quantità di DNA genomico estratto.}
+\centering
+\begin{tabular}[t]{rrr}
+\toprule
+POOL & Quantificazione (ng/ul) & Rapporto 260/280\\
+\midrule
+1 & 19.0 & 2.15\\
+2 & 12.0 & 2.10\\
+3 & 15.0 & 2.13\\
+4 & 14.0 & 2.16\\
+5 & 7.3 & 2.13\\
+6 & 24.0 & 2.19\\
+7 & 46.0 & 2.18\\
+8 & 13.0 & 2.19\\
+9 & 14.0 & 2.18\\
+10 & 12.0 & 2.16\\
+11 & 6.4 & 3.14\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+### SEQUENZIAMENTO GENOMICO: Preparazione del DNA genomico, delle librerie genomiche, reazione di sequenziamento ed analisi bioinformatiche {-}
+
+La corsa di sequenziamento in Miseq dei pool di isolati selezionati hanno generato le quantità di dato indicate in tabella 3. La quantità di dato per ogni pool è accettabile poiché produce un coverage medio per isolato >10, soglia al di sopra della quale si è dimostrato di poter rintracciare tutti i geni AMR presenti grazie a prove preliminari a diverse profondità con un ceppo a resistenze note e ad un confronto con gli esperti AMR del DTU (centro di referenza europeo per l’antibiotico resistenza); rimane tuttavia un piccolo sbilanciamento del coverage di alcuni pool che risultano a basso coverage (pool n.7 e 9) mentre altri hanno coverage più elevati (35-36X, pool n. 5 e 6). Il coverage medio delle corse risulta essere di 28X. Tale copertura di sequenziamento e la bontà della qualità dei dati genomici valutata con FastQC ha permesso l’identificazione dei geni di antibiotico-resistenza con sufficiente profondità e precisione.
+
+\begin{table}[H]
+\caption*{Tabella 3: Numero di reads e coverage per ciascun pool sequenziato.}
+\centering
+\begin{tabular}[t]{rrrrrr}
+\toprule
+POOL & N.isolati & R1 & R2 & R3 & Cov\\
+\midrule
+1 & 50 & 28336544 & 27250964 & 545019 & 27\\
+2 & 50 & 26719066 & 25451148 & 509023 & 25\\
+3 & 31 & 22532802 & 21984142 & 709166 & 35\\
+4 & 49 & 29934864 & 28806258 & 587883 & 29\\
+5 & 35 & 27035084 & 24895484 & 711300 & 36\\
+6 & 47 & 33658626 & 32615470 & 693946 & 35\\
+7 & 45 & 14550964 & 13832892 & 307398 & 15\\
+8 & 49 & 29133736 & 28498164 & 581595 & 29\\
+9 & 47 & 15552662 & 13859472 & 294882 & 15\\
+10 & 20 & 13250594 & 12846328 & 642316 & 32\\
+\bottomrule
+\multicolumn{6}{l}{\rule{0pt}{1em}\textsuperscript{R1} N.totali reads}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}\textsuperscript{R2} N.totali reads filtrate (bp)}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}\textsuperscript{R3} N.reads totali filtrate/isolato (bp)}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}\textsuperscript{Cov} Coverage medio/isolato (X)}\\
+\end{tabular}
+\end{table}
+
+Dal momento che nelle analisi non è possibile associare un profilo di resistenza/sensibilità ad un antibiotico per un singolo isolato dato che si tratta di una valutazione di un pool di isolati è stata considerata la presenza/assenza in-silico di geni AMR per gli antibiotici considerati in ciascun pool di isolati. Tale valutazione qualitativa è stata effettuata partendo dal dettaglio di identificazione dei singoli geni AMR individuati (fig 1)
+
+```{r echo=FALSE, fig.align = "center",out.width = '90%'}
+knitr::include_graphics("figure/allfig1.png")
+```
+
+mentre una valutazione quantitativa è stata effettuata sul n. di geni AMR totali presenti in ciascun pool e per ciascun antibiomicrobico (fig.2)
+
+```{r echo=FALSE, fig.align = "center",out.width = '90%'}
+knitr::include_graphics("figure/allfig2.png")
+```
+
+e per ciascuna classe di antimicrobici (fig.3)
+
+```{r echo=FALSE, fig.align = "center",out.width = '90%'}
+knitr::include_graphics("figure/allfig3.png")
+```
+
+Il test di correlazione per ranghi di Kendall tra la frazione di isolati in ogni pool risultati resistenti a un dato antimicrobico nello screening fenotipico e il numero di geni AMR associati allo stesso antimicrobico trovati nel pool tramite analisi metagenomica è risultato molto significativo ($\tau$ = 0.65; p-value = $6*10^{-9}$). Tale risultato suggerisce che l’analisi metagenomica shotgun effettuata sui pool abbia risoluzione sufficiente per individuare i geni ARM presenti negli isolati e responsabili dei fenotipi osservati.I pool di E. coli (POOL 1-9) mostrano tutti la presenza di geni con resistenze a aminoglyoside, beta-lactamici e tetraciclina. Non sono stati trovati geni AMR appartenenti alle classi: oxazolidinone, steroidi antibatterici e psudomonic acid. Nel pool di K. Pneumoniae (POOL 10) si può notare invece l’elevata presenza di geni legati alla resistenza ai beta-lactamici. Nel POOL 5 è stato individuato anche un gene di resistenza alla colistina della classe mcr (mcr-9).
+L’analisi metagenomica ha inoltre permesso di evidenziare differenze geografiche nel corredo di geni AMR presenti in E. coli prelevati in cervidi. In particolare, è stato possibile osservare per tutte le classi fenotipiche un maggior numero di geni AMR negli isolati della provincia di Sondrio rispetto alla provincia di Bergamo. 
+
+
+```{r echo=FALSE, fig.align = "center",out.width = '90%'}
+knitr::include_graphics("figure/allfig4.PNG")
+```
+
+Anche all’interno dei pool prelevati nelle singole province di Bergamo e Sondrio sembrano emergere pattern differenti di AMR in funzione dell’altitudine di prelievo. In particolare, i pool prelevati da animali che vivono ad altitudini maggiori mostrano generalmente una maggiore presenza di geni AMR in tutte le classi fenotipiche (Figura 5 per Bergamo e Figura 6 per Sondrio).
+
+
+
+```{r echo=FALSE, fig.align = "center",out.width = '90%'}
+knitr::include_graphics("figure/allfig6.PNG")
+```
+
+
+## Discussione {-}
+L’analisi metagenomica shotgun mostra una buona corrispondenza con il dato fenotipico (Kendall-tau = 0.65; p-value = 6*10-9). Questo mostra che la metodologia è sufficientemente robusta per individuare con buona confidenza i geni AMR che conferiscono resistenze anche su pool di isolati. 
+
+L’analisi dei pool prelevati a diverse altitudini e in diverse province su E. coli isolati in cervidi sembrano mostrare un aumento della presenza di geni AMR con l’altitudine. Tale risultato deve essere però confermato attraverso una più completa analisi quantitativa della presenza di reads AMR nei diversi pool. 
+
+
+## Bibliografia {-}
+Anthony M. Bolger, Marc Lohse, Bjoern Usadel, Trimmomatic: a flexible trimmer for Illumina sequence data, Bioinformatics, Volume 30, Issue 15, 1 August 2014, Pages 2114–2120, 
+
+Bortolaia V, Kaas RS, Ruppe E, Roberts MC, Schwarz S, Cattoir V, Philippon A, Allesoe RL, Rebelo AR, Florensa AF, Fagelhauer L, Chakraborty T, Neumann B, Werner G, Bender JK, Stingl K, Nguyen M, Coppens J, Xavier BB, Malhotra-Kumar S, Westh H, Pinholt M, Anjum MF, Duggett NA, Kempf I, Nykäsenoja S, Olkkola S, Wieczorek K, Amaro A, Clemente L, Mossong J, Losch S, Ragimbeau C, Lund O, Aarestrup FM. ResFinder 4.0 for predictions of phenotypes from genotypes. J Antimicrob Chemother. 2020 Aug 11:dkaa345. doi: 10.1093/jac/dkaa345. Epub ahead of print. PMID: 32780112.

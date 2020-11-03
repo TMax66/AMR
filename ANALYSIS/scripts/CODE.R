@@ -909,6 +909,132 @@ esbl %>%
   kable_styling(latex_options = c("repeat_header"))
 
 
+###########TABELLE ALLEGATO ANALISI METAGENOMICHE################
+
+
+t1 <- read_excel(here("ANALYSIS", "reports", "RELAZIONE FINALE", "alltab1.xlsx"))
+
+t1 %>% 
+  kable("latex", caption = "Composizione dei pool di ceppi utilizzati per l'analisi metagenomica",
+        booktabs = TRUE) %>% 
+  kable_styling()
+
+
+t2 <- read_excel(here("ANALYSIS", "reports", "RELAZIONE FINALE", "alltab2.xlsx"), col_types = c("numeric", "numeric", "numeric"))
+
+
+
+t2 %>% 
+  kable("latex", caption = "Elenco dei pool analizzati e relative quantità di DNA genomico estratto.",
+        booktabs = TRUE) %>% 
+  kable_styling()
+
+
+t3 <- read_excel(here("ANALYSIS", "reports", "RELAZIONE FINALE", "alltab3.xlsx"), 
+                 col_types = c("numeric", "numeric", "numeric", "numeric", "numeric", "numeric" ))
+
+
+t3 %>% 
+  kable("latex", caption = "Tabella 3: Numero di reads e coverage per ciascun pool sequenziato.",
+        booktabs = TRUE) %>% 
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed")) %>% 
+  footnote(
+           symbol = c("N.totali reads", "N.totali reads filtrate (bp)", 
+                      "N.reads totali filtrate/isolato (bp)", "Coverage medio/isolato (X)")
+  )
+
+  
+ 
+library(hrbrthemes)
+library(ggvis)
+t4 <- read_excel(here("ANALYSIS", "reports", "RELAZIONE FINALE", "alltab4.xlsx"))
+t4$gene_phenotype <- paste(t4$AMRgene, "-", t4$Phenotype)
+
+t4 %>% 
+  pivot_longer(cols = 3:12, names_to = "Pool", values_to = "n",values_drop_na = TRUE) %>% 
+  mutate(Pool = factor(Pool, levels = c("pool1","pool2","pool3",
+                                        "pool4","pool5","pool6","pool7",
+                                        "pool8","pool9","pool10" ))) %>% 
+  ggplot( aes(Pool, gene_phenotype), label=n) + geom_tile(aes(fill = n))+
+  theme_ipsum_rc()+
+  geom_text(aes(label = n), size=4, col = "white") +
+  #scale_fill_gradient(low = "gray", high = "steelblue")+
+  scale_x_discrete(expand = c(0, 0), position = "top")  + theme_ipsum_rc()+
+  scale_y_discrete(expand = c(0, 0)) + labs(x="Pool") +
+  theme(legend.position = "NULL",axis.ticks = element_blank(),
+        axis.text.x = element_text(hjust = 1,size=8),axis.text.y = element_text(size=8))+
+  labs(caption = "Fig.1: Geni AMR individuati nei pool- Per ogni gene AMR individuato nell’analisi metagenomica (AMR gene) viene riportata 
+       la classe di antimicrobici associata (Phenotype) e la presenza/assenza del gene in ogni pool")
+  
+
+
+
+t5 <- read_excel(here("ANALYSIS", "reports", "RELAZIONE FINALE", "allfig2.xlsx"))
+t5$Classe_antibiotico <- paste(t5$Classe, "-", t5$Antibiotico)
+
+t5 %>% 
+  pivot_longer(cols = 3:12, names_to = "Pool", values_to = "n",values_drop_na = TRUE) %>% 
+  mutate(Pool = factor(Pool, levels = c("pool1","pool2","pool3",
+                                        "pool4","pool5","pool6","pool7",
+                                        "pool8","pool9","pool10" )), 
+         Classe_antibiotico = fct_rev(Classe_antibiotico)) %>% 
+  ggplot( aes(Pool, Classe_antibiotico), label=n) + geom_tile(aes(fill = n))+
+  theme_ipsum_rc()+
+  geom_text(aes(label = n), size=4, color = "white") +
+ # scale_fill_gradient(low = "gray3", high = "steelblue")+
+  scale_fill_gradient(trans = 'reverse')+
+  scale_x_discrete(expand = c(0, 0), position = "top")  + theme_ipsum_rc()+
+  scale_y_discrete(expand = c(0, 0)) + labs(x="Pool") +
+  theme(legend.position = "NULL",axis.ticks = element_blank(),
+        axis.text.x = element_text(hjust = 1,size=8),axis.text.y = element_text(size=8))+
+  labs(caption = "Fig.2: Analisi quantitativa del n. di geni AMR per antibiotico nei pool analizzati")
+
+
+
+
+t6 <- read_excel(here("ANALYSIS", "reports", "RELAZIONE FINALE", "allfig3.xlsx"))
+
+
+t6 %>% 
+  pivot_longer(cols = 2:11, names_to = "Pool", values_to = "n",values_drop_na = TRUE) %>% 
+  mutate(Pool = factor(Pool, levels = c("pool1","pool2","pool3",
+                                        "pool4","pool5","pool6","pool7",
+                                        "pool8","pool9","pool10" )), 
+         Classe_fenotipica = fct_rev(Classe_fenotipica)) %>% 
+  ggplot( aes(Pool, Classe_fenotipica), label=n) + geom_tile(aes(fill = n))+
+  theme_ipsum_rc()+
+  geom_text(aes(label = n), size=4, color = "white") +
+  # scale_fill_gradient(low = "gray3", high = "steelblue")+
+  scale_fill_gradient(trans = 'reverse')+
+  scale_x_discrete(expand = c(0, 0), position = "top")  + theme_ipsum_rc()+
+  scale_y_discrete(expand = c(0, 0)) + labs(x="Pool") +
+  theme(legend.position = "NULL",axis.ticks = element_blank(),
+        axis.text.x = element_text(hjust = 1,size=8),axis.text.y = element_text(size=8))+
+  labs(caption = "Fig.3: Analisi quantitativa del n. di geni AMR per classi di antibiotici nei pool analizzati")
+
+
+
+
+
+
+# t4$pool1 <-  cell_spec(t4$pool1, color = ifelse( !is.na(t4$pool1), "blue", "white"))
+# t4$pool2 <-  cell_spec(t4$pool2, color = ifelse( !is.na(t4$pool2), "blue", "white"))
+# t4$pool3 <-  cell_spec(t4$pool3, color = ifelse( !is.na(t4$pool3), "blue", "white"))
+# t4$pool4 <-  cell_spec(t4$pool4, color = ifelse( !is.na(t4$pool4), "blue", "white"))
+# t4$pool5 <-  cell_spec(t4$pool5, color = ifelse( !is.na(t4$pool5), "blue", "white"))
+# t4$pool6 <-  cell_spec(t4$pool6, color = ifelse( !is.na(t4$pool6), "blue", "white"))
+# t4$pool7 <-  cell_spec(t4$pool7, color = ifelse( !is.na(t4$pool7), "blue", "white"))
+# t4$pool8 <-  cell_spec(t4$pool8, color = ifelse( !is.na(t4$pool8), "blue", "white"))
+# t4$pool9 <-  cell_spec(t4$pool9, color = ifelse( !is.na(t4$pool9), "blue", "white"))
+# t4$pool10 <-  cell_spec(t4$pool10, color = ifelse( !is.na(t4$pool10), "blue", "white"))
+# 
+# t4 %>% 
+#   kable("latex", caption = "Tabella 4: Geni AMR individuati nei pool:Per ogni gene AMR individuato nell’analisi metagenomica (AMR gene) 
+#         viene riportata la classe di antimicrobici associata (Phenotype) e la presenza/assenza del gene in ogni pool",
+#         booktabs = TRUE, longtable = T, escape = FALSE) %>% 
+#   kable_styling()
+
+
 ###Grafico
 
 # AMR$x<-!duplicated(AMR$IDcamp)#<-crea una variabile che identifica i singoli campioni di feci
