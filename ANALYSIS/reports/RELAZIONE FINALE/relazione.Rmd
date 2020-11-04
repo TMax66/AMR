@@ -56,6 +56,7 @@ ELENCO DEI COLLABORATORI
 \newpage
 \listoftables
 
+\newpage
 
 # INTRODUZIONE 
 L'Antibiotico-Resistenza (AR) è una grave minaccia per la salute in quanto compromette la capacità di trattare le infezioni sia in medicina umana che veterinaria. La resistenza agli antibiotici si sviluppa sia attraverso complessi meccanismi come la mutazione sotto la pressione selettiva, derivante dall'uso/abuso di antibiotici,  sia attraverso scambi di DNA inter e intra-specifici, prinicipalmente mediante il trasferimento orizzontale di geni di resistenza localizzati su plasmidi che rappresenta il più importante meccanismo all'origine dell'acquisizione della resistenza in batteri patogneni rilevanti per la salute umana [@carattoli2013plasmids]. 

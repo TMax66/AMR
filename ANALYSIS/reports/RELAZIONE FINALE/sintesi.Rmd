@@ -24,7 +24,11 @@ linkcolor: blue
 
 ---
 
-**Parole chiave:** antimicrobico-reistenza, fauna selvatica, resistoma ambientale. 
+Responsabile scientifico: Dr. Tranquillo Vito (vito.tranquillo@izsler.it)
+
+**Parole chiave:** antimicrobico-resistenza, fauna selvatica, resistoma ambientale. 
+
+
 
 **Introduzione**
 
