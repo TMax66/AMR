@@ -24,7 +24,7 @@ linkcolor: blue
   \LARGE
    Ruolo della fauna selvatica del mantenimento e diffusione dell'antibiotico-resistenza\\
   
-  \vspace*{1cm}
+  
   \end{center}
   
   
@@ -52,8 +52,8 @@ linkcolor: blue
     \end{figure}
 \end{bfseries}
 
-\begin{center}
+ \vspace*{1cm}
 
-Documento editato in rmarkdown [@xie2018r]
 
-\end{center}
+Documento editato in rmarkdown   [@xie2018r]
+

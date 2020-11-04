@@ -28,11 +28,11 @@ linkcolor: blue
 ```{r child='frontespizio.Rmd'}
 ```
 
-\newpage
-\pagenumbering{Roman}
+<!-- \newpage -->
+<!-- \pagenumbering{Roman} -->
 
-```{r child='sintesi.rmd'}
-```
+<!-- ```{r child='sintesi.rmd'} -->
+<!-- ``` -->
 
 \newpage
 \tableofcontents
@@ -40,17 +40,17 @@ linkcolor: blue
 
 ELENCO DEI COLLABORATORI
 
-* **Dr. Tranquillo Vito** U.O. 1-Responsabile scientifico del progetto.Coordinamento delle U.O., Analisi statistica dei dati fenotipici. 
+* **Dr. Tranquillo Vito** U.O. 1-Responsabile scientifico del progetto. Coordinamento delle U.O., Analisi statistica dei dati fenotipici. 
 * **Dr. Fiocchi Alfredo** U.O. 1-Analisi microbiologiche e antibiogrammi.
 * **Dr. Pongolini Stefano** U.O. 2-Coordinamento U.O. e attività di analisi metagenomiche
 * **Dr. Bolzoni Luca** U.O. 2-Attività analisi metagenomiche 
-* **Dr. Erika Scaltriti** U.O. 2-Attività analisi metagenomiche 
-* **Dr. Bertoletti Irene** U.O. 3-Analisi Microbiologiche e antibiogrammi
+* **Dr.ssa  Erika Scaltriti** U.O. 2-Attività analisi metagenomiche 
+* **Dr.ssa  Bertoletti Irene** U.O. 3-Analisi Microbiologiche e antibiogrammi
 * **Dr. Alessandro Bianchi** U.O. 3-Analisi Microbiologiche e antibiogrammi
 * **Dr. Loris Alborali** U.O. 4-Analsi genomiche ceppi Ceftiofur resistenti
 * **Dr. Prati Paola** U.O. 5- Attività di raccolta e invio campioni a U.O.1 per successive analisi
 * **Dr. Gianni Sala** U.O. 6- Attività di raccolta e invio campioni a U.O.1 per successive analisi
-
+* **Dr.ssa  Sacchi Cristina** U.O. 6- Attività di raccolta e invio campioni a U.O.1 per successive analisi
 \newpage
 \listoffigures
 \newpage
@@ -100,6 +100,18 @@ Sulla base di questi dati è stato progettato un studio osservazionale con l'obi
 ```{r echo=FALSE, fig.align = "center",out.width = '90%', }
 knitr::include_graphics("figure/timeline.png")
 ```
+
+In particolare: 
+
+L'U.O. 1  ha svolto regolarmente le attività  per quel che riguarda la parte analitica, relativamente alla disponibilità dei campioni di feci inviati dalle U. O. 5 e 6. A Febbraio del 2019 a conclusione della parte analitica di isolamento,  identificazione,  test di suscettibilità dei ceppi e loro archiviazione si è proceduto all'invio dei pool di ceppi di Escherichia coli all'U.O.2 per le attività di analisi metagenomica. L'attività di analisi dei dati fenotipici si è conclusa a Maggio del 2020, mentre l'editing della relazione finale è iniziata a Giugno 2020 e si è conclusa a Novembre 2020, con l'invio della relazione finale in data  . Il 
+
+L'U.O. 2 ha ricevuto i campioni per le analisi metagenomiche a Febbraio 2019 e ha concluso le attività il 2/11/2020 con l'invio all'U.O. 1 di una relazione delle attvità svolte.  A causa della scadenza prossima dell'invio della relazione finale alla Direzione Generale dell'IZLSER prevista per il 7/11/2020, non essendo stato possibile  procedere a una  valutazione, discussione ed eventuali integrazione dei risultati e considerazioni relative alle analisi metagenomiche il responsabile scientifico ha ritenuto opportuno inserire il contributo della U.O. come allegato alla relazione finale del progetto di ricerca.
+
+L'U.O. 3 ha svolto regolarmente le attività di analisi previste e introduzione dei risultati nel database predisposto dall'U.O. 1. Inoltre ha proceduto a fine 2019 ad effettuare sui ceppi risultati resistenti al Ceftiofur i test di screening per l'individuazione fenotipica di ceppi ESBL. 
+
+L.U.O. 4 ha effettuato sui ceppi ceftiofur resistenti la caratterizzazione genomica.
+
+L.U.O. 5 e 6 hanno svolto regolarmente la loro attività di collezione dei campioni di feci, stoccaggio e invio all'U.O.1. 
 
 A Ottobre del 2019 è stata chiesta e ottenuta  una proroga del progetto sulla base dei primi risultati ottenuti dall'U.O.2 impegnata nelle analisi metagenomiche. Si è colta l'occasione della proroga dei tempi per integrare i risultati indagando nello specifico i profili genetici di ceppi di Escherichia coli risultati resistenti a Ceftiofur per evidenziare la presenza di geni di resistenza ESBL. 
 
@@ -242,7 +254,7 @@ $\alpha$ rappresenta un parametro di scala, lungo il quale la richezza del profi
 ## Quadro generale
 
 ### Territorio
-L'attività di campionamento si è svolta tra Settembre 2017 e Dicembre 2019  in sette province della Lombardia : Bergamo, Pavia, Varese,Como, Lecco e Brescia da un totale di 223 comuni (Fig\ref{fig:fig1}). 
+L'attività di campionamento si è svolta tra Settembre 2017 e Dicembre 2018  in sette province della Lombardia : Bergamo, Pavia, Varese,Como, Lecco e Brescia da un totale di 223 comuni (Fig\ref{fig:fig1}). 
 Sulla base dei  criteri di classificazione dei comuni adottati dall'ISTAT, in merito a grado di urbanizzazione, e montanità risulta che : 415 campioni (57%) provengono da comuni a bassa urbanizzazione (aree rurali scarsamente popolate), 221 campioni (30%) da comuni a densità intermedia di popolazione e 11 campioni (1.15%) da comuni ad alta densità di popolazione; 472 campioni (65%) provengono da comuni totalmente montani, 161 (22%) da comuni in pianura e 14 campioni (2%), da aree parzialmente montane (collinari). Questi risultati sono riferiti ad un totale di 647 campioni provenienti da comuni per i quali era disponibile il dato ISTAT di urbanizzazione e montanità. In  tabella \ref{tab:tab1} sono riportate le statistiche descrittive della caratterizzazione geografica e di popolazione dei comuni da cui provengono i campioni. 
 
 ### Fauna selvatica
@@ -313,18 +325,29 @@ Il trend di diminuzione della prevalenza di animali carrier di ceppi resistenti 
 
 In questo studio la caratterizzazione microbiologica dei ceppi isolati mostra una netta prevalenza di Escherichia coli (67%), rispetto ad altre _Enterobacteriacee_.  Considerando che le  modalità di campionamento delle colonie selezionate  non garantiscono la rappresentatività degli isolati dai campioni di feci esaminati, in questo studio il focus è principalmente indirizzato alla famiglia delle _Enterobacteriacee_ per quello che riguarda le manifestazioni fenotipiche delle resistenze al panel di antibiotici indagato. Fatta eccezione per lo studio di caratterizzazione genomica dei ceppi di Escherichia coli resistenti a Ceftiofur, e allo studio  metagenomico che è stato eseguito solo  su una selezione di ceppi di Escherichia coli. 
 Focalizzando l'attenzione sui risultati dell'antibiotico-resistenza dei ceppi, il dato più rilevante è che la prevalenza delle resistenze è risultata più elevata solo in due classi di antibiotici: Ampicillina (43%) e  Tetracicline (37%), mentre il restante 20% delle resistente si distribuiscono tra le altre classi di antibiotici. Il profilo fenotipico più frequente tra i ceppi resistenti è il profilo TET-AMP con 141 ceppi, seguito da ceppi resistenti solo a AMP e solo  TET.  Pattern costantemente presente nei differenti gruppi-specie di provenienza dei campioni.  Come già ricordato in precedenza AMP è un antibiotico classificato come Critically Important e High Priority mantre la Tetraciclina è stata recentemente riclassificata, declassandola,  come Highly Important in quanto antibiotico di elezione in casi di Brucellosi che almeno nei paesi sviluppato è stata quasi completamente eradicata. Si tratta di due antibiotici ampiamente utilizzati sia in medicina umana che veterinaria da circa mezzo secolo è ragionevole quindi supporre che i vari meccanismi di contaminazione ambientale di ceppi portatori di resistenza abbiano avuto il tempo di raggiungere aree meno antropomorfizzate aumentando la probabilità di esposizione della fauna selvatica al resistoma ambientale contaminante. Rilevante,  da un punto di vista della sanità pubblica,  la bassa prevalenza di ceppi resistenti ad antibiotici particolarmente importanti e sotto osservazione da parte del WHO tra cui la **Colistina** (5%), il **Ceftiofur**(9%) e l'**Enrofloxacin**(5%), in tutti i gruppi specie. 
-I risultati ottenuti sono coerenti con gli altri studi pubblicati, e sebbene il confronto non sempre è possibile per differenti modalità di campionamento, specie campionate, antibiotici testati, si può osservare che gli antibiotici  verso cui i ceppi di enterobacteriacee isolati mostrano maggiore resistenza sono principalmente quelli del gruppo delle $\beta$-lattamasi (Ampicillina, Amoxicillina, Amoxicillina-Ac.Clavulanico), Tetracicline e aminoglicosidi [@foti_study_2018]. 
+I risultati ottenuti sono coerenti con gli altri studi pubblicati, e sebbene il confronto non sempre è possibile per differenti modalità di campionamento, specie campionate, antibiotici testati, si può osservare che gli antibiotici  verso cui i ceppi di enterobacteriacee isolati mostrano maggiore resistenza sono principalmente quelli del gruppo delle $\beta$-lattamasi (Ampicillina, Amoxicillina, Amoxicillina-Ac.Clavulanico), Tetracicline e aminoglicosidi [@foti_study_2018]. I risultati emersi dalla caratterizzazione genomica dei ceppi resistenti a Ceftiofir, con l'individuazione a bassa prevaelnza dei soli geni TEM e SHV dimostra la presenza di ceppi ESBL nel comparto selvatico limitatamente al gruppo specie CERVIDI da campioni di feci prelevati da animali provenienti dai territori della provincia di Sondrio. 
 Il fenomeno delle multi-resistenze, considerando il ceppo come unità di osservazione è ulteriormente ridimensionato, infatti solo il 10% dei ceppi mostra resistenza a tre o più antibiotici. Tra i pochi ceppi multiresistenti isolati i profili fenotipici più frequenti si  caratterizzano  dalla co-resistenza a **CFT-TET-AMP** osservato in 27 ceppi e  **COL-TET-AMP** osservato in 14 ceppi. Altre combinazioni di co-resistenze risultano rare e molto disperse considerando che sono stati identificati 49 profili differenti  di co-resistenza. La ridotta numerosità di questi fenotipi non permette di speculare sul loro significato biologico in merito alla diffusione e mantenimento dell'antibiotico-resistenza, nonostante queste limitazioni l'ampia variabilità intra-specie della frequenza di questi fenotipi è di un certo interesse in quanto offre una chiave di interpretazione a carattere ecologico che abbiamo cercato di affrontare attraverso lo studio della biodiversità  nei differenti gruppi-specie. Questo approccio è già stato utulizzato da @mather2012ecological in un lavoro metodologico in cui è descritta l'applicazione di un nuovo  approccio ecologico allo studio  della biodiversità  dei fenotipi antibiotico-resistenti al fine di indentificare le sorgenti di resistenza più probabili in popolazioni umane a animali a confronto. Un analogo approccio è stato quindi utilizzato anche da @hassell_clinically_2019-1 mettendo a confronto la diversità dei fenotipi di resistenza di ceppi di Escherichia coli in popolazione di selvatici suburbani, animali domestici, esseri umani e ambiente. In questo studio la prevalenza di animali selvatici carrier di ceppi multi-resistenti è risultata molto elevata (52%) e variabile a seconda delle specie e delle abitudini alimentari. Il riscontro più interessante è rappresentato dal fatto che la diversità fenotipica dei ceppi isolati dalle specie selvatiche è risultata più bassa di quella osservata nei campioni di umani, di animali domestici e dell'ambiente. Secondo @hassell_clinically_2019-1 questo risultato è consistente con l'ipotesi che i selvatici sono carrier passivi, recipienti (net sink), che fungono da canali di disseminazione ambientale piuttosto che una sorgente di resistenze. In sostanza la minore diversità fenotipica può essere attribuita  a una minore presenza di geni di resistenza o in loro presenza all'assenza di stimoli selettivi (antibiotici, agenti chimici) in grado di attivare i geni ampliando quindi lo spettro fenotipico dei ceppi. In questo progetto di ricerca mancano i dati relativi a ceppi provenienti dagli altri comparti (uomo, animali domestici e ambiente), quindi lo studio della diversità fenotipica si è limitata ad un confronto tra i fenotipi dei ceppi isolati dai diversi gruppo-specie indagati. Il gruppo CERVIDI mostra un profilo di bassa diversità, con la presenza di pochi fenotipi dominanti ( questo gruppo si caratterizza per la frequenza più elevata di ceppi suscettibili a tutti gli antibiotici testati) , rispetto a tutti gli altri gruppi. CORVIDI E RAPACI condividono un profilo di diversità praticamente identico ( le due curve si sovrappongono e quindi i due gruppi non possono essere ranghizzati) maggiore rispetto ai CERVIDI ma più basso rispetto agli altri gruppi che mostrano profili di maggiore unifomità (eveness) rispetto ai precedenti gruppi e un crescente profilo di diversità (in ordine crescente : SUIDI, BOVIDI, CARNIVORI, UCCELLI ACQUATICI, LEPRE E ALTRI VOLATILI Fig.\ref{fig:greny}). Occorre sottolineare che trattandosi di profili empirici basati sulle proporzioni dei vari fenotipi di resistenza osservati, generalmente funzionano bene  per grandi valori di ordine $\alpha$ (ad esempio $\alpha >3$) perché queste misure sono determinate dai fenotipi  dominanti, che appaiono sempre nei campioni, se la dimensione del campione non è irragionevolmente piccola. Tuttavia, per ordini bassi di $\alpha$ (specialmente per $0 ≤ \alpha ≤ 3$), i profili empirici tipicamente sottostimano i profili reali della popolazione a causa dell'effetto dei fenotipi non rilevate nei campioni - @chao2015estimating. Alla luce di queste considerazioni,  i nostri risultati sulla diversità fenotipica, almeno per i gruppi specie LEPRE, ALTRI-VOLATILI, UCCELLI ACQUATICI, sono di scarsa utilità considerando la bassa dimensione campionaria e necessitano di ulteriori conferme attraverso studi di maggiori dimensioni.  In assenza di stimoli selettivi , quali la somministrazione di antibiotici, la maggiore diversità fenotipica osservata nella maggior parte dei gruppi specie  è verosimilmente imputabile a una contaminazione ambientale di ceppi multi-resistenti o geni di resistenza diversificata, a cui però , stante la bassa prevalenza di ceppi multi-resistenti generalmente osservata in tutti i gruppi-specie, non segue l'espansione clonale che potrebbe essere attesa in caso di costante stimolo selettivo indotto dall'assunzione di antibiotici. 
+
+I risultati di questo studio confermano la presenza di ceppi di _Enterobacteriacee_ resistenti e di geni di resistenza in un ampio spettro di specie di fauna selvatica di un vasto territorio con differenti caratteristiche territoriali e pressione antropegenica. La prevalenza di ceppi multi-resistenti risulta contenuta e questo supporta quanto già descritto in letteratura [@hassell_clinically_2019-1], l'ipotesi che il comparto dei selvatici funga principalmente da contenitore accidentale del resistoma ambientale in cui l'assenza di continui stimoli selettivi (somministrazione di antibiotici) non permette l'espansione clonale dei ceppi resistenti. Da questo punto di vista i selvatici assumono un ruolo di sentinella di ambienti contaminati dal resistoma ambientale. La riduzione della contaminazione ambientale dei residui di antibiotici e sostanze chimiche rappresenta il principale presidio per impedire che ceppi reistenti presenti nel microbioma delle specie selvatiche possano svilupparsi ed espandersi in modo critico innescando flussi di contaminazione verso gli animali domestici e popolazioni umane vanificando gli sforzi messi in atto in questi anni per ridurre il fenomeno dell'antibiotico-resistenza.
 
 
 
 \newpage
 # Raccomandazioni 
-### elementi gestionali e/o diagnostici
-### indicazioni per la ricerca
-### sugg per eventuali provvedimenti normativi
 
-# MODALITÀ DI DIVULGAZIONE DEI RISULTATI 
+### Elementi gestionali e/o diagnostici
+Nessuno
+
+### Indicazioni per la ricerca
+
+L'accumulo di evidenze circa la diffusione nel comparto selvatico di ceppi resistenti e multi-resistenti e/o geni di resistenza e la definizione dei selvatici prevalentemente come  sentinelle della  contaminazione ambientale dei determinanti di resistenza (resistoma), dovrebbe orientare futuri progetti di ricerca a concentrarsi maggiormente sulla contaminazione ambientale di  residui di antibiotici e chimici che potrebbero determinare nel microbioma dei selvatici la selezione di ceppi di resistenza e soprattutto la loro espansione clonale indotta dal persistere della pressione selettiva, rendendo il comparto dei selvatici veri e propri serbatoi e diffusori dell'antibiotico-reistenza. 
+
+
+### Suggerimenti per eventuali provvedimenti normativi
+Nessuno
+
+# Modalità di divulgazione dei risultati
+La principale modalità di diffusione dei risultati del progetto di ricerca avverrà attraverso l'invio a riviste internazionali peer-reviewd di articoli scientifici.
 
 \newpage
 
@@ -801,9 +824,9 @@ ID Ceppo & Gruppo filogenetico & CTX-M & SHV & CMY & TEM & MCR\\
 
 # Allegato 
 
-## Analisi metagenomiche (Responsabile scientifico Dr. Stefano Pongolini- U.O.2) {-}
+**Analisi metagenomiche (Responsabile scientifico Dr. Stefano Pongolini- U.O.2)**
 
-### Materiali e metodi{-}
+**Materiali e metodi**
 I pool di isolati sui quali sono state applicate tecniche di metagenomica shotgun sono stati allestiti in modo da valutare eventuali differenze nel corredo di geni di antibioresistenza in _Escerichia coli_ tra gruppi-specie di ospiti differenti e, all’interno dello stesso gruppo-specie , tra aree differenti corrispondenti alle province di Bergamo e Sondrio e a livelli altitudinali differenti all’interno della stessa provincia. In particolare, gli isolati di _Escherichia coli_ ottenuti  da campioni di feci di CERVIDI nella provincia di Bergamo sono stati divisi in tre pool corrispondenti alle prealpi bergamasche (Pool 1), la Val Brembana (Pool 2) e le Valli Seriana e Borlezza (Pool 3). Gli isolati di _Escherichia coli_  da feci di CERVIDI nella provincia di Sondrio sono stati divisi in due pool corrispondenti alla media valle (Pool 4) e l’alta valle (Pool 5). I pool per gli isolati di _Escherichia coli_ da feci da altri gruppi di ospiti sono stati suddivisi tra SUIDI (Pool 6), CORVIDI (Pool 7), BOVIDI (Pool 8) e RAPACI (Pool 9).
 
 In aggiunta ai pool già descritti per valutare i profili di geni di resistenza in _Escherichia coli_ nei selvatici è stato inserito un ulteriore pool (Pool 10) per ricercare i geni di resistenza in _Klebsiella pneumoniae_ in considerazione della particolare importanza nella clinica umana e nelle problematiche di antibiotico-resistenza nosocomiali.  Quest’ultimo pool è composto da isolati ottenuti da feci di  CORVIDI (13 isolati), RAPACI (4 isolati), CERVIDI (2 isolati) e LEPRI (1 isolato).
@@ -843,7 +866,7 @@ I pool degli isolati selezionati sono stati preparati come indicato nei punti so
 
   4. miscelamento accurato del pool mediante vortex e trasferimento del pool al laboratorio di sequenziamento in giornata per evitare degradazione del materiale e risultati non affidabili. 
 
-### Sequenziamento genomico {-}
+**Sequenziamento genomico**
 
 Il DNA genomico è stato estratto mediante il kit DNeasy Blood & Tissue Kit (Qiagen) a partire da 1 ml di brodocoltura di ciascun pool di isolati seguendo il protocollo della ditta produttrice per l’estrazione del DNA genomico di batteri gram negativi.
 
@@ -857,9 +880,9 @@ Le reads grezze prodotte dal sequenziatore sono state valutate sulla base di cri
 Le reads filtrate sono state poi utilizzate come input per l’individuazione di geni conferenti antibiotico resistenza utilizzando il database Resfinder ver. 4.0 (Bortolaia V. et al.2020) usando i parametri di default (80% di identità su 60% di lunghezza di un gene target). Tra gli output dell’analisi sono stati considerati e comparati i geni presenti in ciascun pool di campioni associati alle principali classi di antibiotici (Amminoglicosidi, Beta lattamici, Colistina, Fluorochinoloni, Fosfomicina, Acido Fusico, Glicopeptidi, Macrolidi, Lincosamina, Streptomicina A, Nitroimidazolo, Fenicolo, Oxazolidinone, Rifampicina, Sulfonamide, Tetraciclina, Trimetoprim) ed i profili di resistenza in-silico per gli antibiotici considerati.
 
 
-## Risultati {-}
+**Risultati**
 
-### Estrazione del DNA genomico  {-}
+**Estrazione del DNA genomico**
 
 Il DNA genomico dei 10 pool analizzati è stato estratto con rese non elevate ma sufficienti per la preparazione delle librerie genomiche (tabella 2). La purezza del DNA è risultata adeguata in tutti i campioni tranne che nel campione n. 11  che perciò non è risultato processabile.
 
@@ -885,7 +908,7 @@ POOL & Quantificazione (ng/ul) & Rapporto 260/280\\
 \end{tabular}
 \end{table}
 
-### SEQUENZIAMENTO GENOMICO: Preparazione del DNA genomico, delle librerie genomiche, reazione di sequenziamento ed analisi bioinformatiche {-}
+**SEQUENZIAMENTO GENOMICO: Preparazione del DNA genomico, delle librerie genomiche, reazione di sequenziamento ed analisi bioinformatiche**
 
 La corsa di sequenziamento in Miseq dei pool di isolati selezionati hanno generato le quantità di dato indicate in tabella 3. La quantità di dato per ogni pool è accettabile poiché produce un coverage medio per isolato >10, soglia al di sopra della quale si è dimostrato di poter rintracciare tutti i geni AMR presenti grazie a prove preliminari a diverse profondità con un ceppo a resistenze note e ad un confronto con gli esperti AMR del DTU (centro di referenza europeo per l’antibiotico resistenza); rimane tuttavia un piccolo sbilanciamento del coverage di alcuni pool che risultano a basso coverage (pool n.7 e 9) mentre altri hanno coverage più elevati (35-36X, pool n. 5 e 6). Il coverage medio delle corse risulta essere di 28X. Tale copertura di sequenziamento e la bontà della qualità dei dati genomici valutata con FastQC ha permesso l’identificazione dei geni di antibiotico-resistenza con sufficiente profondità e precisione.
 
@@ -957,13 +980,13 @@ knitr::include_graphics("figure/allfig6.PNG")
 
 
 
-## Discussione {-}
+**Discussione**
 L’analisi metagenomica shotgun mostra una buona corrispondenza con il dato fenotipico (Kendall-tau = 0.65; p-value = 6*10-9). Questo mostra che la metodologia è sufficientemente robusta per individuare con buona confidenza i geni AMR che conferiscono resistenze anche su pool di isolati. 
 
 L’analisi dei pool prelevati a diverse altitudini e in diverse province su E. coli isolati in cervidi sembrano mostrare un aumento della presenza di geni AMR con l’altitudine. Tale risultato deve essere però confermato attraverso una più completa analisi quantitativa della presenza di reads AMR nei diversi pool. 
 
 
-## Bibliografia {-}
+**Bibliografia**
 Anthony M. Bolger, Marc Lohse, Bjoern Usadel, Trimmomatic: a flexible trimmer for Illumina sequence data, Bioinformatics, Volume 30, Issue 15, 1 August 2014, Pages 2114–2120, 
 
 Bortolaia V, Kaas RS, Ruppe E, Roberts MC, Schwarz S, Cattoir V, Philippon A, Allesoe RL, Rebelo AR, Florensa AF, Fagelhauer L, Chakraborty T, Neumann B, Werner G, Bender JK, Stingl K, Nguyen M, Coppens J, Xavier BB, Malhotra-Kumar S, Westh H, Pinholt M, Anjum MF, Duggett NA, Kempf I, Nykäsenoja S, Olkkola S, Wieczorek K, Amaro A, Clemente L, Mossong J, Losch S, Ragimbeau C, Lund O, Aarestrup FM. ResFinder 4.0 for predictions of phenotypes from genotypes. J Antimicrob Chemother. 2020 Aug 11:dkaa345. doi: 10.1093/jac/dkaa345. Epub ahead of print. PMID: 32780112.
