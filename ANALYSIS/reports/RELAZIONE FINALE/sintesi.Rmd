@@ -28,8 +28,6 @@ Responsabile scientifico: Dr. Tranquillo Vito (vito.tranquillo@izsler.it)
 
 **Parole chiave:** antimicrobico-resistenza, fauna selvatica, resistoma ambientale. 
 
-
-
 **Introduzione**
 
 L'interesse per il ruolo della fauna selvatica nella diffusione e nel mantenimento dell'antibiotico-resistenza è aumentato nel corso degli ultimi 10 anni.  La principale preoccupazione nasce dal timore che l'eventuale dimostrazione di un ruolo della fauna selvatica come "serbatoio" e "mantenimento" di batteri portatori di geni di resistenza, contribuendo alla contaminazione ambientale di batteri resistenti o materiale genetico di resistenza, possa compromettere gli sforzi messi in atto, soprattutto in questi ultimi anni, in campo medico e veterinario per ridurre la diffusione del fenomeno dell'antibiotico-resistenza. La resistenza agli antibiotici è di per se un fenomeno naturale e come tale non sorprende il riscontro di ceppi antibiotico-resistenti in animali selvatici anche in aree remote del globo. I dati disponibili [@greig_scoping_2015] mostrano che numerose specie di animali selvatici sono portatori di  batteri antimicrobici resistenti  in una vasta gamma di habitat, il che solleva la questione del loro ruolo nelle dinamiche di diffusione e mantenimento all'interfaccia tra popolazioni umane, animali domestici ed ecosistemi naturali. La presenza nella fauna selvatica, normalmente non sottoposta a trattamenti antibiotici, di ceppi batterici resistenti e in generale di geni di resistenza, è verosimilmente attribuibile a fenomeni di contaminazione ambientale. 
