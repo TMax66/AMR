@@ -55,5 +55,5 @@ linkcolor: blue
  \vspace*{1cm}
 
 
-Documento editato in rmarkdown   [@xie2018r]
+Documento editato in R Markdown   [@xie2018r]
 
