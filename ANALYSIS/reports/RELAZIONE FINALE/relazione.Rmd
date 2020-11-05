@@ -36,8 +36,9 @@ linkcolor: blue
 
 \newpage
 \tableofcontents
-\pagenumbering{arabic}
 
+
+\newpage
 ELENCO DEI COLLABORATORI
 
 * **Dr. Tranquillo Vito** U.O. 1-Responsabile scientifico del progetto. Coordinamento delle U.O., Analisi statistica dei dati fenotipici. 
@@ -191,7 +192,7 @@ I dati raccolti sono stati inseriti in foglio elettronico denominato **AMR** in 
 
 Altre variabili presenti nel dataset ma non utilizzate per l'analisi dei dati sono: FASCETTA (identificativo,quando presente, dell'animale da cui proviene il campione di feci), DATA_PRELIEVO, DATA_SEMINA, STATO_CAMPIONE ( se fresco o congelato), til ( tilmicosina), ox (oxacillina), er (eritromicina): questi tre antibiotici sono stati tutti utilizzati durante il test di sensibilità agli antibiotici, ma come da indicazione del centro di referenza per l'antibiotico-resistenza le **Enterobatteriacee** mostrano resistenza naturale, quindi i rispettivi risultati non sono stati utilizzati per le successive analisi dei dati.
 
-Il dataset **AMR** ha una struttura gerarchica costituita da tre livelli: Comune, IDCamp, e IDceppo. I comuni contribuiscono con uno o più campioni di feci provenienti da diverse specie animali; da un singolo campione di feci identificato dal IDcamp, possono essere isolati da uno a più ceppi batterici appartenente alla famiglia delle _Enterobacteriaceae_ identificati dal IDceppo. Le statistiche relative ai campioni di feci sono quindi state ottenute escludendo per i campioni con più di un ceppo i record multipli con differente IDceppo ma identico IDcamp.
+Il dataset **AMR** ha una struttura gerarchica costituita da tre livelli: Comune, ID Camp, e IDceppo. I comuni contribuiscono con uno o più campioni di feci provenienti da diverse specie animali; da un singolo campione di feci identificato dal IDcamp, possono essere isolati da uno a più ceppi batterici appartenente alla famiglia delle _Enterobacteriaceae_ identificati dal IDceppo. Le statistiche relative ai campioni di feci sono quindi state ottenute escludendo per i campioni con più di un ceppo i record multipli con differente IDceppo ma identico IDcamp.
 
 Le caratteristiche dei differenti comuni di provenienza dei campioni sono state ottenute da differenti database dell'ISTAT consultabili al sito (https://www.istat.it/it/) e quindi collegate al dataset AMR mediante il campo COMUNE, ottenendo quindi il dataset **AMR_istat**, costituito da 876 record, utilizzato per analizzare l'associazione tre caratteristiche ambientali-sociali dei differenti comuni e la prevalenza di animali portatori di _Enterobacteriaceae_ resistenti ad almeno un antibiotico del panel indagato. 
 
@@ -281,7 +282,7 @@ Su 670 campioni di feci, 92 presentano almeno un ceppo MULTI-RESISTENTE (numero 
 
 ### Associazione tra la prevalenza di animali carrier e caratteristiche ambientali
 
-Il confronto tra modelli indagati basato sulle metriche della K-fold cross-validation  (tabella\ref{tab:kfold}) ha permesso di selezionare come modello con le  migliori performance in termini di predittività il modello:  $$logit(p) =  \alpha_{\text{Comune}} + \beta_{\text{Specie}} + \beta_{\text{Pascolo}} + \beta_{\text{Urbanizzazione}} + \beta_{\text{Specie*Pascolo}}$$.  
+Il confronto tra modelli indagati basato sulle metriche della K-fold cross-validation  (tabella\ref{tab:kfold}) ha permesso di selezionare come modello con le  migliori performance in termini di predittività il modello:  $$\text{logit(p)} =  \alpha_{\text{Comune}} + \beta_{\text{Specie}} + \beta_{\text{Pascolo}} + \beta_{\text{Urbanizzazione}} + \beta_{\text{Specie*Pascolo}}$$.  
 Le stime dei coefficienti di regressione e gli intervalli di credibilità sono riassunti in tabella \ref{tab:stimefe} e le rispettive distribuzioni a posteriori rappresentate in figura \ref{fig:stimefe}
 
 Secondo il modello, la probabilità di un animale di essere un carrier di ceppi antibiotico resistenti di _Enterobacteriacee_  aumenta all'aumentare della superficie comunale (in ettari) dedicata al pascolo   in misura differente a seconda del gruppo-specie di appartenenza (interazione tra specie e pascolo), come raffigurato in fig \ref{fig:condplot} dove la  dipendenza della probabilità di Resistenza dalla superficie dedicata al pascolo per comune è riportata condizionalmente ai diversi gruppi-specie a cui appartiene il campione risultato carrier di ceppi resistenti.  
