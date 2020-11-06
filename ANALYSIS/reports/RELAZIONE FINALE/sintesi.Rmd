@@ -1,6 +1,6 @@
 
 ---
-title: "Ruolo della fauna selvatica nel mantenimento e diffusione dell'antibiotico-resistenza"
+title: "Ruolo della fauna selvatica nella diffusione e  mantenimento  dell'antibiotico-resistenza \\ (PRC2016020)"
 author: 'SINTESI'
 header-includes: \usepackage[italian]{babel} \usepackage{setspace}\doublespacing \usepackage{float} 
                   \usepackage{booktabs} \usepackage{longtable} 
